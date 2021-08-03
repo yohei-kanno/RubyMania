@@ -1,24 +1,59 @@
-# README
+### アプリ名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# RubyMania
 
-Things you may want to cover:
+<br>
 
-* Ruby version
+### どんなアプリか
 
-* System dependencies
+## ruby特化の基礎編問題集
 
-* Configuration
+<br>
 
-* Database creation
+## 何でこのアプリを作りたいのか
+- 自分自身でちゃんと知識を定着させたいから
+- 自分が公式の勉強をしている際にネットに落ちている問題と公式の問題集以外にも無いのかなと感じたのでその一助をしたい
+- 無料で出来る問題集は毎回同じ順番、同じ問題が出るのでどうしても問題を暗記してしまう為、ランダムに問題が出題されてほしい
+- こんなメソッドがあるって知ってると開発の手助けになるのでその助けとなりたい
 
-* Database initialization
+<br>
+<br>
 
-* How to run the test suite
+## ターゲット
+- rubyの基礎知識を定着させたい人
+- 無料でrubysilverレベルの問題を解いてみたい方
+- ネットに落ちている問題をやり切ってしまった方
+<br>
+<br>
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## どんな価値でどんな機能を提供するのか
+- 文法編
+- オブジェクト志向編
+- 組み込みライブラリ編(ハッシュ)
+- 組み込みライブラリ編(配列)
+- 組み込みライブラリ編(数値)
+- 組み込みライブラリ編(文字列)  
+- 総合問題
+
+等、カテゴリー毎に問題集を解くことが出来る
+
+- 問題は作者の気まぐれで更新される
+
+- ユーザーにはレベルがあって問題を解いているとレベルが上がる
+- そのレベルはトップページにランキング形式で記載される
+
+- 問題はカテゴリー毎に選ばれるがカレコードに問題と回答を登録しておいて毎回ランダムに１０問問題が出題される様にしたい
+
+- 将来的にはRubyGoldの範囲の問題も作成したい
+
+<br>
+
+## 画面遷移図
+
+https://xd.adobe.com/view/ad23d2b2-aff1-4a28-bc76-dbc298abf4d1-f870/
+
+## ER図
+
+https://drive.google.com/file/d/1Ol4b4vjj0u5OxKuXtZkvFWanKXrheX-7/view?usp=sharing
