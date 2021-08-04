@@ -17,6 +17,7 @@
   justify-content: space-around;
   margin-bottom: 0;
   padding: 0;
+  text-align: center;
 }
 
 
@@ -24,22 +25,25 @@
   margin-top: 35px;
 }
 
+
+
 .header-container{
   @include header-footer;
 }
 
 .footer-container{
-  @include header-footer;
+  @include header-footer
 }
 
 .top-left{
-  width: 30%;
+  width: 40%;
+  margin-left: 0;
+  margin-bottom: 50px;
 }
 
 .top-right{
-  width: 70%;
-  border: 1px solid black;
-  margin-right: 10px;
+  width: 60%;
+  margin-bottom: 50px;
 }
 
 .user-ranking-header{
@@ -61,4 +65,21 @@ hr {
   margin: 0;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #ccc;
+}
+
+@media screen and (max-width: 1100px) {
+  .flex{
+    display: inline-block;
+    margin: auto;
+  }
+  .top-left{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .top-right{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
 }
