@@ -1,18 +1,38 @@
 @import "bootstrap";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import "top";
+@import "flash";
+@import "errors";
 @import "swiper";
 
 
 body{
-  width: 100%;
   margin: auto;
   text-align: center;
+}
+
+.title-header{
+  margin: 15px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .text-left{
   text-align: left;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .btn{
   vertical-align: initial;
+}
+
+.input-group{
+  width: 300px;
+}
+
+.form-group{
+  text-align: center;
 }

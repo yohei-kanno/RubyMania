@@ -12,5 +12,8 @@ html
     link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" /
   body
     = render 'shared/header'
+    - flash.each do |key, value|
+      p class=("alert alert-#{key}") 
+        = value
     = yield
     = render 'shared/footer'

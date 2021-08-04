@@ -1,0 +1,47 @@
+= render "shared/errors",{object: @user}
+
+.title-header
+  = t("dict.new_user")
+
+= form_with model: @user, local: true do |f|
+  .form-group
+    = f.label :nickname, User.human_attribute_name(:nickname)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.fas.fa-user
+        = f.text_field :nickname, class: "form-control", placeholder: t("placeholder.nickname")
+        
+  .form-group
+    = f.label :email, User.human_attribute_name(:email)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.far.fa-envelope
+        = f.email_field :email, class: "form-control", placeholder: t("placeholder.email")
+        
+  .form-group
+    = f.label :password, User.human_attribute_name(:password)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.fas.fa-key
+        = f.password_field :password, class: "form-control", placeholder: t("placeholder.password"), minlength: 6
+        
+  .form-group
+    = f.label :password_confirmation, User.human_attribute_name(:password_confirmation)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.fas.fa-key
+        = f.password_field :password_confirmation, class: "form-control", placeholder: t("placeholder.password"), minlength: 6
+            
+    = f.submit class: "btn btn-primary"

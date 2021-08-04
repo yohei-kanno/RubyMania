@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper-container', {
   loop: true,
   speed: 1500,
   autoplay: {
-    delay: 3000,
+    delay: 1000,
   },
   direction: "horizontal",
   effect: "coverflow",

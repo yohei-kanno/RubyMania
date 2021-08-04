@@ -1,7 +1,17 @@
 .flex
-  .flex-container-name
-    = link_to "RubyMania", root_path, class: "disabled-title"
-  .flex-header
-    = link_to "ログイン", root_path, class: "header-container"
-    = link_to "新規登録", root_path, class: "header-container"
+  - if logged_in?
+    .flex-container-name
+      = link_to "RubyMania", root_path, class: "disabled-title"
+    .flex-header
+      = current_user.nickname
+      = " Lv#{current_user.level}"
+      = link_to "プロフィール", new_user_path, class: "header-container"
+      = link_to "ログアウト", logout_path, method: :delete, class: "header-container"
+  - else
+    .flex-container-name
+      = link_to "RubyMania", root_path, class: "disabled-title"
+    .flex-header
+      = link_to "ログイン", login_path, class: "header-container"
+      = link_to "新規登録", new_user_path, class: "header-container"
+    
 hr/

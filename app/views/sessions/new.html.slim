@@ -1,0 +1,25 @@
+.title-header
+  = t("dict.login_user")
+
+= form_with model: @user,url: login_path, method: :post, local: true do |f|
+  .form-group
+    = f.label :email, User.human_attribute_name(:email)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.far.fa-envelope
+        = f.email_field :email, class: "form-control", placeholder: t("placeholder.email")
+        
+  .form-group
+    = f.label :password, User.human_attribute_name(:password)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.fas.fa-key
+        = f.password_field :password, class: "form-control", placeholder: t("placeholder.password"), minlength: 6
+            
+    = f.submit class: "btn btn-primary"
