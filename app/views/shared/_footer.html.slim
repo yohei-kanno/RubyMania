@@ -4,5 +4,6 @@ hr/
     span.footer-container
       | &copyRubymania
     = link_to "お問い合わせ", root_path, class: "footer-container"
-    = link_to "利用規約", root_path, class: "footer-container"
-    = link_to "プライバシーポリシー", root_path, class: "footer-container"
+    = render 'shared/term_of_use'
+    = render "shared/privacy"
+      

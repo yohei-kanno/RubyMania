@@ -1,4 +1,28 @@
 .flex
+  .top-right
+    .user-ranking-header
+      = "RubyManiaの特徴"
+    
+      .swiper-container
+        .swiper-wrapper
+    
+          .swiper-slide
+            | string
+          .swiper-slide
+            | hash
+          .swiper-slide
+            | array
+          .swiper-slide
+            | integer
+              
+        /! If we need pagination
+        .swiper-pagination.swiper-pagination-black
+        /! If we need navigation buttons
+        .swiper-button-prev.swiper-custom-button
+          i.fa.fa-angle-left
+        .swiper-button-next.swiper-custom-button
+          i.fa.fa-angle-right
+            
   .top-left
     .user-ranking-header
       = "ランキング"
@@ -32,7 +56,7 @@
     div.user-ranking
       = image_tag "kouseki_colorful", class: "image-font"
       | 1位  &ensp; LV456 &ensp; pandamania
-      
-  h2.top-right
-    = "RubyManiaの特徴"
-    
+  
+script src="https://unpkg.com/swiper/swiper-bundle.js" 
+script src="https://unpkg.com/swiper/swiper-bundle.min.js" 
+= javascript_pack_tag "swiper/swiper.js"
