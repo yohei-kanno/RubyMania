@@ -11,5 +11,6 @@ h1 = "RubyMania #{@category_name}編"
               span.radio_button_container = f.radio_button "#{i}","#{choice.id}", checked: true , class: "radio_button"
               span.choice
                 = f.label "#{i}_#{choice.id}", choice.content, class: "choice_content_tag"
+                = f.hidden_field :name, value: params[:name]
                 
     p = f.submit "回答する"

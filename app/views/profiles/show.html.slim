@@ -18,5 +18,23 @@ table.table.profile-tabel
     tr
       th = User.human_attribute_name(:next_level_points)
       td.text-left = "あと#{@next_level}問"
-
+    tr
+      th = "今までの履歴"
+      td.text-left
+        button.btn.btn-link.modal-container data-bs-target="#Modal-record" data-bs-toggle="modal" type="button" 
+          = "記録を見る"
+        #Modal-record.modal.fade aria-hidden="true" aria-labelledby="Modal-term" tabindex="-1" 
+          .modal-dialog.modal-dialog-scrollable.modal-lg
+            .modal-content
+              .modal-header
+                h5#Modal-term.modal-title = "#{current_user.nickname}さんの記録"
+                button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button" 
+              .modal-body
+                = render 'record'
+              .modal-footer
+                button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close
+                        
 = link_to "編集する", edit_profile_path, class: "btn btn-primary"
+
+
+        

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_171550) do
+ActiveRecord::Schema.define(version: 2021_08_05_012806) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
@@ -52,6 +52,18 @@ ActiveRecord::Schema.define(version: 2021_08_04_171550) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "study_records", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.string "question_record", null: false
+    t.datetime "studied_at", null: false
+    t.integer "score", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_study_records_on_category_id"
+    t.index ["user_id"], name: "index_study_records_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", null: false
@@ -68,4 +80,6 @@ ActiveRecord::Schema.define(version: 2021_08_04_171550) do
   add_foreign_key "categories_questions", "categories"
   add_foreign_key "categories_questions", "questions"
   add_foreign_key "choices", "questions"
+  add_foreign_key "study_records", "categories"
+  add_foreign_key "study_records", "users"
 end

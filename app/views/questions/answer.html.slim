@@ -1,4 +1,4 @@
-h1 RubyMania 文法編[回答]
+h1 ="RubyMania #{@category.name}[回答]"
 .question_title 
   .text-left = "あなたの今回の点数は#{@point}/100点です！"
   - @questions.each.with_index(1) do |question, i|

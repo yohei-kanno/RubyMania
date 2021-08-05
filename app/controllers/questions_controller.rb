@@ -18,14 +18,8 @@ class QuestionsController < ApplicationController
       redirect_to root_path
       return
     end
-    
-    choices = Choice.find(params[:question].values)
-    choices_ids = params[:question].values.join(",")
-    # StudyRecord.create(
-    #   user_id: 1
-    #   categories_id: 1
-    #   question_record: choices_ids
-    # )
+    choices = Choice.find(params[:question].values.drop(1))
+    choices_ids = params[:question].values.drop(1).join(",")
     choices.each do |choice|
       if choice.answer == true
         @point += 10
@@ -36,6 +30,14 @@ class QuestionsController < ApplicationController
       @questions << choice.question
     end
     
+    @category = Category.find_by(name:params[:question][:name])
+    StudyRecord.create(
+      user_id: current_user.id,
+      category_id: @category.id,
+      question_record: choices_ids,
+      studied_at: Time.now,
+      score: @point
+    )
     current_user.experience_point += @point
     current_user.save!
     next_level_point = LevelStatus.find_by(level: current_user.level + 1).required_experience_points

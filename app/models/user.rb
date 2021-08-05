@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  
+  has_many :study_records
+  
   enum admin: { general: false, admin: true }
   validates :admin, inclusion: ["admin", "general"]
   
