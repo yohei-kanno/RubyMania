@@ -9,7 +9,7 @@
             .swiper-slide
               = category.name 
               div
-                = link_to "#{category.name}編をやってみる", questions_path(name: category.name), class: "disabled-title"
+                = link_to "#{category.name}編をやってみる", questions_path(name: category.name), class: "disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
               
         /! If we need pagination
         .swiper-pagination.swiper-pagination-black
