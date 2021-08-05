@@ -7,6 +7,10 @@ ja:
       user:
         nickname: ニックネーム
         email: メールアドレス
+        level: レベル
+        created_at: 登録日時
+        cumulative_experience_points: 累計回答問題数
+        next_level_points: 次のレベルまで
         password: パスワード
         password_confirmation: パスワード(確認)
         

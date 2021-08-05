@@ -6,4 +6,5 @@ ja:
   
   dict:
     new_user: ユーザー登録画面
+    edit_user: プロフィール編集画面
     login_user: ログイン画面

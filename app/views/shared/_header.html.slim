@@ -5,8 +5,9 @@
     .flex-header
       = current_user.nickname
       = " Lv#{current_user.level}"
-      = link_to "プロフィール", new_user_path, class: "header-container"
+      = link_to "プロフィール", profile_path, class: "header-container"
       = link_to "ログアウト", logout_path, method: :delete, class: "header-container"
+      
   - else
     .flex-container-name
       = link_to "RubyMania", root_path, class: "disabled-title"

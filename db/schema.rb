@@ -10,7 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_005857) do
+ActiveRecord::Schema.define(version: 2021_08_04_171550) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "categories_questions", force: :cascade do |t|
+    t.integer "question_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_categories_questions_on_category_id"
+    t.index ["question_id", "category_id"], name: "index_categories_questions_on_question_id_and_category_id", unique: true
+    t.index ["question_id"], name: "index_categories_questions_on_question_id"
+  end
+
+  create_table "choices", force: :cascade do |t|
+    t.integer "question_id", null: false
+    t.text "content", null: false
+    t.boolean "answer", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_choices_on_question_id"
+  end
+
+  create_table "level_statuses", force: :cascade do |t|
+    t.integer "level", default: 2, null: false
+    t.integer "required_experience_points", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "content", null: false
+    t.integer "point", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "nickname", null: false
@@ -25,4 +65,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_005857) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "categories_questions", "categories"
+  add_foreign_key "categories_questions", "questions"
+  add_foreign_key "choices", "questions"
 end

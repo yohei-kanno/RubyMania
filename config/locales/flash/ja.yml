@@ -2,6 +2,8 @@ ja:
   flash:
     success_login: ログインしました
     failure_login: ログイン出来ませんでした
+    success_update: 更新しました
+    failure_update: 更新出来ませんでした
     success_logout: ログアウトしました
     success_create: 登録しました
     failure_create: 登録出来ませんでした

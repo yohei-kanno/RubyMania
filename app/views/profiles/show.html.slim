@@ -1,0 +1,22 @@
+table.table.profile-tabel
+  tbody
+    tr
+      th = User.human_attribute_name(:nickname)
+      td.text-left = current_user.nickname
+    tr
+      th = User.human_attribute_name(:level)
+      td.text-left = "Lv #{current_user.level}"
+    tr
+      th = User.human_attribute_name(:created_at)
+      td.text-left = l current_user.created_at
+    tr
+      th = User.human_attribute_name(:created_at)
+      td.text-left = l current_user.created_at
+    tr
+      th = User.human_attribute_name(:cumulative_experience_points)
+      td.text-left = "#{current_user.experience_point/10 }問"
+    tr
+      th = User.human_attribute_name(:next_level_points)
+      td.text-left = "あと#{@next_level}問"
+
+= link_to "編集する", edit_profile_path, class: "btn btn-primary"

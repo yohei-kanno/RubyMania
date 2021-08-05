@@ -1,0 +1,28 @@
+h1 RubyMania 文法編[回答]
+.question_title 
+  .text-left = "あなたの今回の点数は#{@point}/100点です！"
+  - @questions.each.with_index(1) do |question, i|
+    - if @msgs[i] == "正解！"
+      div
+        = "問#{i}: #{question.title}"
+        span.correct = "#{@msgs[i]}"
+    - else
+      div
+        = "問#{i}: #{question.title}"
+        span.un_correct = "#{@msgs[i]}"
+
+    .choice_container
+      .question_content = question.content
+      - question.choices.each do |choice|
+        - if choice.answer == true
+          .choice_content style="background-color:lightgreen;"
+            span.radio_button_container = radio_button_tag "#{i}","#{choice.id}",(true if choice == Choice.find(params[:question][i.to_s])) , {class: "radio_button", disabled: true}
+            span.choice
+              = label_tag "#{i}_#{choice.id}", choice.content, class: "choice_content_tag"
+        - else
+          .choice_content
+            span.radio_button_container = radio_button_tag "#{i}","#{choice.id}", (true if choice == Choice.find(params[:question][i.to_s])) ,{class: "radio_button", disabled: true }
+            span.choice
+              = label_tag "#{i}_#{choice.id}", choice.content, class: "choice_content_tag"
+              
+= link_to "トップページへ", root_path
