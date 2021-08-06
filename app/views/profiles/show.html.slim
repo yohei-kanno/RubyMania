@@ -7,8 +7,10 @@ table.table.profile-tabel
       th = User.human_attribute_name(:level)
       td.text-left = "Lv #{current_user.level}"
     tr
-      th = User.human_attribute_name(:created_at)
-      td.text-left = l current_user.created_at
+      th = User.human_attribute_name(:avatar)
+      td.text-left
+        - if current_user.avatar.attached?
+          = image_tag current_user.avatar.variant(resize_to_limit:[40, 40]), class: "border"
     tr
       th = User.human_attribute_name(:created_at)
       td.text-left = l current_user.created_at

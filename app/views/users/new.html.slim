@@ -25,6 +25,12 @@
         = f.email_field :email, class: "form-control", placeholder: t("placeholder.email")
         
   .form-group
+    = f.label :avatar, User.human_attribute_name(:avatar)
+    .row.justify-content-center.mb-3
+      .input-group
+        = f.file_field :avatar, class: "form-control"
+        
+  .form-group
     = f.label :password, User.human_attribute_name(:password)
     .row.justify-content-center.mb-3
       .input-group

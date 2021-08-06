@@ -13,5 +13,11 @@
             span
               i.fas.fa-user
         = f.text_field :nickname, class: "form-control", placeholder: t("placeholder.nickname")
+              
+  .form-group
+    = f.label :avatar, User.human_attribute_name(:avatar)
+    .row.justify-content-center.mb-3
+      .input-group
+        = f.file_field :avatar, class: "form-control"
             
     = f.submit class: "btn btn-primary"

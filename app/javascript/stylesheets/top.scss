@@ -65,8 +65,20 @@
 }
 
 .image-font{
-  height: 20px;
-  margin-right: 10px;
+  height: 25px;
+  display: inline-block;
+}
+
+.wrap{
+  display: inline-block;
+  align-items: flex-start;
+  font-size: 25px;
+}
+
+.wraper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
   
 hr {

@@ -4,48 +4,36 @@ class QuestionsController < ApplicationController
     @categories.each do |category|
       if params[:name] == category.name
         @category_name = category.name
-        @questions = category.questions.all.sample(9)
+        @questions = category.questions.all.sample(10)
       end
     end
   end
   
   def answer
-    @questions = []
-    @point = 0
-    @msgs = [nil]
+    @questions = []; @point = 0; @msgs = [nil]
     
-    if params[:question].nil?
-      redirect_to root_path
-      return
-    end
     choices = Choice.find(params[:question].values.drop(1))
+    insert_msg(choices, @questions, @msgs, @point)
+
     choices_ids = params[:question].values.drop(1).join(",")
+    @category = Category.find_by(name:params[:question][:name])
+    
+    StudyRecord.create_record(current_user, @category, choices_ids, @point)
+    current_user.level_up!(@point)
+    flash.now[:mysuccess] = "レベルがアップしました！"  if current_user.level_up?
+  end
+    
+  
+  private
+  def insert_msg(choices,questions,msgs, point)
     choices.each do |choice|
       if choice.answer == true
         @point += 10
-        @msgs << "正解！"
+        msgs << "正解！"
       else
-        @msgs << "不正解!"
+        msgs << "不正解!"
       end
-      @questions << choice.question
-    end
-    
-    @category = Category.find_by(name:params[:question][:name])
-    StudyRecord.create(
-      user_id: current_user.id,
-      category_id: @category.id,
-      question_record: choices_ids,
-      studied_at: Time.now,
-      score: @point
-    )
-    current_user.experience_point += @point
-    current_user.save!
-    next_level_point = LevelStatus.find_by(level: current_user.level + 1).required_experience_points
-    
-    if current_user.experience_point >= next_level_point
-      current_user.level += 1
-      current_user.save!
-      flash.now[:mysuccess] = "レベルがアップしました！"
+      questions << choice.question
     end
   end
 end

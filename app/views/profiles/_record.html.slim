@@ -1,15 +1,13 @@
-#pagenate
-  table.table.profile-tabel id="record"
-    thead
-      tr
-        th = "日付"
-        th = "カテゴリー"
-        th = "点数"
-    
-    tbody
-      - @records.each do |record|
-        tr 
-          td = l record.studied_at
-          td = record.category.name
-          td = "#{record.score}点"
-#pagenate
+table.table.profile-tabel id="record"
+  thead
+    tr
+      th = "日付"
+      th = "カテゴリー"
+      th = "点数"
+  
+  tbody
+    - @records.each do |record|
+      tr 
+        td = l record.studied_at
+        td = record.category.name
+        td = "#{record.score}点"
