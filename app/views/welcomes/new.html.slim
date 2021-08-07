@@ -35,10 +35,13 @@
       - user_rank.each.with_index(1) do |(j ,user),i|
         .wrapper
           .wrap
-            = image_tag j, class: "image-font"
-            span.ml-5 = "#{i}位"
-            span.ml-10 = "Lv#{user.level}"
-            span.ml-10 = user.nickname
+            - if user
+              = image_tag j, class: "image-font"
+              span.ml-5 = "#{i}位"
+              span.ml-10 = "Lv#{user.level}"
+              span.ml-10 = user.nickname
+            - else
+              = "まだユーザーがいません"
           
 script src="https://unpkg.com/swiper/swiper-bundle.js" 
 script src="https://unpkg.com/swiper/swiper-bundle.min.js" 
