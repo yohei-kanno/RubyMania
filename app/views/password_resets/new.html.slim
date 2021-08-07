@@ -1,0 +1,21 @@
+.title-header
+  = "パスワードリセット"
+  
+.mb-3
+  = "パスワードをリセットします"
+.mb-3
+  = "RubyManiaにご登録頂いてるメールアドレスを入力して下さい"
+= form_with url: password_resets_path, method: :post, local: true do |f|
+  .form-group
+    = f.label :email, User.human_attribute_name(:email)
+    .row.justify-content-center.mb-3
+      .input-group
+        .input-group-prepend
+          .input-group-text
+            span
+              i.far.fa-envelope
+        = f.email_field :email, class: "form-control", placeholder: t("placeholder.email")
+            
+    = f.submit "パスワードをリセットする", class: "btn btn-primary mb-3 "
+    
+    p = "上記のメールアドレスに再設定用のメールアドレスを送信します。"

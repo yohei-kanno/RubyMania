@@ -29,6 +29,7 @@
     .row.justify-content-center.mb-3
       .input-group
         = f.file_field :avatar, class: "form-control"
+  
         
   .form-group
     = f.label :password, User.human_attribute_name(:password)
@@ -50,4 +51,4 @@
               i.fas.fa-key
         = f.password_field :password_confirmation, class: "form-control", placeholder: t("placeholder.password"), minlength: 6
             
-    = f.submit class: "btn btn-primary"
+  = f.submit class: "btn btn-primary"

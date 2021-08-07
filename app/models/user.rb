@@ -15,7 +15,6 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   
-  
   scope :level_upper, -> { order(level: :desc).limit(9) }
   
   def level_up!(point)
@@ -31,4 +30,5 @@ class User < ApplicationRecord
     end
   end
 end
+  
   

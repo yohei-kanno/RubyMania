@@ -8,7 +8,7 @@
             .swiper-slide
               span.box-title = category.name 
               .title
-                = link_to "#{category.name}", questions_path(name: category.name), class: "container-disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
+                = link_to "Let's start!!", questions_path(name: category.name), class: "container-disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
               .sub-title
                 = "こんな問題が出題されます！"
                 - unless category.questions.count == 0

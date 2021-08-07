@@ -5,7 +5,9 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    if @user = login(params[:email], params[:password])
+    if @user = login(params[:email], params[:password], params[:remember])
+      binding.pry
+      auto_login(@user)
       redirect_to root_path
       flash[:mysuccess] = t("flash.success_login")
     else
