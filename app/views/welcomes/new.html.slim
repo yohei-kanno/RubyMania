@@ -1,15 +1,27 @@
 .flex
   .top-right
     .user-ranking-header
-      = "サービス概要"
-    
+      / = t("dict.service")
       .swiper-container
         .swiper-wrapper
           - @categories.each do |category|
             .swiper-slide
-              = category.name 
-              div
-                = link_to "#{category.name}編でやる", questions_path(name: category.name), class: "disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
+              span.box-title = category.name 
+              .title
+                = link_to "#{category.name}", questions_path(name: category.name), class: "container-disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
+              .sub-title
+                = "こんな問題が出題されます！"
+                - unless category.questions.count == 0
+                  - q = category.questions.sample(1)[0]
+                  .box-container
+                    = q.title
+                  .box-content
+                    = q.content
+                  .box-choices
+                    - q.choices.each do |choice|
+                      .box-choice_content
+                        o= choice.content
+
               
         .swiper-pagination.swiper-pagination-black
         .swiper-button-prev.swiper-custom-button

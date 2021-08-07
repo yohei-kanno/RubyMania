@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
     
     StudyRecord.create_record(current_user, @category, choices_ids, @point)
     current_user.level_up!(@point)
-    flash.now[:mysuccess] = "レベルがアップしました！"  if current_user.level_up?
+    flash.now[:mysuccess] = t("flash.level_up")  if current_user.level_up?
   end
     
   
@@ -29,9 +29,9 @@ class QuestionsController < ApplicationController
     choices.each do |choice|
       if choice.answer == true
         @point += 10
-        msgs << "正解！"
+        msgs << t("dict.correct")
       else
-        msgs << "不正解!"
+        msgs << t("dict.uncorrect")
       end
       questions << choice.question
     end

@@ -1,8 +1,12 @@
-h1 ="RubyMania #{@category.name}[回答]"
+= link_to "もう一度#{@category.name}をやる",  questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("dict.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"
+
+
+h1.mb-3 ="RubyMania #{@category.name}[回答]"
 .question_title 
-  .text-left = "あなたの今回の点数は#{@point}/100点です！"
+  h4.text-left.mb-3 = "あなたの今回の点数は#{@point}/100点です！"
   - @questions.each.with_index(1) do |question, i|
-    - if @msgs[i] == "正解！"
+    - if @msgs[i] == t("dict.correct")
       div
         = "問#{i}: #{question.title}"
         span.correct = "#{@msgs[i]}"
@@ -25,4 +29,5 @@ h1 ="RubyMania #{@category.name}[回答]"
             span.choice
               = label_tag "#{i}_#{choice.id}", choice.content, class: "choice_content_tag"
               
-= link_to "トップページへ", root_path
+= link_to "もう一度#{@category.name}をやる",  questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("dict.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"

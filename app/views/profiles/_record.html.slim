@@ -1,13 +1,13 @@
 table.table.profile-tabel id="record"
   thead
     tr
-      th = "日付"
-      th = "カテゴリー"
-      th = "点数"
+      th = t("dict.date")
+      th = t("dict.category")
+      th = t("dict.point")
   
   tbody
     - @records.each do |record|
       tr 
         td = l record.studied_at
         td = record.category.name
-        td = "#{record.score}点"
+        td = "#{record.score}/100点"

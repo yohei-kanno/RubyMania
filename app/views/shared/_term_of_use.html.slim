@@ -1,10 +1,10 @@
 button.btn.btn-link.footer-container data-bs-target="#Modal-term-of-use" data-bs-toggle="modal" type="button" 
-  = "利用規約"
+  = t("dict.term")
 #Modal-term-of-use.modal.fade aria-hidden="true" aria-labelledby="Modal-term" tabindex="-1" 
   .modal-dialog.modal-dialog-scrollable.modal-lg
     .modal-content
       .modal-header
-        h5#Modal-term.modal-title 利用規約
+        h5#Modal-term.modal-title = t("dict.term")
         button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button" 
       .modal-body
         .text-left

@@ -9,14 +9,14 @@
         = current_user.nickname
       span.header-container
         = " Lv#{current_user.level}"
-      = link_to "プロフィール", profile_path, class: "header-container"
-      = link_to "ログアウト", logout_path, method: :delete, class: "header-container"
+      = link_to t("link.profile"), profile_path, class: "header-container"
+      = link_to t("link.logout"), logout_path, method: :delete, class: "header-container"
       
   - else
     .flex-container-name
-      = link_to "RubyMania", root_path, class: "disabled-title"
+      = link_to t("link.rubymania"), root_path, class: "disabled-title"
     .flex-header
-      = link_to "ログイン", login_path, class: "header-container"
-      = link_to "新規登録", new_user_path, class: "header-container"
+      = link_to t("link.login"), login_path, class: "header-container"
+      = link_to t("link.new"), new_user_path, class: "header-container"
     
 hr/

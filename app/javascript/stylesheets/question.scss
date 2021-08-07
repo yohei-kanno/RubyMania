@@ -45,7 +45,7 @@
   white-space: pre;
   display: inline-flex;
   padding: 15px 0;
-  width: 96%;
+  width: 85%;
   font-size: 15px;
 }
 
@@ -61,5 +61,15 @@
   color: white;
   padding: 1px 8px;
   border-radius: 4px;
+}
+  
+@media screen and (max-width: 600px) {
+  .choice_content_tag{
+    white-space: pre;
+    display: inline-flex;
+    padding: 9px 0;
+    width: 85%;
+    font-size: 12px;
+  }
 }
   
