@@ -3,7 +3,7 @@ class User < ApplicationRecord
   
   has_one_attached :avatar
   
-  has_many :study_records
+  has_many :study_records, dependent: :destroy
   
   enum admin: { general: false, admin: true }
   validates :admin, inclusion: ["admin", "general"]
