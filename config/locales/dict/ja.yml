@@ -5,22 +5,26 @@ ja:
     password: 半角英数字  6文字以上
   
   dict:
-    date: "日付"
-    category: "カテゴリー"
-    point: "点数"
+    confirm: 確認画面
+    send: 送信する
+    back: 戻る
+    date: 日付
+    category: カテゴリー
+    point: 点数
     new_user: ユーザー登録画面
     edit_user: プロフィール編集画面
     login_user: ログイン画面
+    contact: お問い合わせフォーム
     correct: 正解！
     uncorrect: 不正解！
     login_user: ログイン画面
-    to_toppage: "トップページへ"
+    to_toppage: トップページへ
     pricacy: プライバシーポリシー
     term: 利用規約
     service: サービス概要
   
   submit:
-    do_answer: "回答する"
+    do_answer: 回答する
     do_edit: 編集する
     
   confirm:

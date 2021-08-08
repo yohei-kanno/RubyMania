@@ -14,4 +14,11 @@ ja:
         next_level_points: 次のレベルまで
         password: パスワード
         password_confirmation: パスワード(確認)
+        agreement: 利用規約とプライバシーポリシー
+        
+      contact:
+        name: お名前
+        email: 返信先メールアドレス
+        content: 内容
+        
         

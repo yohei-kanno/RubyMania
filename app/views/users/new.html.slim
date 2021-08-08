@@ -50,5 +50,8 @@
             span
               i.fas.fa-key
         = f.password_field :password_confirmation, class: "form-control", placeholder: t("placeholder.password"), minlength: 6
+  .form-group.mb-3    
+    = f.check_box :agreement, :as => :boolean, checked:false
+    = f.label :agreement, "利用規約とプライバシーポリシーに同意する"
             
   = f.submit class: "btn btn-primary"

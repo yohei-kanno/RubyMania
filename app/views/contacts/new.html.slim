@@ -1,0 +1,22 @@
+= render "shared/errors",{object: @contact}
+.title-header
+  h4 = t("dict.contact")
+br/
+= form_with model: @contact, url: confirm_contacts_path do |f|
+  .form-group
+    = f.label :name, Contact.human_attribute_name(:name)
+    .row.justify-content-center
+      .input-group.col-sm-6
+        .input-group-prepend
+          .input-group-text
+            span
+              i.fas.fa-user
+        = f.text_field :name, class: 'form-control', placeholder: t("placeholder.nickname")
+
+  .form-group
+    = f.label :content, Contact.human_attribute_name(:content)
+    .row.justify-content-center
+      .col-sm-4.mb-3
+        = f.text_area :content, size: '10x10', class: 'form-control'
+
+  = f.submit "確認画面へ", class: "btn btn-primary button-submit"

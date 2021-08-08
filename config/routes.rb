@@ -18,6 +18,12 @@ Rails.application.routes.draw do
   
   resources :password_resets, only: %i[new create edit update]
   
+  resources :contacts, only: %i[new create] do
+    collection do
+      post :confirm
+    end
+  end
+  
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
