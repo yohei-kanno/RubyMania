@@ -12,7 +12,7 @@
               .sub-title
                 = "こんな問題が出題されます！"
                 - unless category.questions.count == 0
-                  - q = category.questions.sample(1)[0]
+                  - q = category.questions.first
                   .box-container
                     = q.title
                   .box-content

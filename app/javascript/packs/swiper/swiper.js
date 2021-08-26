@@ -6,7 +6,7 @@ const swiper = new Swiper('.swiper-container', {
     delay: 2500,
   },
   direction: "horizontal",
-  effect: "coverflow",
+  effect: "flip",
   pagination: {
     el: '.swiper-pagination',
     type: "bullets",
