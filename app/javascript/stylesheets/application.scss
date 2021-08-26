@@ -6,6 +6,16 @@
 @import "errors";
 @import "swiper";
 
+
+.gradation{
+  color: #DA8E00;
+  background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+  
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .border{
   border-radius: 50%;
 }
