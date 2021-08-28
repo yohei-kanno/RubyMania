@@ -10,7 +10,7 @@
       span.header-container
         = " Lv#{current_user.level}"
       = link_to t("link.profile"), profile_path, class: "header-container"
-      = link_to t("link.logout"), logout_path, method: :delete, class: "header-container"
+      = link_to t("link.logout"), logout_path, method: :delete, class: "header-container", data: {confirm: "ログアウトしますか？"}
       
   - else
     .flex-container-name.gradation

@@ -5,7 +5,7 @@ class CreateCategoriesQuestions < ActiveRecord::Migration[6.1]
       t.references :category, null: false, foreign_key: true
       t.timestamps
     end
-    
-    add_index :categories_questions, [:question_id, :category_id], unique: true
+
+    add_index :categories_questions, %i[question_id category_id], unique: true
   end
 end

@@ -16,7 +16,7 @@
 	position: relative;
 	padding: 0.1em 0.3em;
 	display: inline-block;
-	transition: .3s;
+	transition: .1s;
 	color: #95ccff;
   text-decoration:none;
   &:hover{
@@ -110,6 +110,7 @@
   display: inline-block;
   align-items: flex-start;
   font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .wraper{
