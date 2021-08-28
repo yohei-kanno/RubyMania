@@ -1,0 +1,13 @@
+ .swiper-slide
+  span.box-title = category.name 
+  .title
+    = link_to "Let's start!!", questions_path(name: category.name), class: "container-disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
+  .sub-title
+    - unless category.questions.count == 0
+      - q = category.questions.first
+      .box-container
+        = q.title
+      .box-content
+        = q.content
+      .box-choices
+        = render q.choices

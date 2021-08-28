@@ -19,16 +19,16 @@ class User < ApplicationRecord
 
   scope :level_upper, -> { order(level: :desc).limit(9) }
 
-  def level_up!(point)
+  def point_up!(point)
     self.experience_point += point
     save!
   end
 
   def level_up?
     next_level_point = LevelStatus.find_by(level: level + 1).required_experience_points
-    if self.experience_point >= next_level_point
-      self.level += 1
-      save!
-    end
+    return unless self.experience_point >= next_level_point
+
+    self.level += 1
+    save!
   end
 end

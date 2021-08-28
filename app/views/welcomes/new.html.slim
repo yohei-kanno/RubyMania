@@ -4,24 +4,7 @@
       = "こんな問題が出題されます！"
       .swiper-container
         .swiper-wrapper
-          - @categories.each do |category|
-            .swiper-slide
-              span.box-title = category.name 
-              .title
-                = link_to "Let's start!!", questions_path(name: category.name), class: "container-disabled-title", data: {confirm: "#{category.name}編を開始しますか？"}
-              .sub-title
-                - unless category.questions.count == 0
-                  - q = category.questions.first
-                  .box-container
-                    = q.title
-                  .box-content
-                    = q.content
-                  .box-choices
-                    - q.choices.each do |choice|
-                      .box-choice_content
-                        o= choice.content
-
-              
+          = render @categories
         .swiper-pagination.swiper-pagination-black
         .swiper-button-prev.swiper-custom-button
           i.fa.fa-angle-left
@@ -31,7 +14,7 @@
   .top-left.text-left
     .user-ranking-header
       = "ランキング"
-      - user_rank.each.with_index(1) do |(j ,user),i|
+      - user_rank(@users).each.with_index(1) do |(j ,user),i|
         .wrapper
           .wrap
             - if user
@@ -45,3 +28,5 @@
 script src="https://unpkg.com/swiper/swiper-bundle.js" 
 script src="https://unpkg.com/swiper/swiper-bundle.min.js" 
 = javascript_pack_tag "swiper/swiper.js"
+
+              
