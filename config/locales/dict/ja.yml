@@ -5,6 +5,7 @@ ja:
     password: 半角英数字  6文字以上
   
   dict:
+    title: RubyMania
     confirm: 確認画面
     send: 送信する
     back: 戻る
@@ -22,10 +23,14 @@ ja:
     pricacy: プライバシーポリシー
     term: 利用規約
     service: サービス概要
+    please_new_password: 新しいパスワードを入力して下さい
+    login: ログイン
+    remember_login: ログイン情報を記憶する
   
   submit:
     do_answer: 回答する
     do_edit: 編集する
+    do_reset_password: パスワードをリセットする
     
   confirm:
     answer?: これで宜しいですか？
@@ -34,6 +39,5 @@ ja:
     contact: お問い合わせ
     profile: プロフィール
     logout: ログアウト
-    rubymania: RubyMania
     new: 新規登録
-    login: ログイン
+    forgot_password: パスワードを忘れた方はこちら

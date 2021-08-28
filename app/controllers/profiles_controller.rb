@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   def show
     @next_level = LevelStatus.next_level(current_user)
-    @study_records = current_user.study_records.all
+    @study_records = current_user.study_records.recent
   end
 
   def edit

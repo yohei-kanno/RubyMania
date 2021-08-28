@@ -3,7 +3,7 @@
 .title-header
   = t("dict.new_user")
 .mb-3
-  = "新しいパスワードを入力して設定して下さい"
+  = t("please_new_password")
 = form_with model: @user, url: password_reset_path(@token), local: true, method: :patch do |f|      
   .form-group
     = f.label :password, User.human_attribute_name(:password)

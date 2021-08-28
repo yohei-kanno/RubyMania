@@ -1,7 +1,7 @@
 .flex
   - if logged_in?
     .flex-container-name.gradation
-      = link_to "RubyMania", root_path, class: "disabled-title"
+      = link_to t("dict.title"), root_path, class: "disabled-title"
     .flex-header
       - if current_user.avatar.attached?
         = image_tag current_user.avatar.variant(resize_to_limit:[30, 30]), class: "header-container border"
@@ -14,9 +14,9 @@
       
   - else
     .flex-container-name.gradation
-      = link_to t("link.rubymania"), root_path, class: "disabled-title"
+      = link_to t("dict.title"), root_path, class: "disabled-title"
     .flex-header
-      = link_to t("link.login"), login_path, class: "header-container"
+      = link_to t("dict.login"), login_path, class: "header-container"
       = link_to t("link.new"), new_user_path, class: "header-container"
     
 hr/

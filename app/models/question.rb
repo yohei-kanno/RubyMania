@@ -3,4 +3,6 @@ class Question < ApplicationRecord
 
   has_many :categories_questions, dependent: :destroy
   has_many :categories, through: :categories_questions
+
+  scope :random, ->(i) { includes(:choices).sample(i) }
 end

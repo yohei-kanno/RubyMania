@@ -11,4 +11,6 @@ class StudyRecord < ApplicationRecord
       score: point
     )
   end
+
+  scope :recent, -> { includes(:category).order(id: "desc") }
 end
