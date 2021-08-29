@@ -1,0 +1,25 @@
+.message {
+  list-style: none;
+  text-align: center;
+  background-color: orangered;
+  border: solid 1px #ff0000;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.message ul li {
+  color: #fff;
+  text-align: center;
+  list-style: none;
+}
+
+.flash_error {
+  text-align: center;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #FFF;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=errors.css.map */

@@ -7,34 +7,45 @@ class QuestionsController < ApplicationController
         @questions = category.questions.random(10)
       end
     end
+    @@questions = @questions
   end
 
   def answer
-    @questions = []
+    @questions = @@questions
+    question_exist?(params[:question])
     @point = 0
     @msgs = [nil]
-
     choices = Choice.includes([question: :choices]).find(params[:question].except("name").values)
-    insert_msg(choices, @questions, @msgs, @point)
 
-    choices_ids = params[:question].values.drop(1).join(',')
+    insert_msg(choices, @msgs, @point)
     @category = Category.find_by(name: params[:question][:name])
-    StudyRecord.create_record(current_user, @category, choices_ids, @point)
-    current_user.point_up!(@point)
+    ActiveRecord::Base.transaction do
+      record_and_point_up(current_user, @category, @point)
+    end
     flash.now[:mysuccess] = t('flash.level_up') if current_user.level_up?
+  rescue StandardError
+    false
   end
 
   private
 
-  def insert_msg(choices, questions, msgs, point)
+  def insert_msg(choices, msgs, _point)
     choices.each do |choice|
       if choice.answer == true
-        point += 10
+        @point += 10
         msgs << t('dict.correct')
       else
         msgs << t('dict.uncorrect')
       end
-      questions << choice.question
     end
+  end
+
+  def record_and_point_up(current_user, category, _point)
+    StudyRecord.create_record(current_user, category, _point)
+    current_user.point_up!(_point)
+  end
+
+  def question_exist?(params_question)
+    redirect_to root_url if params_question.nil?
   end
 end

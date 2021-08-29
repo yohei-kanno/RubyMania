@@ -11,6 +11,8 @@ table.table.profile-tabel
       td.text-left
         - if current_user.avatar.attached?
           = image_tag current_user.avatar.variant(resize_to_limit:[40, 40]), class: "border"
+        - else 
+          = "設定されていません"
     tr
       th = User.human_attribute_name(:created_at)
       td.text-left = l current_user.created_at

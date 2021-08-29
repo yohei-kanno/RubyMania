@@ -1,8 +1,11 @@
 .flex
   .top-right
     .user-ranking-header
-      = "こんな問題が出題されます！"
       .swiper-container
+        = "こんな問題が出ます！"
+        div
+          - @categories.each do |category|
+            = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag", data: {confirm: "#{category.name}編を開始しますか？"}
         .swiper-wrapper
           = render @categories
         .swiper-pagination.swiper-pagination-black
@@ -10,7 +13,7 @@
           i.fa.fa-angle-left
         .swiper-button-next.swiper-custom-button
           i.fa.fa-angle-right
-            
+          
   .top-left.text-left
     .user-ranking-header
       = "ランキング"
@@ -28,5 +31,6 @@
 script src="https://unpkg.com/swiper/swiper-bundle.js" 
 script src="https://unpkg.com/swiper/swiper-bundle.min.js" 
 = javascript_pack_tag "swiper/swiper.js"
+            
 
               
