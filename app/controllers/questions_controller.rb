@@ -41,6 +41,7 @@ class QuestionsController < ApplicationController
   end
 
   def record_and_point_up(current_user, category, _point)
+    binding.pry
     StudyRecord.create_record(current_user, category, _point)
     current_user.point_up!(_point)
   end

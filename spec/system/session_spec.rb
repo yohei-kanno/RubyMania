@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "ログイン機能", type: :system do
   describe "ログイン、ログアウト" do
-    create_list(:category, 5)
     let(:user){create(:user)}
     context "入力が正常である場合" do
       it "ログイン出来ること" do
