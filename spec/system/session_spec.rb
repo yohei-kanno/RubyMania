@@ -11,7 +11,6 @@ RSpec.describe "ログイン機能", type: :system do
         fill_in "パスワード", with: "foobar"
         click_button "ログイン"
         expect(current_path).to eq root_path
-        binding.pry
       end
     end
   end
