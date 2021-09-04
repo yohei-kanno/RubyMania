@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   validates :agreement, acceptance: { allow_nil: false, message: 'に同意してください', on: :create }
 
-  validates :password, length: { minimum: 6 }, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, length: { minimum: 6 }, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, length: { minimum: 6 }, presence: true, if: lambda {
                                                                                   new_record? || changes[:crypted_password]

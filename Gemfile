@@ -5,7 +5,6 @@ ruby '3.0.2'
 gem 'activeadmin'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'dotenv-rails'
-gem 'draper'
 gem 'enum_help'
 gem 'html2slim'
 gem 'image_processing', '~> 1.2'
@@ -27,6 +26,8 @@ group :development, :test do
   gem 'bullet'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-rails'
   gem 'sqlite3', '~> 1.4'
 end
 
@@ -34,7 +35,6 @@ group :development do
   gem 'letter_opener_web'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'rubocop-rails'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
@@ -43,7 +43,6 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
-  gem 'rubocop', require: false
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
