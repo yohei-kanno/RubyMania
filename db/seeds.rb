@@ -1,7 +1,7 @@
 # 99.times do |i|
 #   LevelStatus.create(
 #     level: i + 2,
-#     required_experience_points: 50 * (i + 2)
+#     required_experience_points: 100 * (i + 2)
 #   )
 # end
 
