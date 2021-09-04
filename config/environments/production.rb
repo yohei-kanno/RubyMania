@@ -14,7 +14,7 @@ Rails.application.configure do
   config.log_tags = [:request_id]
 
   config.action_mailer.perform_caching = false
-  host = 'machines-manager.herokuapp.com'
+  host = 'ruby-mania.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
