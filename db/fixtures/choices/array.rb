@@ -22,7 +22,7 @@ $a_choice11 = '[nil, nil, nil]と表示される'
 $a_choice12 = is_exception
 
 # a_question4
-$a_choice13 =  '[0, 1, 2]と表示される'
+$a_choice13 = '[0, 1, 2]と表示される'
 $a_choice14 = '[0, 2, 4]と表示される'
 $a_choice15 = '[nil, nil, nil]と表示される'
 $a_choice16 = is_exception

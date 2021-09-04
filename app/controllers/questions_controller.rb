@@ -7,17 +7,16 @@ class QuestionsController < ApplicationController
         @questions = category.questions.random(10)
       end
     end
-    @@questions = @questions
   end
 
   def answer
-    @questions = @@questions
     question_exist?(params[:question])
+    @questions = []
     @point = 0
     @msgs = [nil]
     choices = Choice.includes([question: :choices]).find(params[:question].except("name").values)
 
-    insert_msg(choices, @msgs, @point)
+    insert_msg(choices, @msgs, @point, @questions)
     @category = Category.find_by(name: params[:question][:name])
     ActiveRecord::Base.transaction do
       record_and_point_up(current_user, @category, @point)
@@ -29,7 +28,7 @@ class QuestionsController < ApplicationController
 
   private
 
-  def insert_msg(choices, msgs, _point)
+  def insert_msg(choices, msgs, _point, questions)
     choices.each do |choice|
       if choice.answer == true
         @point += 10
@@ -37,11 +36,11 @@ class QuestionsController < ApplicationController
       else
         msgs << t('dict.uncorrect')
       end
+      questions << choice.question
     end
   end
 
   def record_and_point_up(current_user, category, _point)
-    binding.pry
     StudyRecord.create_record(current_user, category, _point)
     current_user.point_up!(_point)
   end

@@ -7,6 +7,8 @@ AllCops:
   DisplayStyleGuide: true
   StyleGuideBaseURL: https://github.com/fortissimo1997/ruby-style-guide/blob/japanese/README.ja.md
   Exclude:
+    - 'db/questions/*'
+    - 'db/fixtures/**/*'
     - 'db/migrate/*'
     - 'node_modules/**/*'
     - 'bin/*'

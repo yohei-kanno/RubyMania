@@ -7,23 +7,17 @@ class User < ApplicationRecord
 
   enum admin: { general: false, admin: true }
 
-  with_options presence: true do
-    validates :nickname
-    validates :email
-    validates :password
-    validates :password_confirmation
-  end
-
   validates :admin, inclusion: %w[admin general]
-  validates :email, uniqueness: true
+  validates :nickname, presence: true
+  validates :email, presence: true, uniqueness: true
 
   validates :agreement, acceptance: { allow_nil: false, message: 'に同意してください', on: :create }
 
   validates :password, length: { minimum: 6 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
-  validates :password_confirmation, length: { minimum: 6 }, if: lambda {
-                                                                  new_record? || changes[:crypted_password]
-                                                                }
+  validates :password_confirmation, length: { minimum: 6 }, presence: true, if: lambda {
+                                                                                  new_record? || changes[:crypted_password]
+                                                                                }
 
   scope :level_upper, ->(i) { order(level: :desc).limit(i) }
 
