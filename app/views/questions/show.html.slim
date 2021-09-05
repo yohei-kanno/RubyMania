@@ -1,4 +1,4 @@
-h1 = "RubyMania #{@category_name}編"
+h1 = "#{@category_name}編"
 - unless @questions.count.zero?
   = form_with model: @questions, url: answer_questions_path, method: :post,  local: true do |f|
     - @questions.each.with_index(1) do |question, i|
