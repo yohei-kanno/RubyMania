@@ -11,21 +11,10 @@
   }
 }
 
-.container-disabled-title {
-	position: relative;
-	padding: 0.1em 0.3em;
-	display: inline-block;
-	transition: .1s;
-	color: #95ccff;
-  text-decoration:none;
-  &:hover{
-    color: #2b5985;
-  }
-}
 
 .container-disabled-tag {
 	position: relative;
-	padding: 0.1em 0.3em;
+	padding: 0.1em 0.5em;
 	display: inline-block;
   font-size: 12px;
   text-decoration: none;
@@ -34,34 +23,188 @@
   border-radius: 8px;
   margin-left: 3px;
   &:hover{
-    color: gray;
+    color: lightgray;
+  }
+}
+// --------------------------------------------
+.container-disabled-title-1 {
+	@include relative-title;
+	color: #F06060;
+  &:hover{
+    color: #F06060;
   }
 }
 
-.container-disabled-title::before,
-.container-disabled-title::after {
-	position: absolute;
-	content: '';
-	width: 0;
-	height: 1px;
-	background-color: #95ccff;
-	transition: .3s;
+.container-disabled-title-1::before,
+.container-disabled-title-1::after {
+	@include absolute-title;
+	background-color: #F06060;
 }
 
-.container-disabled-title::before {
+.container-disabled-title-1::before {
 	top: 0;
 	left: 0;
 }
 
-.container-disabled-title::after {
+.container-disabled-title-1::after {
+  bottom: 0;
+	right: 0;
+}
+.container-disabled-title-1:hover::before,
+.container-disabled-title-1:hover::after {
+  width: 100%;
+}
+
+// ------------------------------------------------
+.container-disabled-title-2 {
+	@include relative-title;
+	color: skyblue;
+  &:hover{
+    color: skyblue;
+  }
+}
+
+.container-disabled-title-2::before,
+.container-disabled-title-2::after {
+	@include absolute-title;
+	background-color: skyblue;
+}
+
+.container-disabled-title-2::before {
+	top: 0;
+	left: 0;
+}
+
+.container-disabled-title-2::after {
 	bottom: 0;
 	right: 0;
 }
-.container-disabled-title:hover::before,
-.container-disabled-title:hover::after {
+.container-disabled-title-2:hover::before,
+.container-disabled-title-2:hover::after {
 	width: 100%;
 }
 
+// ------------------------------------------------
+
+.container-disabled-title-3 {
+	@include relative-title;
+	color: green;
+  &:hover{
+    color: green;
+  }
+}
+
+.container-disabled-title-3::before,
+.container-disabled-title-3::after {
+	@include absolute-title;
+	background-color: green;
+}
+
+.container-disabled-title-3::before {
+	top: 0;
+	left: 0;
+}
+
+.container-disabled-title-3::after {
+	bottom: 0;
+	right: 0;
+}
+.container-disabled-title-3:hover::before,
+.container-disabled-title-3:hover::after {
+	width: 100%;
+}
+
+// ------------------------------------------------
+
+.container-disabled-title-4 {
+	@include relative-title;
+	color: yellowgreen;
+  &:hover{
+    color: yellowgreen;
+  }
+}
+
+.container-disabled-title-4::before,
+.container-disabled-title-4::after {
+	@include absolute-title;
+	background-color: yellowgreen;
+}
+
+.container-disabled-title-4::before {
+	top: 0;
+	left: 0;
+}
+
+.container-disabled-title-4::after {
+	bottom: 0;
+	right: 0;
+}
+.container-disabled-title-4:hover::before,
+.container-disabled-title-4:hover::after {
+	width: 100%;
+}
+
+// ------------------------------------------------
+
+.container-disabled-title-5 {
+	@include relative-title;
+	color: palevioletred;
+  &:hover{
+    color: palevioletred;
+  }
+}
+
+.container-disabled-title-5::before,
+.container-disabled-title-5::after {
+	@include absolute-title;
+	background-color: palevioletred;
+}
+
+.container-disabled-title-5::before {
+	top: 0;
+	left: 0;
+}
+
+.container-disabled-title-5::after {
+	bottom: 0;
+	right: 0;
+}
+.container-disabled-title-5:hover::before,
+.container-disabled-title-5:hover::after {
+	width: 100%;
+}
+
+// ------------------------------------------------
+
+.container-disabled-title-6 {
+	@include relative-title;
+	color: peru;
+  &:hover{
+    color: peru;
+  }
+}
+
+.container-disabled-title-6::before,
+.container-disabled-title-6::after {
+	@include absolute-title;
+	background-color: peru;
+}
+
+.container-disabled-title-6::before {
+	top: 0;
+	left: 0;
+}
+
+.container-disabled-title-6::after {
+	bottom: 0;
+	right: 0;
+}
+.container-disabled-title-6:hover::before,
+.container-disabled-title-6:hover::after {
+	width: 100%;
+}
+
+// ------------------------------------------------
 .sub-tutle{
   font-size: 20px;
 }
@@ -105,16 +248,6 @@
   margin-bottom: 50px;
 }
 
-.user-ranking-header{
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.user-ranking{
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
 .image-font{
   height: 25px;
   display: inline-block;
@@ -132,12 +265,21 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+.under{
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
   
 hr {
   margin: 0;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #ccc;
 }
+
+.title{
+  font-weight: bold;
+}
+
 
 @media screen and (max-width: 1100px) {
   .flex{

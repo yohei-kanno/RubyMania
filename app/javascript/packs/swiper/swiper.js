@@ -1,12 +1,12 @@
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper', {
   direction: 'vertical',
   loop: true,
-  speed: 1500,
+  speed: 1000,
   autoplay: {
-    delay: 2500,
+    delay: 4000,
   },
   direction: "horizontal",
-  effect: "flip",
+  effect: "cards",
   pagination: {
     el: '.swiper-pagination',
     type: "bullets",
