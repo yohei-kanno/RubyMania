@@ -8,8 +8,7 @@ html
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    link href="https://unpkg.com/swiper/swiper-bundle.css" rel="stylesheet" /
-    link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" /
+    link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" /
   body
     = render 'shared/header'
     - flash.each do |key, value|
@@ -17,3 +16,5 @@ html
         = value
     = yield
     = render 'shared/footer'
+    script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" 
+    = javascript_pack_tag "swiper/swiper.js"

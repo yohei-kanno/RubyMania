@@ -1,12 +1,12 @@
 .flex
   .top-right
-    .user-ranking-header
-          
-      .swiper-container
-        = "こんな問題が出ます！"
+    .title-header
+      .swiper
         div
           - @categories.each do |category|
             = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag", data: {confirm: "#{category.name}編を開始しますか？"}
+        .title
+          span.under = "Ruby特化の問題学習サービス"
         .swiper-wrapper
           = render @categories
         .swiper-pagination.swiper-pagination-black
@@ -16,8 +16,8 @@
           i.fa.fa-angle-right
             
   .top-left.text-left
-    .user-ranking-header
-      = "ランキング"
+    .title-header
+      span.under = "RANKING"
       - user_rank(@users).each.with_index(1) do |(j ,user),i|
         .wrapper
           .wrap
@@ -28,9 +28,5 @@
               span.ml-10 = user.nickname
             - else
               = "まだユーザーがいません"
-          
-script src="https://unpkg.com/swiper/swiper-bundle.js" 
-script src="https://unpkg.com/swiper/swiper-bundle.min.js" 
-= javascript_pack_tag "swiper/swiper.js"
 
               
