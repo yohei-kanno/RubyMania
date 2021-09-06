@@ -68,9 +68,9 @@
   .choice_content_tag{
     white-space: pre;
     display: inline-flex;
-    padding: 9px 0;
+    padding: 6px 0;
     width: 85%;
-    font-size: 12px;
+    font-size: 7px;
   }
   
   .question_content{
@@ -78,17 +78,18 @@
     background-color: #E6D8CA;
     border: 1px solid black;
     margin-bottom: 15px;
-    padding: 15px;
+    padding: 10px;
     white-space: pre;
     font-size: 8px;
   }
   
-  .choice_content_tag{
-    white-space: pre;
-    display: inline-flex;
-    padding: 15px 0;
-    width: 85%;
+  .question_title{
     font-size: 8px;
+    width: 80%;
+    margin: auto;
+    text-align: left;
   }
+  
+  
 }
   
