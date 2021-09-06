@@ -4,7 +4,7 @@
       .swiper
         div
           - @categories.each do |category|
-            = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag", data: {confirm: "#{category.name}編を開始しますか？"}
+            = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: "#{category.name}編を開始しますか？"}
         .title
           span.under = "Ruby特化の問題学習サービス"
         .swiper-wrapper

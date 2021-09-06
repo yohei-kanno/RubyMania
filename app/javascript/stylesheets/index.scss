@@ -37,6 +37,24 @@
   margin: 5px;
 }
 
+@mixin button-form{
+  color: #fff;
+  display: inline-block;
+  text-decoration:none;
+  font-size: 18px;
+  border-radius: 6px;
+  padding: 3px 50px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  &:hover{
+    color: #FFF;
+    position: relative;
+    top: 3px;
+    box-shadow: none;
+  }
+}
+
+
 @mixin relative-title{
   position: relative;
 	padding: 0.1em 0.3em;
@@ -52,4 +70,15 @@
 	width: 0;
 	height: 1px;
 	transition: .3s;
+}
+
+@mixin tag-form{
+  position: relative;
+	padding: 0.1em 0.5em;
+	display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  margin-left: 3px;
 }

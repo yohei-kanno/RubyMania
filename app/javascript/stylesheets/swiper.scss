@@ -5,65 +5,6 @@
   margin-left: 30px;
 }
 
-.swiper-effect-1{
-  @include border-swiper;
-  border: solid 3px #F06060;
-}
-
-.box-title-1 {
-  @include title-swiper;
-  color: #F06060;
-}
-
-.swiper-effect-2{
-  @include border-swiper;
-  border: solid 3px skyblue;
-}
-
-.box-title-2 {
-  @include title-swiper;
-  color: skyblue;
-}
-
-.swiper-effect-3{
-  @include border-swiper;
-  border: solid 3px green;
-}
-
-.box-title-3 {
-  @include title-swiper;
-  color: green;
-}
-
-.swiper-effect-4{
-  @include border-swiper;
-  border: solid 3px yellowgreen;
-}
-
-.box-title-4 {
-  @include title-swiper;
-  color: yellowgreen;
-}
-
-.swiper-effect-5{
-  @include border-swiper;
-  border: solid 3px palevioletred;
-}
-
-.box-title-5 {
-  @include title-swiper;
-  color: palevioletred;
-}
-
-.swiper-effect-6{
-  @include border-swiper;
-  border: solid 3px peru;
-}
-
-.box-title-6 {
-  @include title-swiper;
-  color: peru;
-}
 
 .swiper-custom-parent{
   position: relative;
