@@ -1,32 +1,14 @@
-.flex
-  .top-right
-    .title-header
-      .swiper
-        div
-          - @categories.each do |category|
-            = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: "#{category.name}編を開始しますか？"}
-        .title
-          span.under = "Ruby特化の問題学習サービス"
-        .swiper-wrapper
-          = render @categories
-        .swiper-pagination.swiper-pagination-black
-        .swiper-button-prev.swiper-custom-button
-          i.fa.fa-angle-left
-        .swiper-button-next.swiper-custom-button
-          i.fa.fa-angle-right
-            
-  .top-left.text-left
-    .title-header
-      span.under = "RANKING"
-      - user_rank(@users).each.with_index(1) do |(j ,user),i|
-        .wrapper
-          .wrap
-            - if user
-              = image_tag j, class: "image-font"
-              span.ml-5 = "#{i}位"
-              span.ml-10 = "Lv#{user.level}"
-              span.ml-10 = user.nickname
-            - else
-              = "まだユーザーがいません"
-
-              
+.swiper
+  div
+    - @categories.each do |category|
+      = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: "#{category.name}編を開始しますか？"}
+  .title
+    span.under = "Ruby特化の問題学習サービス"
+  .swiper-wrapper
+    = render @categories
+  .swiper-pagination.swiper-pagination-black
+  .swiper-button-prev.swiper-custom-button
+    i.fa.fa-angle-left
+  .swiper-button-next.swiper-custom-button
+    i.fa.fa-angle-right
+        

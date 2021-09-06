@@ -1,0 +1,27 @@
+button.btn.btn-link.footer-container data-bs-target="#Modal-privacy" data-bs-toggle="modal" type="button" 
+  = "ランキング"
+#Modal-privacy.modal.fade aria-hidden="true" aria-labelledby="Modal-privacy" tabindex="-1" 
+  .modal-dialog.modal-dialog-scrollable.modal-lg
+    .modal-content
+      .modal-header
+        h5#Modal-privacy.modal-title = "ユーザーランキング"
+        button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button" 
+      .modal-body
+         
+        .top-left.text-left
+          .title-header
+            span.under = "RANKING"
+            - user_rank(@users).each.with_index(1) do |(j ,user),i|
+              .wrapper
+                .wrap
+                  - if user
+                    = image_tag j, class: "image-font"
+                    span.ml-5 = "#{i}位"
+                    span.ml-10 = "Lv#{user.level}"
+                    span.ml-10 = user.nickname
+                  - else
+                    = "まだユーザーがいません"
+
+
+      .modal-footer
+        button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close

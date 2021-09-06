@@ -10,6 +10,7 @@
       span.header-container
         = " Lv#{current_user.level}"
       = link_to t("link.profile"), profile_path, class: "header-container"
+      = render 'shared/ranking'
       = link_to t("link.logout"), logout_path, method: :delete, class: "header-container", data: {confirm: "ログアウトしますか？"}
       
   - else
@@ -17,6 +18,7 @@
       = link_to t("dict.title"), root_path, class: "disabled-title"
     .flex-header
       = link_to t("dict.login"), login_path, class: "header-container"
+      = render 'shared/ranking'
       = link_to t("link.new"), new_user_path, class: "header-container"
     
 hr/
