@@ -54,31 +54,18 @@
   }
 }
 
-
-@mixin relative-title{
-  position: relative;
-	padding: 0.1em 0.3em;
-	display: inline-block;
-	transition: .1s;
-  text-decoration:none;
-  font-size: 20px;
-}
-
-@mixin absolute-title{
-  position: absolute;
-	content: '';
-	width: 0;
-	height: 1px;
-	transition: .3s;
-}
-
 @mixin tag-form{
-  position: relative;
 	padding: 0.1em 0.5em;
 	display: inline-block;
   font-size: 12px;
   text-decoration: none;
-  color: white;
+  color: #FFF;
   border-radius: 8px;
   margin-left: 3px;
+  &:hover{
+    color: #FFF;
+    position: relative;
+    top: 2px;
+    box-shadow: none;
+  }
 }

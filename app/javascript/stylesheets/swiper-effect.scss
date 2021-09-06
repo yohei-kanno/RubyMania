@@ -1,159 +1,26 @@
-.container-disabled-tag-1 {
-	@include tag-form;
-  background-color: #F06060;
-  &:hover{
-    color: lightgray;
+$colorList:(1:#F06060, 2:#51b8f5, 3:#089127, 4:#d7e000, 5:#ff4cc4, 6:#ff9f06);
+
+@each $i,$color in $colorList {
+  .container-disabled-title-#{$i}{
+    background-color: $color;
+    box-shadow: 0px 3px darken($color, 25% );
+	  @include button-form;
   }
-}
-
-.container-disabled-tag-2 {
-	@include tag-form;
-  background-color: #51b8f5;
-  &:hover{
-    color: lightgray;
+  
+  .container-disabled-tag-#{$i} {
+    @include tag-form;
+    background-color: $color;
+    box-shadow: 0px 3px darken($color, 25% );
   }
-}
-
-.container-disabled-tag-3 {
-	@include tag-form;
-  background-color: #089127;
-  &:hover{
-    color: lightgray;
+  
+  .swiper-effect-#{$i}{
+    @include border-swiper;
+    border: solid 3px $color;
   }
-}
 
-.container-disabled-tag-3 {
-	@include tag-form;
-  background-color: #089127;
-  &:hover{
-    color: lightgray;
+  .box-title-#{$i} {
+    @include title-swiper;
+    color: $color;
   }
+
 }
-
-.container-disabled-tag-4 {
-	@include tag-form;
-  background-color: #d7e000;
-  &:hover{
-    color: lightgray;
-  }
-}
-
-.container-disabled-tag-5 {
-	@include tag-form;
-  background-color: #ff4cc4;
-  &:hover{
-    color: lightgray;
-  }
-}
-
-.container-disabled-tag-6 {
-	@include tag-form;
-  background-color: #ff9f06;
-  &:hover{
-    color: lightgray;
-  }
-}
-
-
-.swiper-effect-1{
-  @include border-swiper;
-  border: solid 3px #F06060;
-}
-
-.box-title-1 {
-  @include title-swiper;
-  color: #F06060;
-}
-
-.swiper-effect-2{
-  @include border-swiper;
-  border: solid 3px #51b8f5;
-}
-
-.box-title-2 {
-  @include title-swiper;
-  color: #51b8f5;
-}
-
-.swiper-effect-3{
-  @include border-swiper;
-  border: solid 3px #089127;
-}
-
-.box-title-3 {
-  @include title-swiper;
-  color: #089127;
-}
-
-.swiper-effect-4{
-  @include border-swiper;
-  border: solid 3px #d7e000;
-}
-
-.box-title-4 {
-  @include title-swiper;
-  color: #d7e000;
-}
-
-.swiper-effect-5{
-  @include border-swiper;
-  border: solid 3px #ff4cc4;
-}
-
-.box-title-5 {
-  @include title-swiper;
-  color: #ff4cc4;
-}
-
-.swiper-effect-6{
-  @include border-swiper;
-  border: solid 3px #ff9f06;
-}
-
-.box-title-6 {
-  @include title-swiper;
-  color: #ff9f06;
-}
-
-// --------------------------------------------
-.container-disabled-title-1 {
-  background-color: #F06060;
-  box-shadow: 0px 3px #b84747;
-	@include button-form;
-}
-
-.container-disabled-title-2 {
-  background-color: #51b8f5;
-  box-shadow: 0px 3px #357ba3;
-	@include button-form;
-}
-
-// ------------------------------------------------
-
-.container-disabled-title-3 {
-  background-color: #089127;
-  box-shadow: 0px 3px #055016;
-	@include button-form;
-}
-// ------------------------------------------------
-
-.container-disabled-title-4 {
-  background-color: #d7e000;
-  box-shadow: 0px 3px #979c06;
-	@include button-form;
-}
-// ------------------------------------------------
-
-.container-disabled-title-5 {
-  background-color: #ff4cc4;
-  box-shadow: 0px 3px #942a71;
-	@include button-form;
-}
-// ------------------------------------------------
-
-.container-disabled-title-6 {
-	background-color: #ff9f06;
-  box-shadow: 0px 3px #ad6e08;
-	@include button-form;
-}
-// ------------------------------------------------
