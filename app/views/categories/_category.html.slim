@@ -1,13 +1,14 @@
  div class="swiper-slide swiper-effect-#{category.id}"
   span class="box-title-#{category.id}" = category.name 
-  .title
+  div
     = link_to "Let's start!!", questions_path(name: category.name), class: "container-disabled-title-#{category.id}", data: {confirm: "#{category.name}編を開始しますか？"}
   .sub-title
     - unless category.questions.count == 0
       - q = category.questions.first
-      .box-container
+      .question-title
         = q.title
-      .box-content
+      .question-content-box
         = q.content
-      .box-choices
-        = render q.choices
+      - q.choices.each do |choice|
+        .choice-content-box
+          = choice.content

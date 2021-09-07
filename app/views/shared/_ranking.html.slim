@@ -1,27 +1,24 @@
-button.btn.btn-link.footer-container data-bs-target="#Modal-privacy" data-bs-toggle="modal" type="button" 
+button.btn.btn-link data-bs-target="#Modal-ranking" data-bs-toggle="modal" type="button" 
   = "ランキング"
-#Modal-privacy.modal.fade aria-hidden="true" aria-labelledby="Modal-privacy" tabindex="-1" 
+#Modal-ranking.modal.fade aria-hidden="true" aria-labelledby="Modal-ranking" tabindex="-1" 
   .modal-dialog.modal-dialog-scrollable.modal-lg
     .modal-content
       .modal-header
-        h5#Modal-privacy.modal-title = "ユーザーランキング"
+        #Modal-ranking.modal-title
+          = "Lvランキング"
         button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button" 
-      .modal-body
-         
-        .top-left.text-left
-          .title-header
-            span.under = "RANKING"
-            - user_rank(@users).each.with_index(1) do |(j ,user),i|
-              .wrapper
-                .wrap
-                  - if user
-                    = image_tag j, class: "image-font"
-                    span.ml-5 = "#{i}位"
-                    span.ml-10 = "Lv#{user.level}"
-                    span.ml-10 = user.nickname
-                  - else
-                    = "まだユーザーがいません"
-
-
+      .modal-body.text-start
+        .modal-title 
+        - user_rank(@users).each.with_index(1) do |(j ,user),i|
+          - if user
+            .ranking-content
+              = image_tag j, class: "image-font ml-5"
+              span.me-3 = "#{i}位"
+              span.me-3= "Lv#{user.level}"
+              span.me-3= "#{user.nickname}"
+              span.me-3= "チャレンジした回数：#{user.study_records.count}回"
+          - else
+            .ranking-content
+              = "まだユーザーがいません"
       .modal-footer
         button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close

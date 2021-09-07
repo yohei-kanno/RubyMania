@@ -1,13 +1,20 @@
+.flash_error{
+  list-style: none;
+  background-color: $failure-color;
+  color: $white;
+  border-radius: 5px;
+}
+
 .alert-mydanger{
-  background-color: orangered;
-  border: solid 3px #ff0000;
-  color: #fff;
+  background-color: $failure-color;
+  border: solid 3px darken($failure-color, 5%);
+  color: $white;
   padding: 0;
 }
 
 .alert-mysuccess{
-  background-color: #0055ff;
-  border: solid 3px #2b00ff;
-  color: #fff;
+  background-color: $success-color;
+  border: solid 3px darken($success-color, 5%);
+  color: $white;
   padding: 0;
 }

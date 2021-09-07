@@ -1,16 +1,17 @@
-h1 = "#{@category_name}編"
+.title 
+  = "#{@category_name}編"
 - unless @questions.count.zero?
   = form_with model: @questions, url: answer_questions_path, method: :post,  local: true do |f|
     - @questions.each.with_index(1) do |question, i|
-      .question_title 
+      .question-title.mb-5
         = "問#{i}:" "#{question.title}"
-        .choice_container
-          .question_content = question.content
-          - question.choices.each do |choice|
-            .choice_content
-              span.radio_button_container = f.radio_button "#{i}","#{choice.id}", checked: true , class: "radio_button"
-              span.choice
-                = f.label "#{i}_#{choice.id}", choice.content, class: "choice_content_tag"
-                = f.hidden_field :name, value: params[:name]
+        .question-content
+           = question.content
+        - question.choices.each do |choice|
+          .choice-content
+            span.radio-button-container = f.radio_button "#{i}","#{choice.id}", checked: true , class: "radio_button"
+            span.choice
+              = f.label "#{i}_#{choice.id}", choice.content, class: "choice-content-tag"
+              = f.hidden_field :name, value: params[:name]
                 
     p = f.submit t("submit.do_answer"), class: "btn btn-primary", data: { confirm: t("confirm.answer?")}

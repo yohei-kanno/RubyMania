@@ -1,0 +1,28 @@
+.modal-title{
+  font-size: $big-font;
+  font-weight: bold;
+}
+
+.btn-link{
+  text-decoration: none;
+  font-size: $basic-font;
+  color: #4b4b4b;
+}
+
+.ranking-content{
+  margin-bottom: 10px;
+  border-bottom: 4px rgb(236, 165, 12) solid;
+}
+
+.image-font{
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .btn-link{
+    font-size: $small-font;
+  }
+}

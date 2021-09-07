@@ -1,11 +1,56 @@
 @import "bootstrap";
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import "top";
-@import "flash";
 @import "question";
-@import "errors";
-@import "swiper";
 @import "swiper-effect";
+@import "modal";
+@import "flash";
+@import "variable";
+
+
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header{
+  width: 100%;
+  padding: 15px 5% 5px;
+  display: flex;
+  align-items: center;
+  background-color: #f8eef6;
+}
+
+footer{
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 5%;
+  background-color: #a3dee8;
+}
+
+h1{
+  font-size: $big-font;
+}
+
+a{
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  display: flex;
+  > li{
+    margin: 0 0 0 15px;
+    font-size: $basic-font;
+  }
+}
+
+nav{
+  margin: 0 0 0 auto;
+}
 
 
 .gradation{
@@ -16,58 +61,21 @@
   -webkit-text-fill-color: transparent;
 }
 
-
-.border{
-  border-radius: 50%;
-}
-
-body{
-  margin: auto;
-  text-align: center;
-}
-
-.form-group{
-  margin: auto;
-}
-
-.title-header{
-  margin: 15px;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.text-left{
-  text-align: left;
-}
-
-.text-center{
-  text-align: center;
-}
-
-.btn{
-  vertical-align: initial;
-}
-
 .input-group{
   width: 300px;
 }
 
-.form-group{
-  text-align: center;
+@media screen and (max-width: 600px) {
+  ul{
+    > li{
+      margin: 0 0 0 5px;
+      font-size: $small-font;
+    }
+  }
+      
+  h1{
+    font-size: $basic-font;
+  }
 }
-
-.table > :not(caption) > * > * {
-  padding: 15px 50px;
-}
-
-.ml-30{
-  margin-left: 30px;
-}
-
-.ml-10{
-  margin-left: 10px;
-}
-
-.ml-5{
-  margin-left: 5px;
-}
+  
+  

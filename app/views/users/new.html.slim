@@ -1,6 +1,6 @@
 = render "shared/errors",{object: @user}
 
-.title-header
+.title
   = t("dict.new_user")
 
 = form_with model: @user, local: true do |f|
@@ -23,14 +23,7 @@
             span
               i.far.fa-envelope
         = f.email_field :email, class: "form-control", placeholder: t("placeholder.email")
-        
-  .form-group
-    = f.label :avatar, User.human_attribute_name(:avatar)
-    .row.justify-content-center.mb-3
-      .input-group
-        = f.file_field :avatar, class: "form-control"
-  
-        
+
   .form-group
     = f.label :password, User.human_attribute_name(:password)
     .row.justify-content-center.mb-3
@@ -54,4 +47,4 @@
     = f.check_box :agreement, :as => :boolean, checked:false
     = f.label :agreement, "利用規約とプライバシーポリシーに同意する"
             
-  = f.submit class: "btn btn-primary"
+  = f.submit class: "btn btn-primary btn-sm"

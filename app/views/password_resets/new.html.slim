@@ -1,4 +1,4 @@
-.title-header
+.title
   = "パスワードリセット申請フォーム"
   
 .mb-3
@@ -16,6 +16,4 @@
               i.far.fa-envelope
         = f.email_field :email, class: "form-control", placeholder: t("placeholder.email")
             
-    = f.submit t("submit.do_reset_password"), class: "btn btn-primary mb-3 "
-    
-    p = "上記のメールアドレスに再設定用のメールアドレスを送信します。"
+    = f.submit t("submit.do_reset_password"), class: "btn btn-primary btn-sm"

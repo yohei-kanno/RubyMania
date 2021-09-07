@@ -1,4 +1,4 @@
 tr 
-  td = l study_record.studied_at
+  td = study_record.studied_at.strftime("%Y-%m-%d %H:%M")
   td = study_record.category.name
   td = "#{study_record.score}/100点"

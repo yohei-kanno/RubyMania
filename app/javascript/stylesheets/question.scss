@@ -1,95 +1,70 @@
-.question_title{
-  font-size: 15px;
-  width: 80%;
-  margin: auto;
-  text-align: left;
+@import 'variable';
+
+.question-title{
+  @include question-title-form;
+  font-size: $basic-font;
 }
 
-.question_content{
-  text-align: left;
-  background-color: #E6D8CA;
-  border: 1px solid black;
-  margin-bottom: 15px;
-  padding: 15px;
-  white-space: pre;
-  font-size: 15px;
+.question-content{
+  @include question-content-form;
+  font-size: $basic-font;
 }
 
-.choice_container{
-  margin-bottom: 40px;
+.choice-content-tag{
+  @include choice-content-tag-form;
+  font-size: $basic-font;
 }
 
-.choice_content{
-  background-color: #F7E9E9;
+.choice-content{
+  background-color: $choice-color;
   border: 1px solid black;
   margin-bottom: .4rem;
 }
 
-.choice_content_tag{
-  margin-left: 10px;
-  
+.choice-content-box{
+  @include content-box-form;
+  background-color: $choice-color;
 }
 
-.radio_button_container{
+.question-content-box{
+  @include content-box-form;
+  background-color: $question-color;
+}
+
+
+.radio-button-container{
   vertical-align: middle;
-  
 }
-
 
 .radio_button{
-  top: 1.5px;
   position: relative;
-  margin-left: 10px;
-}
-
-.choice_content_tag{
-  white-space: pre;
-  display: inline-flex;
-  padding: 15px 0;
-  width: 85%;
-  font-size: 15px;
+  top: 1.2px;
+  margin: 0 10px;
 }
 
 .correct{
-  background-color: rgb(93, 218, 93);
-  color: white;
-  padding: 1px 8px;
-  border-radius: 4px;
+  @include correct-form; 
+  background-color: $success-color;
 }
 
-.un_correct{
-  background-color: red;
-  color: white;
-  padding: 1px 8px;
-  border-radius: 4px;
+.uncorrect{
+  @include correct-form;  
+  background-color: $failure-color;
 }
   
 @media screen and (max-width: 600px) {
-  .choice_content_tag{
-    white-space: pre;
-    display: inline-flex;
-    padding: 10px 0;
-    width: 85%;
-    font-size: 10px;
+  .choice-content-tag{
+    @include choice-content-tag-form;
+    font-size: $small-font;
+  }
+
+  .question-content{
+    @include question-content-form;
+    font-size: $small-font;
   }
   
-  .question_content{
-    text-align: left;
-    background-color: #E6D8CA;
-    border: 1px solid black;
-    margin-bottom: 15px;
-    padding: 10px;
-    white-space: pre;
-    font-size: 8px;
+  .question-title{
+    @include question-title-form;
+    font-size: $small-font;
   }
-  
-  .question_title{
-    font-size: 8px;
-    width: 80%;
-    margin: auto;
-    text-align: left;
-  }
-  
-  
 }
-  

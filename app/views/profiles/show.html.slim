@@ -1,31 +1,27 @@
-table.table.profile-tabel
+.title
+  = "プロフィール画面"
+
+table.table
   tbody
     tr
       th = User.human_attribute_name(:nickname)
-      td.text-left = current_user.nickname
+      td.text-start = current_user.nickname
     tr
       th = User.human_attribute_name(:level)
-      td.text-left = "Lv #{current_user.level}"
-    tr
-      th = User.human_attribute_name(:avatar)
-      td.text-left
-        - if current_user.avatar.attached?
-          = image_tag current_user.avatar.variant(resize_to_limit:[40, 40]), class: "border"
-        - else 
-          = "設定されていません"
+      td.text-start = "Lv #{current_user.level}"
     tr
       th = User.human_attribute_name(:created_at)
-      td.text-left = l current_user.created_at
+      td.text-start = l current_user.created_at
     tr
       th = User.human_attribute_name(:cumulative_experience_points)
-      td.text-left = "#{current_user.experience_point/10 }問"
+      td.text-start = "#{current_user.experience_point/10 }問"
     tr
       th = User.human_attribute_name(:next_level_points)
-      td.text-left = "あと#{@next_level}問"
+      td.text-start = "あと#{@next_level}問"
     tr
       th = "今までの履歴"
-      td.text-left
-        button.btn.btn-link.modal-container data-bs-target="#Modal-record" data-bs-toggle="modal" type="button" 
+      td.text-start
+        button.modal-container.btn.btn-outline-secondary.btn-sm data-bs-target="#Modal-record" data-bs-toggle="modal" type="button" 
           = "記録を見る"
         #Modal-record.modal.fade aria-hidden="true" aria-labelledby="Modal-term" tabindex="-1" 
           .modal-dialog.modal-dialog-scrollable.modal-lg
@@ -38,7 +34,7 @@ table.table.profile-tabel
               .modal-footer
                 button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close
                         
-= link_to t("submit.do_edit"), edit_profile_path, class: "btn btn-primary"
+= link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm"
 
 
         

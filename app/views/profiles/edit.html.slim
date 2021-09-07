@@ -1,7 +1,7 @@
 = render "shared/errors",{object: @user}
 
-.title-header
-  = t("dict.edit_user")
+.title
+  = "ニックネーム変更画面"
   
 = form_with model: @user, url: profile_path, method: :patch, local: true do |f|
   .form-group
@@ -13,11 +13,4 @@
             span
               i.fas.fa-user
         = f.text_field :nickname, class: "form-control", placeholder: t("placeholder.nickname")
-              
-  .form-group
-    = f.label :avatar, User.human_attribute_name(:avatar)
-    .row.justify-content-center.mb-3
-      .input-group
-        = f.file_field :avatar, class: "form-control"
-            
-    = f.submit class: "btn btn-primary"
+  = f.submit class: "btn btn-primary btn-sm"
