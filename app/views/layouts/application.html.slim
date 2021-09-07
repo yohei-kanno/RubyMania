@@ -4,6 +4,7 @@ html
     title
       = t("dict.title")
     meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = favicon_link_tag('logo.png')
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
