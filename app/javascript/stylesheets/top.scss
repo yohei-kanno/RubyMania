@@ -2,7 +2,7 @@
 
 .title{
   font-size: $big-font;
-   font-weight: bold;
+  font-weight: bold;
   margin: 10px 0;
 }
 
@@ -14,8 +14,11 @@
 }
 
 @media screen and (max-width: 600px) {
+  .title{
+    font-size: $basic-font;
+  }
   .sub-title{
-    font-size: 8px;
+    font-size: $small-font;
   }
 }
   
