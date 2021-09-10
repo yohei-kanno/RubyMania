@@ -1,4 +1,7 @@
 class QuestionsController < ApplicationController
+  
+  skip_before_action :require_login
+
   def show
     @categories = Category.all
     @categories.each do |category|
@@ -21,7 +24,9 @@ class QuestionsController < ApplicationController
     ActiveRecord::Base.transaction do
       record_and_point_up(current_user, @category, @point)
     end
-    flash.now[:mysuccess] = t('flash.level_up') if current_user.level_up?
+    if current_user
+      flash.now[:mysuccess] = t('flash.level_up') if current_user.level_up?
+    end
   rescue StandardError
     false
   end

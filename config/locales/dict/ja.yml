@@ -1,6 +1,6 @@
 ja:
   placeholder:
-    nickname: user_name
+    name: user_name
     email: test@example.com
     password: 半角英数字  6文字以上
   

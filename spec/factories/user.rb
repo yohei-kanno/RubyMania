@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    nickname { "panda" }
+    name { "panda" }
     sequence(:email) { |n| "test#{n}@example.com" }
     level { 1 }
     experience_point { 0 }

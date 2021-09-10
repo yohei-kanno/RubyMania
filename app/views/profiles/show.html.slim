@@ -4,8 +4,8 @@
 table.table
   tbody
     tr
-      th = User.human_attribute_name(:nickname)
-      td.text-start = current_user.nickname
+      th = User.human_attribute_name(:name)
+      td.text-start = current_user.name
     tr
       th = User.human_attribute_name(:level)
       td.text-start = "Lv #{current_user.level}"
@@ -27,7 +27,7 @@ table.table
           .modal-dialog.modal-dialog-scrollable.modal-lg
             .modal-content
               .modal-header
-                h5#Modal-term.modal-title = "#{current_user.nickname}さんの記録"
+                h5#Modal-term.modal-title = "#{current_user.name}さんの記録"
                 button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button" 
               .modal-body
                 = render 'record'

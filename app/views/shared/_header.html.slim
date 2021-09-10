@@ -4,7 +4,7 @@
     nav
       ul
         li = " Lv#{current_user.level}"
-        li = current_user.nickname
+        li = current_user.name
         li = link_to t("link.profile"), profile_path
         li = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: "ログアウトしますか？"}
         li = link_to t("link.contact"), new_contact_path
@@ -14,6 +14,9 @@
     h1.gradation = link_to t("dict.title"), root_path
     nav
       ul
+        li = link_to auth_at_provider_path(provider: :github) do
+          i.fab.fa-github.mr-2
+          = "Sign in with Github"
         li = link_to t("dict.login"), login_path
         li = link_to t("link.new"), new_user_path
         li = link_to t("link.contact"), new_contact_path

@@ -1,14 +1,14 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
-
-  has_one_attached :avatar
-
+  
+  has_many :authentications, dependent: :destroy
+  accepts_nested_attributes_for :authentications
+  
   has_many :study_records, dependent: :destroy
-
   enum admin: { general: false, admin: true }
 
   validates :admin, inclusion: %w[admin general]
-  validates :nickname, presence: true
+  validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
   validates :agreement, acceptance: { allow_nil: false, message: 'に同意してください', on: :create }

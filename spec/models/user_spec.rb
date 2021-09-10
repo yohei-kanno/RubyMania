@@ -19,9 +19,9 @@ describe "Userモデル" do
   
   context "入力が異常である場合" do
     it "ニックネームが未入力であれば無効であること" do
-      user = build(:user, nickname: nil)
+      user = build(:user, name: nil)
       expect(user).to_not be_valid
-      expect(user.errors[:nickname]).to include("を入力してください")
+      expect(user.errors[:name]).to include("を入力してください")
     end
     
     it "メールアドレスが未入力であれば無効であること" do

@@ -15,7 +15,7 @@ button.btn.btn-link data-bs-target="#Modal-ranking" data-bs-toggle="modal" type=
               = image_tag j, class: "image-font ml-5"
               span.me-3 = "#{i}位"
               span.me-3= "Lv#{user.level}"
-              span.me-3= "#{user.nickname}"
+              span.me-3= "#{user.name}"
               span.me-3= "チャレンジした回数：#{user.study_records.count}回"
           - else
             .ranking-content
