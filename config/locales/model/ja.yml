@@ -5,16 +5,10 @@ ja:
       
     attributes:
       user:
-        name: ニックネーム
-        email: メールアドレス
-        avatar: プロフィール画像
         level: レベル
         created_at: 登録日時
         cumulative_experience_points: 累計回答問題数
         next_level_points: 次のレベルまで
-        password: パスワード
-        password_confirmation: パスワード(確認)
-        agreement: 利用規約とプライバシーポリシー
         
       contact:
         name: お名前

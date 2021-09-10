@@ -12,25 +12,17 @@ ja:
     date: 日付
     category: カテゴリー
     point: 点数
-    new_user: ユーザー登録画面
     edit_user: プロフィール編集画面
-    login_user: ログイン画面
     contact: お問い合わせフォーム
     correct: 正解！
     uncorrect: 不正解！
-    login_user: ログイン画面
-    to_toppage: トップページへ
     pricacy: プライバシーポリシー
     term: 利用規約
     service: サービス概要
-    please_new_password: 新しいパスワードを入力して下さい
-    login: ログイン
-    remember_login: ログイン情報を記憶する
   
   submit:
     do_answer: 回答する
     do_edit: 編集する
-    do_reset_password: パスワードをリセットする
     
   confirm:
     answer?: これで宜しいですか？
@@ -39,5 +31,3 @@ ja:
     contact: お問い合わせ
     profile: プロフィール
     logout: ログアウト
-    new: 新規登録
-    forgot_password: パスワードを忘れた方はこちら

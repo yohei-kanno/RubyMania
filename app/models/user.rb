@@ -10,15 +10,7 @@ class User < ApplicationRecord
   validates :admin, inclusion: %w[admin general]
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-
-  validates :agreement, acceptance: { allow_nil: false, message: 'に同意してください', on: :create }
-
-  validates :password, length: { minimum: 6 }, presence: true, if: -> { new_record? || changes[:crypted_password] }
-  validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
-  validates :password_confirmation, length: { minimum: 6 }, presence: true, if: lambda {
-                                                                                  new_record? || changes[:crypted_password]
-                                                                                }
-
+  
   scope :level_upper, ->(i) { order(level: :desc).limit(i) }
 
   def point_up!(point)

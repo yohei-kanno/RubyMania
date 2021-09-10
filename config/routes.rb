@@ -4,12 +4,7 @@ Rails.application.routes.draw do
   post "oauth/callback", to: "oauths#callback"
   get "oauth/callback", to: "oauths#callback"
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
-    
-  resources :users, only: %i[new create edit update] do
-    member do
-      get :activate
-    end
-  end
+
   resource :profile, only: %i[show edit update]
   resource :answers, only: %i[show create]
   resource :questions, only: %i[show] do
@@ -19,19 +14,13 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :password_resets, only: %i[new create edit update]
-
   resources :contacts, only: %i[new create] do
     collection do
       post :confirm
     end
   end
-
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
+  
   delete '/logout', to: 'sessions#destroy'
 
-  Rails.application.routes.draw do
-    mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
-  end
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
