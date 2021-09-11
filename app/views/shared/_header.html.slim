@@ -6,7 +6,7 @@
         li = " Lv#{current_user.level}"
         li = current_user.name
         li = link_to t("link.profile"), profile_path
-        li = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: "ログアウトしますか？"}
+        li = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: t("confirm.logout?")}
         li = link_to t("link.contact"), new_contact_path
     
 - else

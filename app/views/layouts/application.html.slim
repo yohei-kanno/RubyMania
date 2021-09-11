@@ -13,11 +13,12 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" /
   body
-    = render 'shared/header'
-    - flash.each do |key, value|
-      p class=("alert alert-#{key}") 
-        = value
-    = yield
-    = render 'shared/footer'
+    .container-fluid
+      = render 'shared/header'
+      - flash.each do |key, value|
+        p class=("alert alert-#{key}") 
+          = value
+      = yield
+      = render 'shared/footer'
     script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" 
     = javascript_pack_tag "swiper/swiper.js"

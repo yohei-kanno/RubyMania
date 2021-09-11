@@ -1,5 +1,5 @@
 .title 
-  = "#{@category_name}編"
+  = t("variable.category", name: @category_name)
 - unless @questions.count.zero?
   = form_with model: @questions, url: answer_questions_path, method: :post,  local: true do |f|
     - @questions.each.with_index(1) do |question, i|

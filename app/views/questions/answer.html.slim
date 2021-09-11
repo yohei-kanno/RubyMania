@@ -1,10 +1,10 @@
-= link_to "もう一度#{@category.name}をやる",  questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
-= link_to t("dict.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("variable.retry", name: @category.name),  questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("link.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"
 
 .title.mb-3 
-  = "#{@category.name}[回答]"
+  = "[回答]#{@category.name}編"
 div
-  = "あなたの今回の点数は#{@point}/100点です！"
+  = t("variable.your-score", point: "#{@point}")
 - @questions.each.with_index(1) do |question, i|
   .question-title.mb-5
     - if @msgs[i] == t("dict.correct")
@@ -30,5 +30,5 @@ div
             = radio_button_tag "#{i}","#{choice.id}", (true if choice == Choice.find(params[:question][i.to_s])) ,{class: "radio_button", disabled: true }
             = label_tag "#{i}_#{choice.id}", choice.content, class: "choice-content-tag"
                 
-= link_to "もう一度#{@category.name}をやる",  questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
-= link_to t("dict.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("variable.retry", name: "#{@category.name}"),  questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("link.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"

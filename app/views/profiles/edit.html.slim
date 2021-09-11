@@ -1,7 +1,7 @@
 = render "shared/errors",{object: @user}
 
 .title
-  = "ニックネーム変更画面"
+  = t("dict.change-name")
   
 = form_with model: @user, url: profile_path, method: :patch, local: true do |f|
   .form-group

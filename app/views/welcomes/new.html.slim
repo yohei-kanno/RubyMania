@@ -1,6 +1,6 @@
 .swiper.mb-3
   .title
-    = "Ruby特化のクイズサービス"
+    = t("dict.sub-title")
   .swiper-wrapper
     = render @categories
   .swiper-pagination.swiper-pagination-black
@@ -9,5 +9,5 @@
   .swiper-button-next.swiper-custom-button
     i.fa.fa-angle-right
 - @categories.each do |category|
-  = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: "#{category.name}編を開始しますか？"}
+  = link_to category.name, questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
         
