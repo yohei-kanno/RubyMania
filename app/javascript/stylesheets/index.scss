@@ -38,18 +38,16 @@
 }
 
 @mixin tag-form{
-	padding: 0.1em 0.5em;
-	display: inline-block;
-  font-size: 12px;
-  text-decoration: none;
+  width: 200px;
+  height: 230px;
+  padding-top: 20px;
+  display: inline-block;
   color: $white;
-  border-radius: 8px;
-  margin-left: 3px;
+  margin: 0 3px 10px;
   &:hover{
-    color: $white;
-    position: relative;
-    top: 2px;
-    box-shadow: none;
+    color: lightgray;
+    box-shadow: 0 5px 10px rgb(156, 149, 149);
+    transform: translate(0, -5px);
   }
 }
 

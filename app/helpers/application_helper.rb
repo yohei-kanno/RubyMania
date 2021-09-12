@@ -6,4 +6,12 @@ module ApplicationHelper
   def user_rank(users)
     ranks.zip(users)
   end
+  
+  def objects
+    %w[obj1 obj2 obj3 obj4 obj5 obj6]
+  end
+  
+  def object_index(category)
+    objects.zip(category)
+  end
 end
