@@ -48,10 +48,7 @@
 }
   
 @media screen and (max-width: 600px) {
-  .choice-content-tag{
-    @include choice-content-tag-form;
-    font-size: $small-font;
-  }
+
 
   .question-content{
     @include question-content-form;
@@ -62,4 +59,10 @@
     @include question-title-form;
     font-size: $small-font;
   }
+  
+  .choice-content{
+    font-size: $small-font;
+    padding-bottom: 1px;
+  }
+
 }

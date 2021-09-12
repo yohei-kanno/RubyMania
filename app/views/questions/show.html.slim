@@ -3,7 +3,7 @@
 - unless @questions.count.zero?
   = form_with model: @questions, url: answer_questions_path, method: :post,  local: true do |f|
     - @questions.each.with_index(1) do |question, i|
-      .question-title.mb-5
+      .question-title.mb-3
         = "問#{i}:" "#{question.title}"
         .question-content
            = question.content
