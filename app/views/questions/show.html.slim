@@ -9,9 +9,9 @@
            = question.content
         - question.choices.each do |choice|
           .choice-content
-            span.radio-button-container = f.radio_button "#{i}","#{choice.id}", checked: true , class: "radio_button"
-            span.choice
-              = f.label "#{i}_#{choice.id}", choice.content, class: "choice-content-tag"
-              = f.hidden_field :name, value: params[:name]
+            .form-check
+             = f.radio_button "#{i}","#{choice.id}", checked: true , class: "form-check-input"
+             = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
+             = f.hidden_field :name, value: params[:name]
                 
     p = f.submit t("submit.do_answer"), class: "btn btn-primary", data: { confirm: t("confirm.answer?")}
