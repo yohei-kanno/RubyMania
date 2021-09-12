@@ -24,6 +24,7 @@
 
 .form-check-label{
   width: 100%;
+  white-space: pre;
 }
 
 .choice-content-box{
@@ -35,7 +36,6 @@
   @include content-box-form;
   background-color: $question-color;
 }
-
 
 .correct{
   @include correct-form; 
