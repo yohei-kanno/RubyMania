@@ -1,16 +1,16 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
-  
+
   has_many :authentications, dependent: :destroy
   accepts_nested_attributes_for :authentications
-  
+
   has_many :study_records, dependent: :destroy
   enum admin: { general: false, admin: true }
 
   validates :admin, inclusion: %w[admin general]
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-  
+
   scope :level_upper, ->(i) { order(level: :desc).limit(i) }
 
   def point_up!(point)

@@ -3,6 +3,7 @@ class OauthsController < ApplicationController
 
   def oauth
     return redirect_to root_path if logged_in?
+
     login_at(params[:provider])
   end
 
@@ -17,9 +18,9 @@ class OauthsController < ApplicationController
         @user = create_from(provider)
         reset_session
         auto_login(@user)
-        redirect_to root_path 
+        redirect_to root_path
         flash[:mysuccess] = "#{provider.titleize}アカウントでログインしました。"
-      rescue
+      rescue StandardError
         redirect_to root_path
         flash[:mydanger] = "#{provider.titleize}アカウントでのログインに失敗しました。"
       end
