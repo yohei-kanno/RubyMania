@@ -21,12 +21,16 @@
 }
 
 .image-object{
-  height: 180px;
+  height: 200px;
 }
 
 
 @media screen and (max-width: 600px) {
   .btn-link{
     font-size: $small-font;
+  }
+  
+  .image-object{
+    height: 100px;
   }
 }
