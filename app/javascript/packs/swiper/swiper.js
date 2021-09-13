@@ -6,7 +6,7 @@ const swiper = new Swiper('.swiper', {
     delay: 4000,
   },
   direction: "horizontal",
-  effect: "cards",
+  effect: "cube",
   pagination: {
     el: '.swiper-pagination',
     type: "bullets",

@@ -49,16 +49,16 @@
 
 @media screen and (max-width: 600px) {
   .swiper {
-    width: 280px;
+    width: 300px;
   }
   
   .space{
-    width: 280px;
+    width:  300px;
   }
   @each $i,$color in $colorList{
     .container-disabled-tag-#{$i} {
-      width: 100px;
-      height: 115px;
+      width: 130px;
+      height: 150px;
       padding-top: 4px;
     }
   }
