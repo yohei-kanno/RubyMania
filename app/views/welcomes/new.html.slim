@@ -38,7 +38,7 @@
       .d-flex.flex-wrap
         - book_index(@categories2).each do |(obj, category)|
           .col
-            = link_to image_tag(obj, class: "image-object"), studies_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?", name: category.name)}
+            = link_to image_tag(obj, class: "image-object"), answers_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?", name: category.name)}
             
     #pills-one-question.tab-pane.fade aria-labelledby="pills-one-question-tab" role="tabpanel"
       .title.mb-3

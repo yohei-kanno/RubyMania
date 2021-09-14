@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resource :studies, only: %i[show]
+  resource :answers, only: %i[show]
 
   resources :contacts, only: %i[new create] do
     collection do
