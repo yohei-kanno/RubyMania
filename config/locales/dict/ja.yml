@@ -33,6 +33,7 @@ ja:
     answer?: これで宜しいですか？
     logout?: ログアウトしますか？
     start?: "%{name}編を開始しますか？"
+    watch?: "%{name}編を確認しますか？"
     
   link:
     to_toppage: トップページへ

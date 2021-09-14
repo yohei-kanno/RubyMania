@@ -10,27 +10,40 @@
     i.fa.fa-angle-right
  
 .space
-  ul#pills-tab.nav.nav-pills.mb-3.justify-content-center role="tablist" 
+  ul#pills-tab.nav.nav-pills.mt-5.justify-content-center role="tablist" 
     li.nav-item role="presentation" 
-      a#pills-home-tab.nav-link.active aria-controls="pills-home" aria-selected="true" data-bs-toggle="pill" href="#pills-home" role="tab"
+      a#question-tab.nav-link.active aria-controls="question" aria-selected="true" data-bs-toggle="pill" href="#question" role="tab"
         = "カテゴリー一覧"
+        
     li.nav-item role="presentation" 
-      a#pills-profile-tab.nav-link aria-controls="pills-profile" aria-selected="false" data-bs-toggle="pill" href="#pills-profile" role="tab"
+      a#pills-profile-tab.nav-link aria-controls="pills-answer" aria-selected="false" data-bs-toggle="pill" href="#pills-answer" role="tab"
         = "問題と回答"
+        
+    li.nav-item role="presentation" 
+      a#pills-one-question-tab.nav-link aria-controls="pills-one-question" aria-selected="false" data-bs-toggle="pill" href="#pills-one-question" role="tab"
+        = "一問一答"
 
   #pills-tabContent.tab-content
-    #pills-home.tab-pane.fade.show.active aria-labelledby="pills-home-tab" role="tabpanel"
+    #question.tab-pane.fade.show.active aria-labelledby="question-tab" role="tabpanel"
       .title.mb-3
-         = "出題カテゴリー一覧"
+         = "カテゴリーを選択して下さい"
       .d-flex.flex-wrap
         - object_index(@categories).each do |(obj, category)|
           .col
             = link_to image_tag(obj, class: "image-object"), questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
             
-    #pills-profile.tab-pane.fade aria-labelledby="pills-profile-tab" role="tabpanel"
+    #pills-answer.tab-pane.fade aria-labelledby="pills-answer-tab" role="tabpanel"
       .title.mb-3
         = "問題と回答をペラペラ見る"
       .d-flex.flex-wrap
         - book_index(@categories2).each do |(obj, category)|
           .col
-            = link_to image_tag(obj, class: "image-object"), study_questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
+            = link_to image_tag(obj, class: "image-object"), studies_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?", name: category.name)}
+            
+    #pills-one-question.tab-pane.fade aria-labelledby="pills-one-question-tab" role="tabpanel"
+      .title.mb-3
+        = "一問一答形式です"
+      .d-flex.flex-wrap
+        - book_index(@categories2).each do |(obj, category)|
+          .col
+            = link_to image_tag(obj, class: "image-object"), questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?", name: category.name)}
