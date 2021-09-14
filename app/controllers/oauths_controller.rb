@@ -11,7 +11,6 @@ class OauthsController < ApplicationController
     provider = params[:provider]
     if @user = login_from(provider)
       redirect_to root_path
-      binding.pry
       flash[:mysuccess] = "#{provider.titleize}アカウントでログインしました。"
     else
       begin
