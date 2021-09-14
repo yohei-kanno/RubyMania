@@ -7,19 +7,27 @@ module ApplicationHelper
     ranks.zip(users)
   end
 
-  def objects
+  def ruby_objects
     %w[obj1 obj2 obj3 obj4 obj5 obj6]
   end
 
   def book_objects
     %w[book1 book2 book3 book4]
   end
+  
+  def pen_objects
+    %w[pen1 pen2 pen3 pen4 pen5 pen6]
+  end
 
-  def object_index(category)
-    objects.zip(category)
+  def ruby_index(category)
+    ruby_objects.zip(category)
   end
 
   def book_index(category)
     book_objects.zip(category)
+  end
+  
+  def pen_index(category)
+    pen_objects.zip(category)
   end
 end

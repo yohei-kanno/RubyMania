@@ -34,6 +34,7 @@ ja:
     logout?: ログアウトしますか？
     start?: "%{name}編を開始しますか？"
     watch?: "%{name}編を確認しますか？"
+    one_question?: "%{name}編で一問一答を開始しますか"
     
   link:
     to_toppage: トップページへ

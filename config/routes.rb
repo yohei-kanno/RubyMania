@@ -11,7 +11,13 @@ Rails.application.routes.draw do
     collection do
       post :answer
       get :answer
-      get :study
+    end
+  end
+  
+  resource :one_questions, only: %i[show] do
+    collection do
+      post :answer
+      get :answer
     end
   end
   
