@@ -1,5 +1,10 @@
 @import 'variable';
 
+.cards{
+  padding: 20px 20px;
+  height:300px;
+}
+
 .question-title{
   @include question-title-form;
   font-size: $basic-font;

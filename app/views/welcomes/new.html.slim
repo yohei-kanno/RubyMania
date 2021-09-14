@@ -8,10 +8,29 @@
     i.fa.fa-angle-left
   .swiper-button-next.swiper-custom-button
     i.fa.fa-angle-right
-    
+ 
 .space
-  .title.mb-3 = "出題カテゴリー一覧"
-  .d-flex.flex-wrap
-    - object_index(@categories).each do |(obj, category)|
-      .col
-        = link_to image_tag(obj, class: "image-object"),  questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
+  ul#pills-tab.nav.nav-pills.mb-3.justify-content-center role="tablist" 
+    li.nav-item role="presentation" 
+      a#pills-home-tab.nav-link.active aria-controls="pills-home" aria-selected="true" data-bs-toggle="pill" href="#pills-home" role="tab"
+        = "カテゴリー一覧"
+    li.nav-item role="presentation" 
+      a#pills-profile-tab.nav-link aria-controls="pills-profile" aria-selected="false" data-bs-toggle="pill" href="#pills-profile" role="tab"
+        = "問題と回答"
+
+  #pills-tabContent.tab-content
+    #pills-home.tab-pane.fade.show.active aria-labelledby="pills-home-tab" role="tabpanel"
+      .title.mb-3
+         = "出題カテゴリー一覧"
+      .d-flex.flex-wrap
+        - object_index(@categories).each do |(obj, category)|
+          .col
+            = link_to image_tag(obj, class: "image-object"), questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
+            
+    #pills-profile.tab-pane.fade aria-labelledby="pills-profile-tab" role="tabpanel"
+      .title.mb-3
+        = "問題と回答をペラペラ見る"
+      .d-flex.flex-wrap
+        - book_index(@categories2).each do |(obj, category)|
+          .col
+            = link_to image_tag(obj, class: "image-object"), study_questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     collection do
       post :answer
       get :answer
+      get :study
     end
   end
 

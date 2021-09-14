@@ -9,6 +9,7 @@
 
 body{
   text-align: center;
+  background-image: url("/images/siro.jpg");
 }
 
 header{
@@ -17,6 +18,10 @@ header{
   display: flex;
   align-items: center;
   background-color: #f8eef6;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
 }
 
 footer{

@@ -1,0 +1,18 @@
+.title 
+  = @category_name
+.sub-title
+  .space.cards
+    - @questions.each.with_index(1) do |question, i|
+      .text-start
+        = "以下のコードの実行結果は回答の通りです"
+      .question-content-box.mb-3
+        = question.content
+      .text-start 
+        = "回答"
+      .choice-content-box
+        - question.choices.each do |choice|
+          = choice.content if choice.answer == true
+          
+  = paginate @questions, theme: 'bootstrap-5',
+                          pagination_class: "pagination-sm flex-wrap justify-content-center",
+                          nav_class: "d-inline-block"

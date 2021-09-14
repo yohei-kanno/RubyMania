@@ -40,10 +40,10 @@
 @mixin tag-form{
   width: 200px;
   height: 230px;
-  padding-top: 10px;
   display: inline-block;
   color: $white;
   margin: 0 3px 10px;
+  background-color: $white;
   &:hover{
     color: lightgray;
     box-shadow: 0 5px 10px rgb(156, 149, 149);
@@ -52,7 +52,7 @@
 }
 
 @mixin question-title-form{
-  width: 100%;
+  width: 80%;
   margin: auto;
   text-align: left;
 }
