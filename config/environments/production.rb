@@ -1,7 +1,6 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
-  GA.tracker = "G-95RYTGWRTR"
   config.cache_classes = true
 
   config.eager_load = true
