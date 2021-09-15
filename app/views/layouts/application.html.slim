@@ -13,7 +13,13 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" /
     - if Rails.env.production?
-      = render partial: 'layouts/google_analytics'
+      script async="" src="https://www.googletagmanager.com/gtag/js?id=G-95RYTGWRTR" 
+      javascript:
+        | window.dataLayer = window.dataLayer || [];
+        | function gtag(){dataLayer.push(arguments);}
+        | gtag('js', new Date());
+
+        | gtag('config', 'G-95RYTGWRTR');
   body
     .container-fluid
       = render 'shared/header'
