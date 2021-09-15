@@ -30,7 +30,7 @@
       .title.mb-3
          = "カテゴリーを選択して下さい"
       .d-flex.flex-wrap
-        - ruby_index(@categories).each do |(obj, category)|
+        - object_index(@categories, "ruby").each do |(obj, category)|
           .col
             = link_to image_tag(obj, class: "image-object"), questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
             
@@ -39,7 +39,7 @@
       .title.mb-3
         = "一問一答形式です"
       .d-flex.flex-wrap
-        - pen_index(@categories).each do |(obj, category)|
+        - object_index(@categories, "pen").each do |(obj, category)|
           .col
             = link_to image_tag(obj, class: "image-object"), one_questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.one_question?", name: category.name)}
 
@@ -47,6 +47,6 @@
       .title.mb-3
         = "問題と回答をペラペラ見る"
       .d-flex.flex-wrap
-        - book_index(@categories2).each do |(obj, category)|
+        - object_index(@categories2, "book").each do |(obj, category)|
           .col
             = link_to image_tag(obj, class: "image-object"), answers_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?", name: category.name)}

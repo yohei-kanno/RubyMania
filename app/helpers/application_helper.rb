@@ -19,15 +19,7 @@ module ApplicationHelper
     %w[pen1 pen2 pen3 pen4 pen5 pen6]
   end
 
-  def ruby_index(category)
-    ruby_objects.zip(category)
-  end
-
-  def book_index(category)
-    book_objects.zip(category)
-  end
-
-  def pen_index(category)
-    pen_objects.zip(category)
+  def object_index(category, object)
+    eval("#{object}_objects.zip(category)")
   end
 end
