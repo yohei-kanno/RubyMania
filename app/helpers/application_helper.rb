@@ -14,7 +14,7 @@ module ApplicationHelper
   def book_objects
     %w[book1 book2 book3 book4]
   end
-  
+
   def pen_objects
     %w[pen1 pen2 pen3 pen4 pen5 pen6]
   end
@@ -26,7 +26,7 @@ module ApplicationHelper
   def book_index(category)
     book_objects.zip(category)
   end
-  
+
   def pen_index(category)
     pen_objects.zip(category)
   end

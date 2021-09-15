@@ -2,16 +2,4 @@
   = t("variable.category", name: @category_name)
 - unless @questions.count.zero?
   = form_with model: @questions, url: answer_questions_path, method: :post,  local: true do |f|
-    - @questions.each.with_index(1) do |question, i|
-      .question-title.mb-3
-        = "問#{i}:" "#{question.title}"
-        .question-content
-           = question.content
-        - question.choices.each do |choice|
-          .choice-content
-            .form-check
-             = f.radio_button "#{i}","#{choice.id}", checked: true , class: "form-check-input"
-             = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
-             = f.hidden_field :name, value: params[:name]
-                
-    p = f.submit t("submit.do_answer"), class: "btn btn-primary", data: { confirm: t("confirm.answer?")}
+    = render "shared/questions_form", {f: f, questions: @questions}
