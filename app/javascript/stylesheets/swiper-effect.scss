@@ -4,14 +4,36 @@
   .container-disabled-title-#{$i}{
     background-color: $color;
     box-shadow: 0px 3px darken($color, 25% );
-	  @include button-form;
+	  color: $white;
+    display: inline-block;
+    text-decoration:none;
+    font-size: 18px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 15px ;
+    &:hover{
+      color: $white;
+      position: relative;
+      top: 3px;
+      box-shadow: none;
+    }
   }
   
   .container-disabled-tag-#{$i} {
-    @include tag-form;
     border: $color 4px solid;
     border-radius: 6px;
     color: black;
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    color: $white;
+    margin: 0 3px 10px;
+    background-color: $white;
+    &:hover{
+      box-shadow: 0 5px 10px rgb(156, 149, 149);
+      transform: translate(0, -5px);
+    }
   }
   
   .swiper-effect-#{$i}{

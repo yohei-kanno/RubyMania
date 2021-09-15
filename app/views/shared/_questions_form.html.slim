@@ -1,13 +1,13 @@
 - questions.each.with_index(1) do |question, i|
-      .question-title.mb-3
-        = "#{question.title}"
-        .question-content
-           = question.content
-        - question.choices.each do |choice|
-          .choice-content
-            .form-check
-             = f.radio_button "#{i}","#{choice.id}", checked: true , class: "form-check-input"
-             = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
-             = f.hidden_field :name, value: params[:name]
+  .container.mb-5
+    .question-title
+      = "#{question.title}"
+    .question-content
+        = question.content
+    - question.choices.each do |choice|
+      .form-check.choice-content-hover
+        = f.radio_button "#{i}","#{choice.id}", checked: true , class: "form-check-input"
+        = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
+        = f.hidden_field :name, value: params[:name]
                 
 = f.submit t("submit.do_answer"), class: "btn btn-primary", data: { confirm: t("confirm.answer?")}

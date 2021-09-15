@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
 
   resource :profile, only: %i[show edit update]
-  resource :answers, only: %i[show create]
+  resource :answers, only: %i[show]
+  
   resource :questions, only: %i[show] do
     collection do
       post :answer
@@ -21,8 +22,6 @@ Rails.application.routes.draw do
     end
   end
   
-  resource :answers, only: %i[show]
-
   resources :contacts, only: %i[new create] do
     collection do
       post :confirm
@@ -33,3 +32,4 @@ Rails.application.routes.draw do
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
+

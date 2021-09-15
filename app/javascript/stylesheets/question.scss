@@ -6,40 +6,56 @@
 }
 
 .question-title{
-  @include question-title-form;
+  margin: auto;
+  text-align: left;
   font-size: $basic-font;
 }
 
 .question-content{
-  @include question-content-form;
+  text-align: left;
+  background-color: $question-color;
+  border: 2px solid gray;
+  margin-bottom: 15px;
+  padding: 15px;
+  white-space: pre;
+  border-radius: 5px;
+  box-shadow: 0 0 12px gray;;
   font-size: $basic-font;
 }
 
-.choice-content-tag{
-  @include choice-content-tag-form;
-  font-size: $basic-font;
+.choice-content-hover{
+  @include choice-content-form;
+  padding: 10px 0px 10px 30px;
+  &:hover{
+    color: black;
+    box-shadow: 0 5px 10px rgb(156, 149, 149);
+    transform: translate(0, -2px);
+  }
 }
 
 .choice-content{
-  background-color: $choice-color;
-  border: 1px solid black;
-  margin-bottom: .4rem;
-  padding: 10px 10px;
+  @include choice-content-form;
+  padding: 10px;
 }
+
+.choice-content-answer{
+  @include choice-content-form;
+  padding: 10px 0px 10px 30px;
+}
+  
+
+.choice-content-tag{
+  white-space: pre;
+  display: inline-flex;
+  padding: 15px 0;
+  width: 85%;
+  font-size: $choice-color;
+}
+
 
 .form-check-label{
   width: 100%;
   white-space: pre;
-}
-
-.choice-content-box{
-  @include content-box-form;
-  background-color: $choice-color;
-}
-
-.question-content-box{
-  @include content-box-form;
-  background-color: $question-color;
 }
 
 .correct{
@@ -54,20 +70,26 @@
 
 @media screen and (max-width: 600px) {
 
+  .question-title{
+    font-size: $small-font;
+  }
 
   .question-content{
-    @include question-content-form;
     font-size: $small-font;
+    padding: 7px;
   }
   
-  .question-title{
-    @include question-title-form;
-    font-size: $small-font;
-  }
   
   .choice-content{
-    font-size: $small-font;
-    padding-bottom: 1px;
+    padding: 5px; 
   }
-
+  .choice-content-hover{
+    font-size: $small-font;
+    padding: 5px 0px 5px 15px;
+  }
+  
+  .choice-content-answer{
+    font-size: $small-font;
+    padding: 5px 0px 5px 15px;
+  }
 }

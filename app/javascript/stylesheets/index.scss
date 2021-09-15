@@ -20,69 +20,16 @@
   margin: 5px;
 }
 
-@mixin button-form{
-  color: $white;
-  display: inline-block;
-  text-decoration:none;
-  font-size: 18px;
-  border-radius: 6px;
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 15px ;
-  &:hover{
-    color: $white;
-    position: relative;
-    top: 3px;
-    box-shadow: none;
-  }
-}
-
-@mixin tag-form{
-  width: 200px;
-  height: 230px;
-  display: inline-block;
-  color: $white;
-  margin: 0 3px 10px;
-  background-color: $white;
-  &:hover{
-    color: lightgray;
-    box-shadow: 0 5px 10px rgb(156, 149, 149);
-    transform: translate(0, -5px);
-  }
-}
-
-@mixin question-title-form{
-  width: 80%;
-  margin: auto;
-  text-align: left;
-}
-
-@mixin question-content-form{
-  text-align: left;
-  background-color: $question-color;
-  border: 1px solid black;
-  margin-bottom: 15px;
-  padding: 15px;
-  white-space: pre;
-}
-
-@mixin choice-content-tag-form{
-  white-space: pre;
-  display: inline-flex;
-  padding: 15px 0;
-  width: 85%;
-}
-
 @mixin  correct-form {
   color: $white;
   padding: 1px 8px;
   border-radius: 4px;
 }
 
-@mixin  content-box-form {
-  white-space: pre;
-  border: 1px solid black;
+@mixin choice-content-form{
+  background-color: $choice-color;
+  border: 1px solid gray;
   margin-bottom: .4rem;
-  padding: 5px 10px;
-  text-align: start;
+  border-radius: 5px;
+  text-align: left;
 }
