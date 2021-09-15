@@ -10,4 +10,4 @@
         = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
         = f.hidden_field :name, value: params[:name]
                 
-= f.submit t("submit.do_answer"), class: "btn btn-primary", data: { confirm: t("confirm.answer?")}
+= f.submit t("submit.do_answer"), class: "btn btn-primary btn-sm", data: { confirm: t("confirm.answer?")}

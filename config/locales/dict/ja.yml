@@ -24,6 +24,9 @@ ja:
     term: 利用規約
     service: サービス概要
     ranking: レベルランキング
+    select_category: カテゴリーを選択して下さい
+    one_questions: 一問一答形式です
+    watch_answer: 問題と回答をペラペラ見る
     
   
   submit:
@@ -33,9 +36,9 @@ ja:
   confirm:
     answer?: これで宜しいですか？
     logout?: ログアウトしますか？
-    start?: "%{name}編を開始しますか？"
-    watch?: "%{name}編を確認しますか？"
-    one_question?: "%{name}編で一問一答を開始しますか"
+    start?: "クイズを開始しますか？"
+    watch?: "問題と答えを確認しますか？"
+    one_question?: "一問一答を開始しますか"
     
   link:
     to_toppage: トップページへ

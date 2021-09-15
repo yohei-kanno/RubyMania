@@ -6,5 +6,5 @@ div
   - elsif logged_in?
     = "経験値を#{@point}獲得しました！"
 = render "shared/answer_form",  {questions: @questions}           
-= link_to t("variable.retry", name: "#{@category.name}"),  one_questions_path(name: @category.name), class: "btn btn-primary mb-3", style: "width: 80%;"
-= link_to t("link.to_toppage"), root_path, class: "btn btn-primary mb-3", style: "width: 80%;"
+= link_to t("variable.retry", name: "#{@category.name}"),  one_questions_path(name: @category.name), class: "btn btn-primary btn-sm mb-3", style: "width: 80%;"
+= link_to t("link.to_toppage"), root_path, class: "btn btn-primary btn-sm mb-3", style: "width: 80%;"

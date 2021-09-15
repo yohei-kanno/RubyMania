@@ -12,41 +12,12 @@
     i.fa.fa-angle-right
  
 .space
-  ul#pills-tab.nav.nav-pills.mt-5.justify-content-center role="tablist" 
-    li.nav-item role="presentation" 
-      a#question-tab.nav-link.active aria-controls="question" aria-selected="true" data-bs-toggle="pill" href="#question" role="tab"
-        = "カテゴリー一覧"
-    li.nav-item role="presentation" 
-      a#pills-one-question-tab.nav-link aria-controls="pills-one-question" aria-selected="false" data-bs-toggle="pill" href="#pills-one-question" role="tab"
-        = "一問一答"
-        
-    li.nav-item role="presentation" 
-      a#pills-profile-tab.nav-link aria-controls="pills-answer" aria-selected="false" data-bs-toggle="pill" href="#pills-answer" role="tab"
-        = "問題と回答"
-        
-
+  ul#pills-tab.nav.nav-pills.mt-5.justify-content-center role="tablist"
+    = render "tab_menu", {content: "questions", word: "カテゴリー一覧", tf: true, active: "active"}
+    = render "tab_menu", {content: "one_questions", word: "一問一答", tf: false, active: nil}
+    = render "tab_menu", {content: "answers", word: "問題と回答", tf: false, active: nil} 
+  
   #pills-tabContent.tab-content
-    #question.tab-pane.fade.show.active aria-labelledby="question-tab" role="tabpanel"
-      .title.mb-3
-         = "カテゴリーを選択して下さい"
-      .d-flex.flex-wrap
-        - object_index(@categories, "ruby").each do |(obj, category)|
-          .col
-            = link_to image_tag(obj, class: "image-object"), questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
-            
-            
-    #pills-one-question.tab-pane.fade aria-labelledby="pills-one-question-tab" role="tabpanel"
-      .title.mb-3
-        = "一問一答形式です"
-      .d-flex.flex-wrap
-        - object_index(@categories, "pen").each do |(obj, category)|
-          .col
-            = link_to image_tag(obj, class: "image-object"), one_questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.one_question?", name: category.name)}
-
-    #pills-answer.tab-pane.fade aria-labelledby="pills-answer-tab" role="tabpanel"
-      .title.mb-3
-        = "問題と回答をペラペラ見る"
-      .d-flex.flex-wrap
-        - object_index(@categories2, "book").each do |(obj, category)|
-          .col
-            = link_to image_tag(obj, class: "image-object"), answers_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?", name: category.name)}
+    = render "tab_content", {content: "questions", word: t("dict.select_category"), object: "ruby", categories: @categories, confirm_word: t("confirm.start?"), show_active: "show active"}        
+    = render "tab_content", {content: "one_questions", word: t("dict.one_questions"), object: "pen", categories: @categories, confirm_word: t("confirm.one_question?"), show_active: nil }        
+    = render "tab_content", {content: "answers", word: t("dict.watch_answer"), object: "book", categories: @categories, confirm_word: t("confirm.watch?"), show_active: nil }        
