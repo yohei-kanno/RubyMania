@@ -15,11 +15,11 @@ html
     - if Rails.env.production?
       script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QL8WNS65KZ" 
       javascript:
-        | window.dataLayer = window.dataLayer || [];
-        | function gtag(){dataLayer.push(arguments);}
-        | gtag('js', new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        | gtag('config', 'G-QL8WNS65KZ');
+          gtag('config', 'G-QL8WNS65KZ');
   body
     .container-fluid
       = render 'shared/header'
