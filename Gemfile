@@ -21,6 +21,7 @@ gem 'slim-rails'
 gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'bullet'

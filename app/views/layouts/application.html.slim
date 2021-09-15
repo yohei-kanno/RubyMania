@@ -9,6 +9,7 @@ html
     = favicon_link_tag 'logo.png', rel: 'android-touch-icon', sizes: '192x192', type: 'image/png'
     = csrf_meta_tags
     = csp_meta_tag
+    = analytics_init if Rails.env.production?
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" /

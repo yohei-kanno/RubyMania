@@ -1,7 +1,7 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
-  
+  GA.tracker = ENV['GoogleTrakingId']
   config.cache_classes = true
 
   config.eager_load = true
