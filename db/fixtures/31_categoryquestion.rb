@@ -27,3 +27,8 @@ Question.where(id: 4001..5000).count.times do |n|
   CategoriesQuestion.seed(:id,
                           { id: n + 4001, category_id: 6, question_id: n + 4001 })
 end
+
+Question.where(id: 5001..6000).count.times do |n|
+  CategoriesQuestion.seed(:id,
+                          { id: n + 5001, category_id: 7, question_id: n + 5001 })
+end
