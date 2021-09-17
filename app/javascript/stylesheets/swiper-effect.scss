@@ -23,18 +23,13 @@
   .container-disabled-tag-#{$i} {
     border: $color 4px solid;
     border-radius: 6px;
-    color: black;
-    width: 200px;
-    height: 230px;
     display: inline-block;
-    color: $white;
-    margin: 0 3px 10px;
-    background-color: $white;
     &:hover{
       box-shadow: 0 5px 10px rgb(156, 149, 149);
       transform: translate(0, -5px);
     }
   }
+  
   
   .swiper-effect-#{$i}{
     @include border-swiper;
@@ -79,8 +74,6 @@
   }
   @each $i,$color in $colorList{
     .container-disabled-tag-#{$i} {
-      width: 130px;
-      height: 150px;
       padding-top: 4px;
     }
   }

@@ -14,10 +14,39 @@
 .space
   ul#pills-tab.nav.nav-pills.mt-5.justify-content-center role="tablist"
     = render "tab_menu", {content: "questions", word: "カテゴリー一覧", tf: true, active: "active"}
-    = render "tab_menu", {content: "one_questions", word: "一問一答", tf: false, active: nil}
-    = render "tab_menu", {content: "answers", word: "問題と回答", tf: false, active: nil} 
+    / = render "tab_menu", {content: "one_questions", word: "一問一答", tf: false, active: nil}
+    / = render "tab_menu", {content: "answers", word: "問題と回答", tf: false, active: nil} 
   
   #pills-tabContent.tab-content
-    = render "tab_content", {content: "questions", word: t("dict.select_category"), object: "ruby", categories: @categories, confirm_word: t("confirm.start?"), show_active: "show active"}        
-    = render "tab_content", {content: "one_questions", word: t("dict.one_questions"), object: "pen", categories: @categories, confirm_word: t("confirm.one_question?"), show_active: nil }        
-    = render "tab_content", {content: "answers", word: t("dict.watch_answer"), object: "book", categories: @categories, confirm_word: t("confirm.watch?"), show_active: nil }        
+    .tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
+      .title.mb-3
+          = t("dict.select_category")
+      .row.row-cols-2.row-cols-md-3
+        - object_index(@categories, "ruby").each do |(obj, category)|
+          .col.mb-3
+            div class="card card-#{category.id}"
+              = link_to questions_path(name: category.name), class: "link", data: {confirm: t("confirm.start?")} do
+                = image_tag(obj, class: "card-img-top")
+                .card-body
+                  div class="card-title-#{category.id}"
+                    = "#{category.name}"
+                  .card-text
+                    = category.title
+            
+            / = link_to image_tag(obj, class: "image-object"), questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.start?")}
+            
+    / .tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
+    /   .title.mb-3
+    /       = t("dict.one_questions")
+    /   .row.row-cols-2.row-cols-3
+    /     - object_index(@categories, "pen").each do |(obj, category)|
+    /       .col
+    /         = link_to image_tag(obj, class: "image-object"), one_questions_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.one_question?")}
+            
+    / .tab-pane.fade aria-labelledby="answers-tab" role="tabpanel" id="answers"
+    /   .title.mb-3
+    /       = t("dict.watch_answer")
+    /   .row.row-cols-2.row-cols-3
+    /     - object_index(@categories2, "book").each do |(obj, category)|
+    /       .col
+    /         = link_to image_tag(obj, class: "image-object"), answers_path(name: category.name), class: "container-disabled-tag-#{category.id}", data: {confirm: t("confirm.watch?")}  
