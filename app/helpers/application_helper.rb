@@ -12,7 +12,7 @@ module ApplicationHelper
   end
   
   def book_objects
-    %w[book1 book2 book3 book4 book5]
+    %w[book1 book2 book3 book4 book5 book6]
   end
   
   def pen_objects

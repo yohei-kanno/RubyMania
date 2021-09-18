@@ -1,7 +1,44 @@
-/ .tab-pane.fade aria-labelledby="#{content}-tab" role="tabpanel" id="#{content}" class="#{show_active}"
-/   .title.mb-3
-/       = "#{word}"
-/   .row.row-cols-2.row-cols-3
-/     - object_index(categories, "#{object}").each do |(obj, category)|
-/       .col
-/         = link_to image_tag(obj, class: "image-object"), eval("#{content}_path(name: category.name)"), class: "container-disabled-tag-#{category.id}", data: {confirm: "#{confirm_word}"}
+.tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
+  .title.mb-3
+      = t("dict.select_category")
+  .row.row-cols-md-3.row-cols-2.g-4
+    - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
+      .col.mb-3
+        div class="card card-#{i}"
+          = link_to questions_path(name: category.name), class: "link", data: {confirm: t("confirm.start?")} do
+            = image_tag(obj, class: "card-img-top")
+            .card-body.pt-0
+              div class="card-title-#{i} card-title"
+                = "#{category.name}"
+              .card-text.text-start
+                = category.decorate.question_description
+                  
+.tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
+  .title.mb-3
+      = t("dict.one_questions")
+  .row.row-cols-2.row-cols-md-3
+    - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
+      .col.mb-3
+        div class="card card-#{i}"
+          = link_to one_questions_path(name: category.name), class: "link", data: {confirm: "confirm.one_question?"} do
+            = image_tag(obj, class: "card-img-top")
+            .card-body.pt-0
+              div class="card-title-#{i} card-title"
+                = "#{category.name}"
+              .card-text.text-start
+                = category.decorate.one_question_description
+                
+.tab-pane.fade aria-labelledby="answers-tab" role="tabpanel" id="answers"                
+  .title.mb-3
+      = t("dict.watch_answer")
+  .row.row-cols-2.row-cols-md-3
+    - object_index(@categories2, "book").each.with_index(1) do |(obj, category), i|
+      .col.mb-3
+        div class="card answer-card-#{i}"
+          = link_to answers_path(name: category.name), class: "link", data: {confirm: "confirm.watch?"} do
+            = image_tag(obj, class: "card-img-top")
+            .card-body.pt-0
+              div class="answer-card-title-#{i} card-title"
+                = "#{category.name}"
+              .card-text.text-start
+                = category.decorate.answer_description
