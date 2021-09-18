@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :ranking
 
   protected
-
+  
   def get_question(num)
     @categories = Category.all
     @categories.each do |category|

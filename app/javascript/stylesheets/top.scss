@@ -45,6 +45,13 @@
   }
 }
 
+.progress{
+  width: 100px;
+  border: blue 1px solid;
+  
+  
+}
+
 .title{
   font-size: $big-font;
   font-weight: bold;
@@ -80,6 +87,12 @@
   
   .card-title{
     font-size: $small-font;
+  }
+  
+  .progress{
+    height: 8px;
+    width: 30px;
+
   }
 }
   
