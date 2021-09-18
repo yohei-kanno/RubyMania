@@ -6,7 +6,7 @@
         li = "Lv#{current_user.level}"
         li = ""
         .progress.mt-1
-          .progress-bar.progress-bar-striped.progress-bar-animated aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: #{(current_user.experience_point/@next_level * 10 + current_user.experience_point)}%")
+          .progress-bar.progress-bar-striped.progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: #{(current_user.experience_point/@next_level * 10 + current_user.experience_point)}%")
         li.mx-2 = current_user.name
           
     nav.navbar.navbar-expand-lg.navbar-light.ms-1
