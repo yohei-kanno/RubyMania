@@ -20,16 +20,6 @@
     }
   }
   
-  .container-disabled-tag-#{$i} {
-    border: $color 4px solid;
-    border-radius: 6px;
-    display: inline-block;
-    &:hover{
-      box-shadow: 0 5px 10px rgb(156, 149, 149);
-      transform: translate(0, -5px);
-    }
-  }
-  
   
   .swiper-effect-#{$i}{
     @include border-swiper;

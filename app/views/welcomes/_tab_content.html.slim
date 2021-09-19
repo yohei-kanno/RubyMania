@@ -5,7 +5,7 @@
     - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
       .col.mb-3
         div class="card card-#{i}"
-          = link_to questions_path(name: category.name), class: "link", data: {confirm: t("confirm.start?")} do
+          = link_to questions_path(name: category.name), class: "link-dark", data: {confirm: t("confirm.start?")} do
             = image_tag(obj, class: "card-img-top")
             .card-body.pt-0
               div class="card-title-#{i} card-title"
