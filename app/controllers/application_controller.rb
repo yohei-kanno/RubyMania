@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   before_action :level_up_point
 
   protected
-  
+
   def level_up_point
     @next_level = LevelStatus.next_level(current_user) if current_user
   end
-  
+
   def get_question(num)
     @categories = Category.all
     @categories.each do |category|

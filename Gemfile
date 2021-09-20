@@ -6,6 +6,7 @@ gem 'activeadmin'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'dotenv-rails'
+gem 'draper'
 gem 'enum_help'
 gem 'html2slim'
 gem 'image_processing', '~> 1.2'
@@ -21,7 +22,6 @@ gem 'slim-rails'
 gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
-gem 'draper'
 
 group :development, :test do
   gem 'bullet'
