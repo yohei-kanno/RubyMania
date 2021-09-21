@@ -1,10 +1,5 @@
 @import 'variable';
 
-.cards{
-  padding: 20px 20px;
-  height:300px;
-}
-
 .question-title{
   margin: auto;
   text-align: left;
@@ -36,6 +31,7 @@
 .choice-content{
   @include choice-content-form;
   padding: 10px;
+  white-space: pre;
 }
 
 .choice-content-answer{

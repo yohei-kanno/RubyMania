@@ -1,7 +1,7 @@
 .title 
   = @category_name
 .sub-title
-  .space.cards
+  .space
     - @questions.each.with_index(1) do |question, i|
       .text-start
         = "以下のコードの実行結果は回答の通りです"
@@ -12,10 +12,10 @@
       .choice-content
         - question.choices.each do |choice|
           = choice.content if choice.answer == true
-          
-  = paginate @questions, theme: 'bootstrap-5',
-                          pagination_class: "pagination-sm flex-wrap justify-content-center",
-                          nav_class: "d-inline-block"
-                          
-= link_to t("link.to_toppage"), root_path, class: "btn btn-primary my-3"
+    div       
+      = paginate @questions, theme: 'bootstrap-5',
+                        pagination_class: "pagination-sm flex-wrap justify-content-center",
+                        nav_class: "d-inline-block"  
+                                          
+    = link_to t("link.to_toppage"), root_path, class: "btn btn-primary my-3"
                           
