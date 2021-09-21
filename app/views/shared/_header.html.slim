@@ -14,9 +14,9 @@
         span.navbar-toggler-icon style="width: 15px;"
       #navbarNavAltMarkup.collapse.navbar-collapse
         .navbar-nav.text-end
-          = link_to t("link.profile"), profile_path, class: "mt-1"
-          = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: t("confirm.logout?")}, class: "ms-3 mt-1"
-          = link_to t("link.contact"), new_contact_path, class: "ms-3 mt-1"
+          = link_to t("link.profile"), profile_path, class: "mt-3"
+          = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: t("confirm.logout?")}, class: "ms-3 mt-3"
+          = link_to t("link.contact"), new_contact_path, class: "ms-3 mt-3"
 
 - else
   header
