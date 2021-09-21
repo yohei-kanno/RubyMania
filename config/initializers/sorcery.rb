@@ -8,9 +8,9 @@ Rails.application.config.sorcery.configure do |config|
 
   config.user_class = 'User'
   if  Rails.env.production?
-    config.github.key = Rails.application.credentials.dig(:github, :key)
-    config.github.secret = Rails.application.credentials.dig(:github, :secret)
-    config.github.callback_url = Rails.application.credentials.dig(:github, :callback_url)
+    config.github.key = Rails.application.credentials.dig(:github_productioin, :key)
+    config.github.secret = Rails.application.credentials.dig(:github_productioin, :secret)
+    config.github.callback_url = Rails.application.credentials.dig(:github_productioin, :callback_url)
   end
   
   config.external_providers = [:github]
