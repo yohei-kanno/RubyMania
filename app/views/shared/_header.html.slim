@@ -7,17 +7,20 @@
         li = ""
         .progress.mt-1
           .progress-bar.progress-bar-striped.progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: #{(current_user.experience_point-(current_user.level-1)*100).to_f}%")
-        li.mx-2 = current_user.name
+        li = current_user.name
     nav.navbar.navbar-expand-lg.navbar-light.ms-1
       .navbar-nav
       button.navbar-toggler aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarNavAltMarkup" data-bs-toggle="collapse" type="button" 
         span.navbar-toggler-icon style="width: 15px;"
       #navbarNavAltMarkup.collapse.navbar-collapse
-        .navbar-nav.text-end
-          = link_to t("link.profile"), profile_path, class: "mt-3"
-          = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: t("confirm.logout?")}, class: "ms-3 mt-3"
-          = link_to t("link.contact"), new_contact_path, class: "ms-3 mt-3"
-
+        ul.navbar-nav.text-end
+          li.nav-item
+            = link_to t("link.profile"), profile_path, class: "nav-link"
+          li.nav-item
+            = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: t("confirm.logout?")}, class: "nav-link"
+          li.nav-item
+            = link_to t("link.contact"), new_contact_path, class: "nav-link"
+    
 - else
   header
     h1.gradation = link_to t("dict.title"), root_path
