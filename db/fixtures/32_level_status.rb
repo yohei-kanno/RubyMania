@@ -1,11 +1,4 @@
-# 99.times do |i|
-#   LevelStatus.create(
-#     level: i + 2,
-#     required_experience_points: 100 * (i + 2)
-#   )
-# end
-
-99.times do |i|
+999.times do |num|
   LevelStatus.seed(:id,
-                   { id: i + 1, level: i + 2, required_experience_points: ((i + 1) * 100 + (i * 50)) })
+                      {id: num + 1, level:num + 2, required_experience_points: (num+1)*100})
 end
