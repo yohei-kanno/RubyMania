@@ -40,10 +40,10 @@ $n_choice23 = '「15.00」と表示される'
 $n_choice24 = is_nil
 
 # i_question7
-$n_choice25 = '「15」と表示される'
-$n_choice26 = '「15.0」と表示される'
-$n_choice27 = '「15.00」と表示される'
-$n_choice28 = is_nil
+$n_choice25 = '「9」と表示される'
+$n_choice26 = '「10」と表示される'
+$n_choice27 = '「11」と表示される'
+$n_choice28 = is_exception
 
 # i_question8
 $n_choice29 = '「9」と表示される'
@@ -67,19 +67,19 @@ $n_choice40 = is_exception
 $n_choice41 = '「9」と表示される'
 $n_choice42 = '「10」と表示される'
 $n_choice43 = '「11」と表示される'
-$n_choice44 = is_exception
+$n_choice44 = '「12」と表示される'
 
 # i_question12
-$n_choice45 = '「9」と表示される'
+$n_choice45 = '「5」と表示される'
 $n_choice46 = '「10」と表示される'
-$n_choice47 = '「11」と表示される'
-$n_choice48 = '「12」と表示される'
+$n_choice47 = '「15」と表示される'
+$n_choice48 = '「20」と表示される'
 
 # i_question13
-$n_choice49 = '「5」と表示される'
+$n_choice49 = '「9」と表示される'
 $n_choice50 = '「10」と表示される'
-$n_choice51 = '「15」と表示される'
-$n_choice52 = '「20」と表示される'
+$n_choice51 = '「11」と表示される'
+$n_choice52 = '「12」と表示される'
 
 # i_question14
 $n_choice53 = '「24」と表示される'
