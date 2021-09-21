@@ -27,7 +27,7 @@ table.table
           .modal-dialog.modal-dialog-scrollable.modal-lg
             .modal-content
               .modal-header
-                h5#Modal-term.modal-title = "#{current_user.name}さんの記録"
+                #Modal-term.modal-title.small-font = "#{current_user.name}さんの記録"
                 button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button" 
               .modal-body
                 = render 'record'

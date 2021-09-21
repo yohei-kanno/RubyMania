@@ -42,8 +42,6 @@
 .progress{
   width: 100px;
   border: blue 1px solid;
-  
-  
 }
 
 .title{
@@ -86,6 +84,10 @@
   .progress{
     height: 8px;
     width: 30px;
+  }
+  
+  .small-font{
+    font-size: $small-font;
   }
   
   .navbar-nav{
