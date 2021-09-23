@@ -14,6 +14,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include Sorcery::TestHelpers::Rails::Request
   config.include FactoryBot::Syntax::Methods
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
@@ -22,4 +23,5 @@ RSpec.configure do |config|
   # config.before(:each, type: :system) do
   #   driven_by :selenium_chrome_headless
   # end
+  config.include LoginSupport
 end
