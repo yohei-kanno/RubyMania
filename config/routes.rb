@@ -29,7 +29,13 @@ Rails.application.routes.draw do
   end
   
   delete '/logout', to: 'sessions#destroy'
-
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
+  
+  unless Rails.env.production?
+    namespace :development do
+      get '/login', to: 'test_sessions#new', as: :login
+      post '/login', to: 'test_sessions#create'
+    end
+  end
 end
-
+      

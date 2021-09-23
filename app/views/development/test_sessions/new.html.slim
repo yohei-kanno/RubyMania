@@ -1,0 +1,13 @@
+.container
+  .row
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      h1.my-3 開発テスト専用画面
+      = form_with url: development_login_path, local: true do |f|
+        .form-group.mb-3
+          = f.label :email
+          = f.text_field :email, class: 'form-control'
+        .form-group.mb-3
+          = f.label :password
+          = f.password_field :password, class: 'form-control'
+        .actions
+          = f.submit 'ログイン', class: 'btn btn-primary'

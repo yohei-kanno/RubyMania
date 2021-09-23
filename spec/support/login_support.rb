@@ -1,17 +1,8 @@
 module LoginSupport
-  def github_login
-    visit root_path
-    click_on "Sign in with Github"
-    fill_in "login_field", with: ENV["MYADDRESS"]
-    fill_in "password", with: ENV["MYPASS"] 
-    click_on "Sign in"
-  end
-  
-  def not_a_user_in_github
-    visit root_path
-    click_on "Sign in with Github"
-    fill_in "login_field", with: "aaaaaaaaaaaaaaaaaa"
-    fill_in "password", with: "aaaaaaaaaaaaaaa"
-    click_on "Sign in"
+  def login_as(user)
+    visit development_login_path
+    fill_in "email", with: user.email
+    fill_in "password", with: "password" 
+    click_on "ログイン"
   end
 end
