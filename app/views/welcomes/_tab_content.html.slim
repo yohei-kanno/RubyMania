@@ -5,7 +5,7 @@
     - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
       .col.mb-3
         div class="card card-#{i}"
-          = link_to questions_path(name: category.name), class: "link-dark", data: {confirm: t("confirm.start?")} do
+          = link_to questions_path(name: category.name), class: "link-dark", id:"link-#{category.id}", data: {confirm: t("confirm.start?")} do
             = image_tag(obj, class: "card-img-top")
             .card-body.pt-0
               div class="card-title-#{i} card-title"
@@ -20,7 +20,7 @@
     - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
       .col.mb-3
         div class="card card-#{i}"
-          = link_to one_questions_path(name: category.name), class: "link-dark", data: {confirm: t("confirm.one_question?")} do
+          = link_to one_questions_path(name: category.name), class: "link-dark", id:"link", data: {confirm: t("confirm.one_question?")} do
             = image_tag(obj, class: "card-img-top")
             .card-body.pt-0
               div class="card-title-#{i} card-title"
@@ -34,7 +34,7 @@
     - object_index(@categories2, "book").each.with_index(1) do |(obj, category), i|
       .col.mb-3
         div class="card answer-card-#{i}"
-          = link_to answers_path(name: category.name), class: "link-dark", data: {confirm: t("confirm.watch?")} do
+          = link_to answers_path(name: category.name), class: "link-dark", id:"link", data: {confirm: t("confirm.watch?")} do
             = image_tag(obj, class: "card-img-top")
             .card-body.pt-0
               div class="answer-card-title-#{i} card-title"
