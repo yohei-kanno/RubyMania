@@ -24,4 +24,5 @@ RSpec.configure do |config|
   #   driven_by :selenium_chrome_headless
   # end
   config.include LoginSupport
+  config.include TestQuestion::StartQuestion
 end
