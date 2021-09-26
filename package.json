@@ -10,6 +10,7 @@
     "@rails/webpacker": "5.4.0",
     "bootstrap": "^5.0.0-beta3",
     "data-confirm-modal": "^1.6.2",
+    "jquery": "^3.6.0",
     "swiper": "^6.8.0",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
