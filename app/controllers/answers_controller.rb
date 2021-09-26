@@ -7,6 +7,10 @@ class AnswersController < ApplicationController
       if params[:name] == category.name
         @category_name = category.name
         @questions = category.questions.page(params[:page])
+        respond_to do |format|
+          format.html
+          format.js
+        end
       end
     end
   end

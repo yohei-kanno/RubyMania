@@ -49,6 +49,6 @@ ja:
     no_logged_in_start: このまま始める
   
   variable:
-    retry: もう一度%{name}をやる
+    retry: もう一度やる
     category: "%{name}編"
     your-score: あなたの今回の点数は%{point}/100点です！

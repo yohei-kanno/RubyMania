@@ -1,12 +1,12 @@
 - questions.each.with_index(1) do |question, i|
-  .container.mb-5
+  .mb-5
     .question-title
       - if @msgs[i] == t("dict.correct")
-        div
+        .judgment
           = "#{question.title}"
           span.correct = "#{@msgs[i]}"
       - else
-        div
+        .judgment
           = "#{question.title}"
           span.uncorrect = "#{@msgs[i]}"
 

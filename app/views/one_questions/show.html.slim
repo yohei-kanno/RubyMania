@@ -1,5 +1,6 @@
-.title 
-  = t("variable.category", name: @category_name)
-- unless @questions.count.zero?
-  = form_with model: @questions, url: answer_one_questions_path, method: :post,  local: true do |f|
-    = render "shared/questions_form", {f: f, questions: @questions}
+.container
+  .title 
+    = t("variable.category", name: @category_name)
+  - unless @questions.count.zero?
+    = form_with model: @questions, url: answer_one_questions_path, method: :post,  local: true do |f|
+      = render "shared/questions_form", {f: f, questions: @questions}

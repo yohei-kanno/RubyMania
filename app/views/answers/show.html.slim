@@ -1,21 +1,5 @@
 .title 
   = @category_name
 .sub-title
-  .space
-    - @questions.each.with_index(1) do |question, i|
-      .text-start
-        = "問題"
-      .question-content.mb-3
-        = question.content
-      .text-start 
-        = "回答"
-      .choice-content
-        - question.choices.each do |choice|
-          = choice.content if choice.answer == true
-    div       
-      = paginate @questions, theme: 'bootstrap-5',
-                        pagination_class: "pagination-sm flex-wrap justify-content-center",
-                        nav_class: "d-inline-block"  
-                                          
-    = link_to t("link.to_toppage"), root_path, class: "btn btn-primary my-3"
-                          
+  = render "show"
+                            
