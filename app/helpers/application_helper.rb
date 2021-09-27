@@ -27,7 +27,7 @@ module ApplicationHelper
     {
       site: 'RubyMania',
       title: 'RubySilverを取得しよう！',
-      reverse: true,
+      reverse: false,
       separator: '|',
       description: 'Rubyに特化したクイズサービスです！',
       canonical: "https://www.rubymania.info",

@@ -3,6 +3,7 @@ html
   head
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = display_meta_tags(default_meta_tags)
+    = favicon_link_tag 'logo.png', rel: 'android-touch-icon', sizes: '192x192', type: 'image/png'
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
