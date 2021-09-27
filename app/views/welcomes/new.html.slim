@@ -1,11 +1,11 @@
 .main-title
   = t("dict.sub-title")
-.sub-title 
+.title 
   = t("dict.content")
 
 .container
   - if logged_in?
-    = link_to "早速始める", "#start", class:"btn btn-outline-primary mb-3"
+    = link_to "早速始める", "#start", class:"btn btn-outline-primary my-3"
   
   - else
     .button
