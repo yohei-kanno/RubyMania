@@ -13,7 +13,9 @@
     i.fa.fa-angle-right
  
 .space
-  ul#pills-tab.nav.nav-pills.mt-5.justify-content-center.menu role="tablist"
+  .title
+    = t("dict.select_category")
+  ul#pills-tab.nav.nav-pills.mt-2.justify-content-center.menu role="tablist"
     = render "tab_menu"
   
   #pills-tabContent.tab-content
