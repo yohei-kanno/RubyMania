@@ -22,4 +22,30 @@ module ApplicationHelper
   def object_index(category, object)
     eval("#{object}_objects.zip(category)")
   end
+  
+  def default_meta_tags
+    {
+      site: 'RubyMania',
+      title: 'RubySilverを取得しよう！',
+      reverse: true,
+      separator: '|',
+      description: 'Rubyに特化したクイズサービスです！',
+      canonical: request.original_url,
+      noindex: ! Rails.env.production?,
+      icon: [
+        { href: image_url('logo.png') },
+        { href: image_url('logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
+        { href: image_url('logo.png'), rel: 'android-touch-icon', sizes: '192x192', type: 'image/png' },
+      ],
+      og: {
+        site_name: 'RubyMania',
+        title: 'RubySilverを取得しよう！',
+        description: 'Rubyに特化したクイズサービスです！', 
+        type: 'website',
+        url: request.original_url,
+        image: image_url('ogp.png'),
+        locale: 'ja_JP',
+      }
+    }
+  end
 end
