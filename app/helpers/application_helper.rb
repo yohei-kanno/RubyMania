@@ -30,7 +30,7 @@ module ApplicationHelper
       reverse: true,
       separator: '|',
       description: 'Rubyに特化したクイズサービスです！',
-      canonical: request.original_url,
+      canonical: "https://www.rubymania.info",
       noindex: ! Rails.env.production?,
       icon: [
         { href: image_url('logo.png') },
@@ -42,7 +42,7 @@ module ApplicationHelper
         title: 'RubySilverを取得しよう！',
         description: 'Rubyに特化したクイズサービスです！', 
         type: 'website',
-        url: request.original_url,
+        url: "https://www.rubymania.info",
         image: image_url('ogp.png'),
         locale: 'ja_JP',
       }
