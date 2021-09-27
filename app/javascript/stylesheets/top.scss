@@ -48,9 +48,15 @@
   border: blue 1px solid;
 }
 
-.title{
+.main-title{
   font-size: $big-font;
   font-weight: bold;
+}
+  
+
+.title{
+  font-weight: bold;
+  font-size: $big-font;
   margin: 10px 0;
 }
 
@@ -64,6 +70,13 @@
 
 .card-img-top{
   padding:5px;
+}
+
+.button-form{
+  height: 50px;
+  width: 230px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 @media screen and (max-width: 1100px) {
