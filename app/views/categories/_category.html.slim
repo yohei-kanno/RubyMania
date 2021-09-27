@@ -1,11 +1,7 @@
 div class="swiper-slide swiper-effect-#{category.id}"
   span class="box-title-#{category.id}" = category.name 
-  - if logged_in?
-    div
-      = link_to t("link.logged_in_start"), questions_path(name: category.name), class: "container-disabled-title-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
-  - else
-    div
-      = link_to t("link.no_logged_in_start"), questions_path(name: category.name), class: "container-disabled-title-#{category.id}", data: {confirm: t("confirm.start?", name: category.name)}
+  div class="container-disabled-title-#{category.id}"
+    = "こんな問題が出題されます！"
   .sub-title
     - unless category.questions.count == 0
       - q = category.questions.first

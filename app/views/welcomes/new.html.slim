@@ -1,17 +1,26 @@
-.swiper.mb-3
-  .title
-    = t("dict.sub-title")
-  .sub-title 
-    = t("dict.content")
+.title
+  = t("dict.sub-title")
+.sub-title 
+  = t("dict.content")
 
+.container
+  = link_to auth_at_provider_path(provider: :github) , class: "btn btn-outline-success btn-sm my-3 me-1" do
+          i.fab.fa-github.mr-2
+          = "Sign in with Github"
+  = link_to "すぐに始める", "#start", class:"btn btn-outline-primary btn-sm my-3 ms-1"
+  
+  .sub-title
+    = "※ログインしない場合、結果が記録されません"
+.swiper.mb-3
   .swiper-wrapper
     = render @categories
   .swiper-pagination.swiper-pagination-black
   .swiper-button-prev.swiper-custom-button
-    i.fa.fa-angle-left
+    i.fa.fa-angle-left  
   .swiper-button-next.swiper-custom-button
     i.fa.fa-angle-right
- 
+  #start 
+    
 .space
   .title
     = t("dict.select_category")
@@ -21,3 +30,4 @@
   #pills-tabContent.tab-content
     = render "tab_content"
     
+  = link_to "ページトップに戻る", "#top", class:"btn btn-outline-primary btn-sm my-3 ms-1"
