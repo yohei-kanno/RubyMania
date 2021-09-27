@@ -124,7 +124,7 @@ Choice.seed(:id,
             { id: 5097, content: $r_choice97, answer: false, question_id: 5025 },
             { id: 5098, content: $r_choice98, answer: true, question_id: 5025 },
             { id: 5099, content: $r_choice99, answer: false, question_id: 5025 },
-            { id: 5010, content: $r_choice100, answer: false, question_id: 5025 },
+            { id: 5100, content: $r_choice100, answer: false, question_id: 5025 },
             # r_question26(3)
             { id: 5101, content: $r_choice101, answer: false, question_id: 5026 },
             { id: 5102, content: $r_choice102, answer: false, question_id: 5026 },
