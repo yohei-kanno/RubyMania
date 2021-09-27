@@ -41,7 +41,7 @@ module ApplicationHelper
         description: 'Rubyに特化したクイズサービスです！', 
         type: 'website',
         url: "https://www.rubymania.info",
-        image: image_url('ogp.png'),
+        image: image_url('logo.png'),
         locale: 'ja_JP',
       }
     }
