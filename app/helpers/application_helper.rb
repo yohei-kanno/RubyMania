@@ -34,7 +34,6 @@ module ApplicationHelper
       icon: [
         { href: image_url('logo.png') },
         { href: image_url('logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
-        { href: image_url('logo.png'), rel: 'android-touch-icon', sizes: '192x192', type: 'image/png' },
       ],
       og: {
         site_name: 'RubyMania',
