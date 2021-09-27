@@ -1,0 +1,23 @@
+ul.pagination{
+  > li{
+    font-size: $basic-font;
+    margin: 5px;
+  }
+}
+
+.page-link{
+  padding: 4px 12px;
+}
+
+@media screen and (max-width: 600px) {
+  ul.pagination{
+    > li{
+      font-size: $small-font;
+      margin: 1px;
+    }
+  }
+  
+  .page-link{
+    padding: 4px 8px;
+  }
+}
