@@ -1,11 +1,14 @@
 #pagenate
   .space
-    - @questions.each do |question|
+    - @questions.each.with_index do |question, i|
       .text-start
         = "問題"
-      .question-content.mb-3
-        = question.content
-      .text-start 
+      .question-content.mb-1 id="copyTarget-#{i}" = question.content
+      .text-start
+        button.copy-button onclick="onClickCopy(#{i})"
+          i.fas.fa-copy.me-1
+          = "上のコードをコピーする"
+      .text-start.mt-3
         = "回答"
       .choice-content
         - question.choices.each do |choice|
@@ -17,4 +20,3 @@
                         remote: true 
                                           
     = link_to t("link.to_toppage"), root_path, class: "btn btn-primary my-3"
-                          

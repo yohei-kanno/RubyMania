@@ -10,8 +10,12 @@
           = "#{question.title}"
           span.uncorrect = "#{@msgs[i]}"
 
-    .question-content 
-      = question.content
+    .question-content id="copyTarget-#{i}" = question.content
+    .text-start.mb-3
+      button.copy-button onclick="onClickCopy(#{i})"
+        i.fas.fa-copy.me-1
+        = "上のコードをコピーする"
+      
     - question.choices.each do |choice|
       - if choice.answer == true
         

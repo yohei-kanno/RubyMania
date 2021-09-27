@@ -26,3 +26,16 @@ html
       = render 'shared/footer'
     script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" 
     = javascript_pack_tag "swiper/swiper.js"
+    
+    javascript:
+        function onClickCopy(num){
+        let pTag = document.getElementById(`copyTarget-${num}`);
+        let range = document.createRange();
+        range.selectNodeContents(pTag);
+        let selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+        alert("コピーしました！")
+      }

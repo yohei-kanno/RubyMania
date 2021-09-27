@@ -2,7 +2,7 @@
   .question-form.mb-5
     .question-title
       = "#{question.title}"
-    .question-content
+    .question-content.mb-4
         = question.content
     - question.choices.each do |choice|
       .form-check.choice-content-hover
