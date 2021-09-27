@@ -27,13 +27,13 @@ module ApplicationHelper
     {
       site: 'RubyMania',
       title: 'RubySilverを取得しよう！',
-      reverse: false,
+      reverse: true,
       separator: '|',
       description: 'Rubyに特化したクイズサービスです！',
       canonical: "https://www.rubymania.info",
       icon: [
         { href: image_url('logo.png') },
-        { href: image_url('logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
+        { href: image_url('logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' }
       ],
       og: {
         site_name: 'RubyMania',
