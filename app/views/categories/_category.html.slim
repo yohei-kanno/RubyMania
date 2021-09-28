@@ -7,7 +7,7 @@ div class="swiper-slide swiper-effect-#{category.id}"
       - q = category.questions.first
       .question-title
         = q.title
-      .question-content
+      .question-content.mb-3
         = q.content
       - q.choices.each do |choice|
         .choice-content.text-start
