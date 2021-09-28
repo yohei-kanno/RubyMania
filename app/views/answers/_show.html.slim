@@ -3,11 +3,11 @@
     - @questions.each.with_index do |question, i|
       .text-start
         = "問題"
-      .question-content.mb-1 id="copyTarget-#{i}" = question.content
-      .text-start
-        button.copy-button onclick="onClickCopy(#{i})"
-          i.fas.fa-copy.me-1
-          = "上のコードをコピーする"
+      .question-form
+        .question-content.mb-1 id="copyTarget-#{i}" = question.content
+        .text-start
+          button.copy-button onclick="onClickCopy(#{i})"
+            i.fas.fa-copy
       .text-start.mt-3
         = "回答"
       .choice-content

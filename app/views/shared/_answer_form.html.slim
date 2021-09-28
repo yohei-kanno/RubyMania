@@ -9,12 +9,11 @@
         .judgment
           = "#{question.title}"
           span.uncorrect = "#{@msgs[i]}"
-
-    .question-content id="copyTarget-#{i}" = question.content
-    .text-start.mb-3
-      button.copy-button onclick="onClickCopy(#{i})"
-        i.fas.fa-copy.me-1
-        = "上のコードをコピーする"
+    .question-form
+      .question-content id="copyTarget-#{i}" = question.content
+      .text-start.mb-3
+        button.copy-button onclick="onClickCopy(#{i})"
+          i.fas.fa-copy
       
     - question.choices.each do |choice|
       - if choice.answer == true

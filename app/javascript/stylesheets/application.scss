@@ -59,13 +59,18 @@ nav{
   margin: 0 0 0 auto;
 }
 
+.question-form{
+  position: relative;
+}
+
 .copy-button{
   font-size:10px;
   border-radius: 5px;
   background-color: blue;
   color: white;
-  position: relative;
-  top: -3px;
+  position: absolute;
+  top: 5px;
+  left: 95%;
 }
 .gradation{
   color: #DA8E00;
