@@ -72,6 +72,7 @@ nav{
   top: 5px;
   left: 95%;
 }
+
 .gradation{
   color: #DA8E00;
   background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
@@ -94,6 +95,10 @@ nav{
       
   h1{
     font-size: $basic-font;
+  }
+  
+  .copy-button{
+    left: 90%;
   }
 }
   
