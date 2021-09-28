@@ -4,7 +4,7 @@
       .text-start
         = "問題"
       .question-form
-        .question-content.mb-1 id="copyTarget-#{i}" = question.content
+        .question-content id="copyTarget-#{i}" = question.content
         .text-start
           button.copy-button onclick="onClickCopy(#{i})"
             i.fas.fa-copy
