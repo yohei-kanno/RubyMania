@@ -1,6 +1,5 @@
 .container
-  = link_to t("variable.retry"),  questions_path(name: @category.name), class: "btn btn-outline-primary btn-sm my-3 me-3", style: "width: 45%;"
-  = link_to t("link.to_toppage"), root_path, class: "btn btn-outline-primary btn-sm my-3", style: "width: 45%;"
+  = render "link_to"      
 
   .title.mb-3 
     = "[回答]#{@category.name}編"
@@ -8,6 +7,5 @@
     = t("variable.your-score", point: "#{@point}")
     
   = render "shared/answer_form",  {questions: @questions}
-                  
-  = link_to t("variable.retry"),  questions_path(name: @category.name), class: "btn btn-outline-primary btn-sm my-3 me-3", style: "width: 45%;"
-  = link_to t("link.to_toppage"), root_path, class: "btn btn-outline-primary btn-sm my-3", style: "width: 45%;"
+  = render "link_to"      
+           

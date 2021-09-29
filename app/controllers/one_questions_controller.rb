@@ -21,3 +21,4 @@ class OneQuestionsController < ApplicationController
     current_user.point_up!(_point)
   end
 end
+  

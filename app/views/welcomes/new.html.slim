@@ -5,7 +5,7 @@
 
 .container
   - if logged_in?
-    = link_to "早速始める", "#start", class:"btn btn-outline-primary my-3"
+    = link_to "早速始める", "#start", class:"btn btn-outline-primary mt-2 mb-1"
   
   - else
     .button
@@ -17,6 +17,7 @@
   
   .sub-title
     = "※ログインしない場合、結果が記録されません"
+    
 .swiper.mb-3
   .swiper-wrapper
     = render @categories
@@ -30,10 +31,10 @@
 .space
   .title
     = t("dict.select_category")
-  ul#pills-tab.nav.nav-pills.mt-2.justify-content-center.menu role="tablist"
     = render "tab_menu"
-  
-  #pills-tabContent.tab-content
     = render "tab_content"
-    
   = link_to "ページトップに戻る", "#top", class:"btn btn-outline-primary btn-sm my-3 ms-1"
+
+  
+
+    

@@ -3,9 +3,9 @@ class OauthsController < ApplicationController
 
   def oauth
     return redirect_to root_path if logged_in?
-
     login_at(params[:provider])
   end
+
 
   def callback
     provider = params[:provider]

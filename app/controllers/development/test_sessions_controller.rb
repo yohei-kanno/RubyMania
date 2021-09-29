@@ -1,5 +1,5 @@
 class Development::TestSessionsController < ApplicationController
-  skip_before_action :require_login, only: %i[create new]
+  skip_before_action :require_login
 
   def new; end
 

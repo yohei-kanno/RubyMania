@@ -1,44 +1,46 @@
-.tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
-  .category-title
+#pills-tabContent.tab-content
+  .tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
+    .category-title
       = "ランダムに10問出題されます"
+    .row.row-cols-md-3.row-cols-2.g-4
+      - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
+        .col
+          div class="card card-#{i}" id="category-#{category.id}"
+            = link_to questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start?")} do
+              = image_tag(obj, class: "card-img-top")
+              .card-body
+                div class="card-title-#{i} card-title"
+                  = "#{category.name}"
+                .card-text.text-start
+                  = category.decorate.question_description
 
-  .row.row-cols-md-3.row-cols-2.g-4
-    - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
-      .col
-        div class="card card-#{i}" id="category-#{category.id}"
-          = link_to questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start?")} do
-            = image_tag(obj, class: "card-img-top")
-            .card-body
-              div class="card-title-#{i} card-title"
-                = "#{category.name}"
-              .card-text.text-start
-                = category.decorate.question_description
-                  
-.tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
-  .category-title
-      = t("dict.one_questions")
-  .row.row-cols-2.row-cols-md-3
-    - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
-      .col.mb-3
-        div class="card card-#{i}"
-          = link_to one_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.one_question?")} do
-            = image_tag(obj, class: "card-img-top")
-            .card-body.pt-0
-              div class="card-title-#{i} card-title"
-                = "#{category.name}"
-              .card-text.text-start
-                = category.decorate.one_question_description           
-.tab-pane.fade aria-labelledby="answers-tab" role="tabpanel" id="answers"                
-  .category-title
-      = t("dict.watch_answer")
-  .row.row-cols-2.row-cols-md-3
-    - object_index(@categories2, "book").each.with_index(1) do |(obj, category), i|
-      .col.mb-3
-        div class="card answer-card-#{i}"
-          = link_to answers_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.watch?")} do
-            = image_tag(obj, class: "card-img-top")
-            .card-body.pt-0
-              div class="answer-card-title-#{i} card-title"
-                = "#{category.name}"
-              .card-text.text-start
-                = category.decorate.answer_description
+  .tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
+    .category-title
+      = "一問一答形式です"
+    .row.row-cols-2.row-cols-md-3
+      - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
+        .col.mb-3
+          div class="card card-#{i}"
+            = link_to one_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.one_question?")} do
+              = image_tag(obj, class: "card-img-top")
+              .card-body.pt-0
+                div class="card-title-#{i} card-title"
+                  = "#{category.name}"
+                .card-text.text-start
+                  = category.decorate.one_question_description  
+                          
+  .tab-pane.fade aria-labelledby="answers-tab" role="tabpanel" id="answers"                
+    .category-title
+      = "問題と回答を見る"
+    .row.row-cols-2.row-cols-md-3
+      - object_index(@categories2, "book").each.with_index(1) do |(obj, category), i|
+        .col.mb-3
+          div class="card answer-card-#{i}"
+            = link_to answers_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.watch?")} do
+              = image_tag(obj, class: "card-img-top")
+              .card-body.pt-0
+                div class="answer-card-title-#{i} card-title"
+                  = "#{category.name}"
+                .card-text.text-start
+                  = category.decorate.answer_description
+                    

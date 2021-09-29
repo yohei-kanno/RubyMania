@@ -12,13 +12,13 @@ button.btn.btn-link data-bs-target="#Modal-ranking" data-bs-toggle="modal" type=
         - user_rank(@users).each.with_index(1) do |(j ,user),i|
           - if user
             .ranking-content.small-font
-              = image_tag j, class: "image-font ml-5"
-              span.me-3 = "#{i}位"
-              span.me-3= "Lv#{user.level}"
-              span.me-3= "#{user.name}"
-              span.me-3= "チャレンジした回数：#{user.study_records.count}回"
+              = image_tag j, class: "image-font me-2"
+              span.me-2 = "#{i}位"
+              span.me-2= "Lv#{user.level}"
+              span.me-2= "#{user.name}"
+              span.me-2= "チャレンジした回数：#{user.study_records.count}回"
           - else
             .ranking-content.small-font
-              = t("t.no-user")
+              = t("dict.no-user")
       .modal-footer
         button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close

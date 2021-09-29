@@ -52,6 +52,10 @@
   white-space: pre;
 }
 
+.correct_answer{
+  background-color: lightgreen
+}
+
 .correct{
   @include correct-form; 
   background-color: $success-color;

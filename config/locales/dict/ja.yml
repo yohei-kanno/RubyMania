@@ -25,8 +25,6 @@ ja:
     service: サービス概要
     ranking: レベルランキング
     select_category: カテゴリーを選択して下さい
-    one_questions: 一問一答形式です
-    watch_answer: 問題と回答をペラペラ見る
     
   
   submit:
