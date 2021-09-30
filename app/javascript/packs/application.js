@@ -8,6 +8,9 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+window.tippy = tippy;
 import "bootstrap";
 import '@fortawesome/fontawesome-free/js/all';
 import "../stylesheets/application";

@@ -63,15 +63,20 @@ nav{
   position: relative;
 }
 
-.copy-button{
-  font-size:10px;
+.copy-button {
+  font-size: 10px;
   border-radius: 5px;
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: blue;
   position: absolute;
   top: 5px;
   left: 95%;
+  border: solid 1px blue;
+  &:hover{
+    background-color: lightgray;
+  }
 }
+    
 
 .gradation{
   color: #DA8E00;

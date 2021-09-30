@@ -13,7 +13,7 @@
       .question-content id="copyTarget-#{i}" = question.content
       .text-start.mb-3
         button.copy-button onclick="onClickCopy(#{i})"
-          i.fas.fa-copy
+          = "copy"
       
     - question.choices.each do |choice|
       .form-check.choice-content-answer style=("#{'background-color: lightgreen' if choice.answer == true}")

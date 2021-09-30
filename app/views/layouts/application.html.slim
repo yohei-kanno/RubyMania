@@ -28,7 +28,7 @@ html
     = javascript_pack_tag "swiper/swiper.js"
     
     javascript:
-        function onClickCopy(num){
+      function onClickCopy(num){
         let pTag = document.getElementById(`copyTarget-${num}`);
         let range = document.createRange();
         range.selectNodeContents(pTag);
@@ -37,5 +37,16 @@ html
         selection.addRange(range);
         document.execCommand('copy');
         selection.removeAllRanges();
-        alert("コピーしました！")
       }
+      
+      
+      tippy('.copy-button', {
+        content: "copied!",
+        trigger: 'click',
+        hideOnClick: false,
+        onShow(instance) {
+          setTimeout(() => {
+            instance.hide();
+          }, 700);
+        }
+      });
