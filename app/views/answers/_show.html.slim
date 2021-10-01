@@ -3,11 +3,7 @@
     - @questions.each.with_index do |question, i|
       .text-start
         = "問題"
-      .question-form
-        .question-content id="copyTarget-#{i}" = question.content
-        .text-start
-          button.copy-button onclick="onClickCopy(#{i})"
-            i.fas.fa-copy
+      = render "shared/copy_button_form", i: i, question: question
       .text-start.mt-3
         = "回答"
       .choice-content
