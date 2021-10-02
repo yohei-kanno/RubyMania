@@ -1,5 +1,33 @@
 module ApplicationHelper
   
+ 
+  def all_user_average_score(i)
+    arr = []
+    users = User.all
+    users.each do |user|
+      arr << user.study_records.where(category_id:i).pluck(:score)
+    end
+    arr.to_a.flatten.sum / arr.to_a.flatten.length
+  end
+  
+  def arr_x
+    arr = []
+    users = User.all
+    users.each do |user|
+      arr << user.study_records.where(category_id:1).pluck(:score)
+    end
+    arr.to_a.flatten
+  end
+  
+  def dev(arr_x)
+      avg = arr_x.sum / arr_x.length
+      arr1 = arr_x.map{|x| (x - avg) ** 2}
+      std = Math.sqrt(arr1.sum / arr_x.length)
+      return (( 49 - avg) * 10 / std + 50).round(2)
+  end
+
+  
+  
   def ranks
     %w[j1 j2 j3 j4 j5 j6 j7 j8 j9]
   end

@@ -1,3 +1,9 @@
+- if logged_in?
+  = render "shared/logged_in_chart"
+            
+- else
+  = render "shared/chart"
+
 .main-title
   = t("dict.sub-title")
 .title 
@@ -34,7 +40,5 @@
     = render "tab_menu"
     = render "tab_content"
   = link_to "ページトップに戻る", "#top", class:"btn btn-outline-primary btn-sm my-3 ms-1"
-
-  
 
     
