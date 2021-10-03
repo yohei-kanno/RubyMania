@@ -114,7 +114,7 @@
     });
 - else 
   javascript:
-    var ctx = document.getElementById("myChart");
+    var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
       //グラフの種類
       type: 'radar',
@@ -157,5 +157,8 @@
     options: {
         // レスポンシブ指定
         responsive: true,
+        ticks:{
+          stepSize:100
+        }
       }
     });
