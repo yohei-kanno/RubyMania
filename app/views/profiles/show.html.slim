@@ -1,26 +1,26 @@
 .title
   = "プロフィール画面"
 
-table.table
+table.table.space
   tbody
     tr
       th = User.human_attribute_name(:name)
-      td.text-start = current_user.name
+      td = current_user.name
     tr
       th = User.human_attribute_name(:level)
-      td.text-start = "Lv #{current_user.level}"
+      td = "Lv #{current_user.level}"
     tr
       th = User.human_attribute_name(:created_at)
-      td.text-start = l current_user.created_at
+      td = l current_user.created_at
     tr
       th = User.human_attribute_name(:cumulative_experience_points)
-      td.text-start = "#{current_user.experience_point/10 }問"
+      td = "#{current_user.experience_point/10 }問"
     tr
       th = User.human_attribute_name(:next_level_points)
-      td.text-start = "あと#{@next_level}問"
+      td = "あと#{@next_level}問"
     tr
       th = "今までの履歴"
-      td.text-start
+      td
         button.modal-container.btn.btn-outline-secondary.btn-sm data-bs-target="#Modal-record" data-bs-toggle="modal" type="button" 
           = "記録を見る"
         #Modal-record.modal.fade aria-hidden="true" aria-labelledby="Modal-term" tabindex="-1" 
@@ -33,8 +33,77 @@ table.table
                 = render 'record'
               .modal-footer
                 button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close
-                        
-= link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm"
+
+.text-center
+  = "#{current_user.name}さんの偏差値"
+.space
+  canvas#myBarChart                        
+= link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm mt-3"
 
 
         
+javascript:
+    var ctx = document.getElementById("myBarChart");
+    var myBarChart = new Chart(ctx, {
+      //グラフの種類
+      type: 'bar',
+      //データの設定
+      data: {
+          //データ項目のラベル
+          labels: ["文字列", "数値", "配列", "ハッシュ", "総合","応用", "正規表現"],
+          //データセット
+          datasets:[
+                {
+                  backgroundColor: [
+                                    "rgba(240, 96, 96, 0.5)",
+                                    "rgba(81, 184, 245, 0.5)",
+                                    "rgba(8, 145, 39, 0.5)",
+                                    "rgba(215, 224, 0, 0.5)",
+                                    "rgba(255, 76, 196, 0.5)",
+                                    "rgba(255, 159, 6, 0.5)",
+                                    "rgba(74, 70, 64, 0.5)",
+                                     ],
+                  borderColor: [
+                                    "rgba(240, 96, 96, 1)",
+                                    "rgba(81, 184, 245, 1)",
+                                    "rgba(8, 145, 39, 1)",
+                                    "rgba(215, 224, 0, 0.5)",
+                                    "rgba(255, 76, 196, 1)",
+                                    "rgba(255, 159, 6, 1)",
+                                    "rgba(74, 70, 64, 1)",
+                                    ],
+                  hoverBackgroundColor: [
+                                    "rgba(240, 96, 96, 1)",
+                                    "rgba(81, 184, 245, 1)", 
+                                    "rgba(8, 145, 39, 1)", 
+                                    "rgba(215, 224, 0, 1)",
+                                    "rgba(255, 76, 196, 1)",
+                                    "rgba(255, 159, 6, 1)",
+                                    "rgba(74, 70, 64, 1)",
+                                    ],
+                  borderWidth: 1,
+                  //グラフのデータ
+                  data: [
+                    #{current_user.decorate.dev(arr_x, 1)},
+                    #{current_user.decorate.dev(arr_x, 2)},
+                    #{current_user.decorate.dev(arr_x, 3)},
+                    #{current_user.decorate.dev(arr_x, 4)},
+                    #{current_user.decorate.dev(arr_x, 5)},
+                    #{current_user.decorate.dev(arr_x, 6)},
+                    #{current_user.decorate.dev(arr_x, 7)},
+                  ]
+                } 
+              ]
+            },
+      options: {
+        indexAxis: 'y',
+          // レスポンシブ指定
+        responsive: true,
+        plugins: {
+          legend : {
+            display : false, 
+          },
+        }
+      }
+    });    
+    

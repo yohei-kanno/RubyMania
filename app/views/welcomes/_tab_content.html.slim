@@ -2,6 +2,8 @@
   .tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
     .category-title
       = "ランダムに10問出題されます"
+    .mb-3 style="font-size:8px;"
+      = "※記録やチャートに反映されます(ログインが必要です)"
     .row.row-cols-md-3.row-cols-2.g-4
       - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
         .col
@@ -17,6 +19,8 @@
   .tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
     .category-title
       = "一問一答形式です"
+    .mb-3 style="font-size:8px;"
+      = "※記録やチャートには反映されませんが経験値は付与されます(ログインが必要です)"
     .row.row-cols-2.row-cols-md-3
       - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
         .col.mb-3

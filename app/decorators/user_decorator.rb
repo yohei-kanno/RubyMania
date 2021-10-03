@@ -1,7 +1,8 @@
 class UserDecorator < Draper::Decorator
   delegate_all
+  
   def average_score(i)
-    return if object.study_records.where(category_id:i).pluck(:score).count.zero?
+    return if  object.study_records.where(category_id:i).pluck(:score).count.zero?
     arr = object.study_records.where(category_id:i).pluck(:score)
     arr.sum / arr.length
   end

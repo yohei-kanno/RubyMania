@@ -14,7 +14,6 @@ window.tippy = tippy;
 import "bootstrap";
 import '@fortawesome/fontawesome-free/js/all';
 import "../stylesheets/application";
-
 import "chartkick/chart.js"
 
 Rails.start()
