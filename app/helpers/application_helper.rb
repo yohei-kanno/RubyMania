@@ -68,7 +68,8 @@ module ApplicationHelper
       og: {
         site_name: 'RubyMania',
         title: 'RubySilverを取得しよう！',
-        description: 'Rubyに特化したクイズサービスです！', 
+        description: '問題数は３５０問以上！
+Rubyに特化したクイズサービスです！', 
         type: 'website',
         url: "https://www.rubymania.info",
         image: image_url('logo.png'),
