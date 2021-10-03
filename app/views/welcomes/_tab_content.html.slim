@@ -3,7 +3,7 @@
     .category-title
       = "ランダムに10問出題されます"
     .mb-3 style="font-size:8px;"
-      = "※記録やチャートに反映されます(ログインが必要です)"
+      = "※記録,チャート,偏差値に反映されます(ログインが必要です)"
     .row.row-cols-md-3.row-cols-2.g-4
       - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
         .col
