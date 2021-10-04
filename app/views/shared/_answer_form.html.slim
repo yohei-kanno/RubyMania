@@ -12,6 +12,6 @@
     = render "shared/copy_button_form", i: i, question: question
     - question.choices.each do |choice|
       .form-check.choice-content-answer style=("#{'background-color: lightgreen' if choice.answer == true}")
-        = radio_button_tag "#{i}","#{choice.id}",(true if choice == Choice.find(params[:question][i.to_s]) , {class: "form-check-input", disabled: true}
+        = radio_button_tag "#{i}","#{choice.id}",(true if choice == Choice.find(params[:question][i.to_s])) , {class: "form-check-input", disabled: true}
         = label_tag "#{i}_#{choice.id}", choice.content, class: "form-check-label"
       
