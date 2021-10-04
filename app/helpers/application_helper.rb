@@ -5,7 +5,7 @@ module ApplicationHelper
     arr = []
     users = User.all
     users.each do |user|
-      arr << user.study_records.where(category_id:i).pluck(:score)
+      arr.push user.study_records.where(category_id:i).pluck(:score)
     end
     return if arr.flatten.empty?
     arr.to_a.flatten.sum / arr.to_a.flatten.length

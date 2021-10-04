@@ -45,11 +45,11 @@ class ApplicationController < ActionController::Base
     choices.each do |choice|
       if choice.answer == true
         @point += 10
-        msgs << t('dict.correct')
+        msgs.push t('dict.correct')
       else
-        msgs << t('dict.uncorrect')
+        msgs.push t('dict.uncorrect')
       end
-      questions << choice.question
+      questions.push choice.question
     end
   end
 
