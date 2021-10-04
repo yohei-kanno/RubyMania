@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     question_exist?(params[:question])
     @questions = []
     @point = 0
-    @msgs = [nil]
+    @msgs = []
     choices = Choice.includes([question: :choices]).find(params[:question].except("name").values)
 
     insert_msg(choices, @msgs, @point, @questions)
