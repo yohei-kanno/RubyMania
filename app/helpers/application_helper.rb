@@ -10,72 +10,7 @@ module ApplicationHelper
     return if arr.flatten.empty?
     arr.to_a.flatten.sum / arr.to_a.flatten.length
   end
-  
-  def arr_x1
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:1).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  def arr_x2
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:2).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  def arr_x3
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:3).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  def arr_x4
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:4).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  def arr_x5
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:5).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  def arr_x6
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:6).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  def arr_x7
-    arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id:7).pluck(:score)
-    end
-    arr.to_a.flatten
-  end
-  
-  
-  
+    
   def ranks
     %w[j1 j2 j3 j4 j5 j6 j7 j8 j9]
   end
