@@ -50,6 +50,7 @@
           datasets: [
               {
                   label: "あなたの平均点",
+                  fill: true,
                   //背景色
                   backgroundColor: "rgba(0, 255, 0, 0.3)",
                   //枠線の色
@@ -106,12 +107,22 @@
           ]
       },
     options: {
-        // レスポンシブ指定
-        ticks:{
-          stepSize:5
+        scales:{
+          r: {
+            angleLines: {
+                display: false
+            },
+            suggestedMin: 0,
+            suggestedMax: 100,
+            ticks:{
+              stepSize:10,
+            }
+          }
         }
       }
     });
+              
+          
 - else 
   javascript:
     var ctx = document.getElementById("myChart").getContext("2d");
@@ -155,9 +166,17 @@
           ]
       },
     options: {
-        // レスポンシブ指定
-        ticks:{
-          stepSize:5
+        scales:{
+          r: {
+            angleLines: {
+                display: false
+            },
+            suggestedMin: 0,
+            suggestedMax: 100,
+            ticks:{
+              stepSize:10,
+            }
+          }
         }
       }
     });
