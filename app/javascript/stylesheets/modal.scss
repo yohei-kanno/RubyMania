@@ -1,5 +1,5 @@
 .modal-title{
-  font-size: $basic-font;
+  font-size: $big-font;
   font-weight: bold;
 }
 
@@ -20,6 +20,16 @@
   margin-right: 10px;
 }
 
+.term-title{
+  font-size: $big-font;
+  font-weight: bold;
+}
+
+.term-sentence{
+  font-size: $basic-font;
+  line-height: 1.5rem;
+}
+
 @media screen and (max-width: 600px) {
   .btn-link{
     font-size: $small-font;
@@ -27,5 +37,14 @@
   
   .image-font{
     height: 15px;
+  }
+  
+  .term-title{
+    font-size: $basic-font;
+  }
+  
+  .term-sentence{
+    font-size: $small-font;
+    line-height: 1rem;
   }
 }
