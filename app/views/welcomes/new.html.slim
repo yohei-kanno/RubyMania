@@ -27,10 +27,11 @@
   .swiper-button-next.swiper-custom-button
     i.fa.fa-angle-right
 
+.chart-space.mt-3
+  canvas#myChart
+  #start
+  
 .space
-  div
-    canvas#myChart
-    #start
   .title
     = t("dict.select_category")
     = render "tab_menu"
@@ -107,7 +108,7 @@
     options: {
         // レスポンシブ指定
         ticks:{
-          stepSize:100
+          stepSize:5
         }
       }
     });
@@ -156,7 +157,7 @@
     options: {
         // レスポンシブ指定
         ticks:{
-          stepSize:100
+          stepSize:5
         }
       }
     });
