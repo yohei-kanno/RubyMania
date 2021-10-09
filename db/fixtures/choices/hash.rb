@@ -130,10 +130,10 @@ $h_choice83 = '{:a=>"foo"}と表示される'
 $h_choice84 = is_exception
 
 # h_question22
-$h_choice81 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
-$h_choice82 = '{:a=>"foo", :b:=>"bar"}と表示される'
-$h_choice83 = '{:a=>"foo"}と表示される'
-$h_choice84 = is_exception
+$h_choice85 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
+$h_choice86 = '{:a=>"foo", :b:=>"bar"}と表示される'
+$h_choice87 = '{:a=>"foo"}と表示される'
+$h_choice88 = is_exception
 
 # h_question23
 $h_choice89 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'

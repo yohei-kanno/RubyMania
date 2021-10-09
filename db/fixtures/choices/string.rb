@@ -130,10 +130,10 @@ $s_choice83 = is_nil
 $s_choice84 = is_exception
 
 # s_question22
-$s_choice89 = '"2378"と表示される'
-$s_choice90 = '"14569"と表示される'
-$s_choice91 = '"123456789"と表示される'
-$s_choice92 = is_exception
+$s_choice85 = '"2378"と表示される'
+$s_choice86 = '"14569"と表示される'
+$s_choice87 = '"123456789"と表示される'
+$s_choice88 = is_exception
 
 # s_question23
 $s_choice89 = '"2378"と表示される'
