@@ -12,7 +12,7 @@ RSpec.describe "回答機能", type: :system do
     
     context "stringの問題を回答した場合" do
       before do
-        start_string_questions
+        start_questions(1)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -31,8 +31,8 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
-        expect(page).to have_link "もう一度をやる"
-        click_link "もう一度をやる", match: :first
+        expect(page).to have_link "もう一度やる"
+        click_link "もう一度やる", match: :first
         expect(page).to have_content("String(文字列)編")
       end
       
@@ -43,6 +43,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -53,7 +54,7 @@ RSpec.describe "回答機能", type: :system do
     
     context "Integerの問題を回答した場合" do
       before do
-        start_integer_questions
+        start_questions(2)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -85,6 +86,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -95,7 +97,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "Arrayの問題を回答した場合" do
       before do
-        start_array_questions
+        start_questions(3)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -127,6 +129,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -137,7 +140,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "Hashの問題を回答した場合" do
       before do
-        start_hash_questions
+        start_questions(4)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -169,6 +172,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -179,7 +183,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "基礎編総合問題を回答した場合" do
       before do
-        start_basic_questions
+        start_questions(5)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -211,6 +215,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -221,7 +226,7 @@ RSpec.describe "回答機能", type: :system do
     
     context "オブジェクト指向編を回答した場合" do
       before do
-        start_object_questions
+        start_questions(6)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -253,6 +258,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -263,7 +269,7 @@ RSpec.describe "回答機能", type: :system do
     
     context "正規表現の問題を回答した場合" do
       before do
-        start_regexp_questions
+        start_questions(7)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -295,6 +301,7 @@ RSpec.describe "回答機能", type: :system do
       end
       
       it "記録されていること" do
+        visit root_path
         expect(user.study_records.count).to eq(1)
       end
       
@@ -308,7 +315,7 @@ RSpec.describe "回答機能", type: :system do
     context "stringの問題を回答した場合" do
       
       before do
-        start_string_questions
+        start_questions(1)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -342,7 +349,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "Integerの問題を回答した場合" do
       before do
-        start_integer_questions
+        start_questions(2)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -376,7 +383,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "Arrayの問題を回答した場合" do
       before do
-        start_array_questions
+        start_questions(3)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -410,7 +417,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "Hashの問題を回答した場合" do
       before do
-        start_hash_questions
+        start_questions(4)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -444,7 +451,7 @@ RSpec.describe "回答機能", type: :system do
       
     context "基礎編総合問題を回答した場合" do
       before do
-        start_basic_questions
+        start_questions(5)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -478,7 +485,7 @@ RSpec.describe "回答機能", type: :system do
     
     context "オブジェクト指向編を回答した場合" do
       before do
-        start_object_questions
+        start_questions(6)
         page.accept_confirm do
           click_on "回答する"
         end
@@ -512,7 +519,7 @@ RSpec.describe "回答機能", type: :system do
     
     context "正規表現の問題を回答した場合" do
       before do
-        start_regexp_questions
+        start_questions(7)
         page.accept_confirm do
           click_on "回答する"
         end

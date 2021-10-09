@@ -306,8 +306,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -329,10 +329,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
-      end
     end
     
     context "Integerの問題に回答した場合" do
@@ -343,8 +339,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -366,10 +362,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
-      end
     end
     
     context "Arrayの問題に回答した場合" do
@@ -380,8 +372,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -403,10 +395,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
-      end
     end
     
     context "Hashの問題に回答した場合" do
@@ -417,8 +405,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -440,10 +428,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
-      end
     end
     
     context "基礎編総合の問題に回答した場合" do
@@ -454,8 +438,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -477,10 +461,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
-      end
     end
     
     context "応用編の問題に回答した場合" do
@@ -491,8 +471,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -514,10 +494,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
-      end
     end
     
     context "正規表現の問題に回答した場合" do
@@ -528,8 +504,8 @@ RSpec.describe "一問一答回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
-        expect(page).to have_selector("#your-point")
+      it "点数が表示されていないこと" do 
+        expect(page).to_not have_selector("#your-point")
       end
       
       it "回答が表示されていること" do
@@ -550,10 +526,6 @@ RSpec.describe "一問一答回答機能", type: :system do
         expect(page).to have_link "トップページへ"
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
-      end
-      
-      it "記録はされていないこと" do
-        expect(user.study_records.count).to eq(0)
       end
     end
   end
