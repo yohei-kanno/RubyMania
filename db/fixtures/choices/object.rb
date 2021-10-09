@@ -10,19 +10,10 @@ $o_choice3 = '「Class」と表示される'
 $o_choice4 = '何も表示されない'
 
 # o_question2
-$o_choice5 = '"baz"
-"bar"
-"foo"
-と表示される'
-$o_choice6 = '"foo"
-"bar"
-"baz"
-と表示される'
-$o_choice7 = '"foo"
-"bar"
-"baz"
-と表示される'
-$o_choice8 = is_exception
+$o_choice5 = is_exception
+$o_choice6 = '「Object」と表示される'
+$o_choice7 = '「C1」と表示される'
+$o_choice8 = '何も表示されない'
 
 # o_question3
 $o_choice9 = is_exception

@@ -334,9 +334,9 @@ $a_choice207 = '「6
 $a_choice208 = '[nil]と表示される'
 
 # a_question53
-$a_choice209 = '「1
+$a_choice209 = '「0
 2
-3」
+4」
 と表示される'
 $a_choice210 = '「2
 4

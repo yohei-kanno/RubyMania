@@ -3,13 +3,10 @@ $o_question1 =
 p c.class'
 
 $o_question2 =
-  'p "foo"
-
-class C1
-  p "bar"
+  'class C1
 end
 
-p "baz'
+p C1.new.class'
 
 $o_question3 =
   'class C1
@@ -441,28 +438,6 @@ p C3.class_variable_get(:@@count)'
 
 $o_question29 =
   'class C1
-  @@count = 0
-  def initialize
-    @@count += 1
-  end
-end
-
-class C2 < C1
-  def initialize
-    super
-  end
-end
-
-class C3 < C2
-  def initialize
-  end
-end
-
-C1.new
-C2.new
-C3.new
-
-p C3.class_variable_get(:@@count)class C1
   @@count = 0
   def initialize
     @@count += 1

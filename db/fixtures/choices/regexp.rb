@@ -138,7 +138,7 @@ $r_choice88 = is_nil
 # r_question23(2)
 $r_choice89 = '「1」と表示される'
 $r_choice90 = '「3」と表示される'
-$r_choice91 = '「9」と表示される'
+$r_choice91 = '「6」と表示される'
 $r_choice92 = is_nil
 
 # r_question24(1)

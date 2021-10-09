@@ -101,8 +101,8 @@ Choice.seed(:id,
             { id: 5079, content: $r_choice79, answer: false, question_id: 5020 },
             { id: 5080, content: $r_choice80, answer: false, question_id: 5020 },
             # r_question21(2)
-            { id: 5081, content: $r_choice81, answer: false, question_id: 5021 },
-            { id: 5082, content: $r_choice82, answer: true, question_id: 5021 },
+            { id: 5081, content: $r_choice81, answer: true, question_id: 5021 },
+            { id: 5082, content: $r_choice82, answer: false, question_id: 5021 },
             { id: 5083, content: $r_choice83, answer: false, question_id: 5021 },
             { id: 5084, content: $r_choice84, answer: false, question_id: 5021 },
             # r_question22(3)
@@ -112,8 +112,8 @@ Choice.seed(:id,
             { id: 5088, content: $r_choice88, answer: false, question_id: 5022 },
             # r_question23(2)
             { id: 5089, content: $r_choice89, answer: false, question_id: 5023 },
-            { id: 5090, content: $r_choice90, answer: true, question_id: 5023 },
-            { id: 5091, content: $r_choice91, answer: false, question_id: 5023 },
+            { id: 5090, content: $r_choice90, answer: false, question_id: 5023 },
+            { id: 5091, content: $r_choice91, answer: true, question_id: 5023 },
             { id: 5092, content: $r_choice92, answer: false, question_id: 5023 },
             # r_question24(1)
             { id: 5093, content: $r_choice93, answer: true, question_id: 5024 },

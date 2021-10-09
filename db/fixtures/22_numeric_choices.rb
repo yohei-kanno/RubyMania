@@ -176,10 +176,10 @@ Choice.seed(:id,
             { id: 1139, content: $n_choice139, answer: false, question_id: 1035 },
             { id: 1140, content: $n_choice140, answer: false, question_id: 1035 },
             # i_question36(1)
-            { id: 1141, content: $n_choice141, answer: true, question_id: 1036 },
+            { id: 1141, content: $n_choice141, answer: false, question_id: 1036 },
             { id: 1142, content: $n_choice142, answer: false, question_id: 1036 },
             { id: 1143, content: $n_choice143, answer: false, question_id: 1036 },
-            { id: 1144, content: $n_choice144, answer: false, question_id: 1036 },
+            { id: 1144, content: $n_choice144, answer: true, question_id: 1036 },
             # i_question37(3)
             { id: 1145, content: $n_choice145, answer: false, question_id: 1037 },
             { id: 1146, content: $n_choice146, answer: false, question_id: 1037 },

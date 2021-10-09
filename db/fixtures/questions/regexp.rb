@@ -101,7 +101,7 @@ p $&'
 
 $r_question26 =
   '/yy/ =~ "xxyyzz"
-p $'''
+p $''
 
 $r_question27 =
   'p /abcde/i === "AbCDE"'

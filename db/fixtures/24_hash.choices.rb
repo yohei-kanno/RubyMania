@@ -157,8 +157,8 @@ Choice.seed(:id,
             { id: 3124, content: $h_choice124, answer: false, question_id: 3031 },
             # h_question32
             { id: 3125, content: $h_choice125, answer: false, question_id: 3032 },
-            { id: 3126, content: $h_choice126, answer: true, question_id: 3032 },
-            { id: 3127, content: $h_choice127, answer: false, question_id: 3032 },
+            { id: 3126, content: $h_choice126, answer: false, question_id: 3032 },
+            { id: 3127, content: $h_choice127, answer: true, question_id: 3032 },
             { id: 3128, content: $h_choice128, answer: false, question_id: 3032 },
             # h_question33
             { id: 3129, content: $h_choice129, answer: false, question_id: 3033 },

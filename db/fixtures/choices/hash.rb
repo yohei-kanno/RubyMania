@@ -36,7 +36,7 @@ $h_choice20 = '[:a, :b]と表示される'
 # h_question6
 $h_choice21 = '{:a=>"foo"}と表示される'
 $h_choice22 = '{:a=>"foo", :b=>"bar"}と表示される'
-$h_choice23 = '{:a=>"foo", :b=>"bar", :c=>"baz"}と表示される'
+$h_choice23 = '{:b=>"bar", :c=>"baz"}と表示される'
 $h_choice24 = is_exception
 
 # h_question7
@@ -103,12 +103,12 @@ $h_choice64 = is_exception
 $h_choice65 = '{a: "foo", b: "bar", c: "baz", d: "qux"}と表示される'
 $h_choice66 = '{b: "bar", c: "baz", d: "qux"}と表示される'
 $h_choice67 = '{b: "bar", c: "baz", d: "qux"}と表示される'
-$h_choice68 = '{a: "foo"}と表示される'
+$h_choice68 = is_exception
 
 # h_question18
-$h_choice69 = '{a: "foo", b: "bar", c: "baz", d: "qux", a: "bar"}と表示される'
-$h_choice70 = '{a: foo, b: "bar", c: "baz", d: "qux"}と表示される'
-$h_choice71 = '{a: "bar"}と表示される'
+$h_choice69 = '{:a=>foo, :b=>"bar", :c=>"baz", :d=>"qux", :a=>"bar"}と表示される'
+$h_choice70 = '{:a=>foo, :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
+$h_choice71 = '{:a=>"bar"}と表示される'
 $h_choice72 = is_exception
 
 # h_question19
@@ -118,32 +118,32 @@ $h_choice75 = '[:a, "foo"]と表示される'
 $h_choice76 = is_exception
 
 # h_question20
-$h_choice77 = '{a: "foo", b: "bar", c: "baz", d: "qux"}と表示される'
-$h_choice78 = '{b:, "bar", c:, "baz", d:, "qux"}と表示される'
+$h_choice77 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
+$h_choice78 = '{:b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
 $h_choice79 = '[:a, "foo"]と表示される'
 $h_choice80 = is_exception
 
 # h_question21
 $h_choice81 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
-$h_choice82 = '{a: "foo", b: "bar" }と表示される'
-$h_choice83 = '{:a, "foo"}と表示される'
+$h_choice82 = '{:a=>"foo", :b:=>"bar"}と表示される'
+$h_choice83 = '{:a=>"foo"}と表示される'
 $h_choice84 = is_exception
 
 # h_question22
-$h_choice85 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
-$h_choice86 = '{a: "foo", b: "bar" }と表示される'
-$h_choice87 = '{c: "baz", d: "qux"}と表示される'
-$h_choice88 = is_exception
+$h_choice81 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
+$h_choice82 = '{:a=>"foo", :b:=>"bar"}と表示される'
+$h_choice83 = '{:a=>"foo"}と表示される'
+$h_choice84 = is_exception
 
 # h_question23
 $h_choice89 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
-$h_choice90 = '{a: "foo", b: "bar" }と表示される'
-$h_choice91 = '{c: "baz", d: "qux"}と表示される'
+$h_choice90 = '{:a=>"foo", :b:=>"bar"}と表示される'
+$h_choice91 = '{:c=>"baz", :d=>"qux"}と表示される'
 $h_choice92 = is_exception
 
 # h_question24
 $h_choice93 = '{:a=>"foo", :b=>"bar", :c=>"baz", :d=>"qux"}と表示される'
-$h_choice94 = '{a: "foo"}と表示される'
+$h_choice94 = '{:a=>"foo"}と表示される'
 $h_choice95 = '{"foo"=>:a, "bar"=>:b, "baz"=>:c, "qux"=>:d}と表示される'
 $h_choice96 = is_exception
 
