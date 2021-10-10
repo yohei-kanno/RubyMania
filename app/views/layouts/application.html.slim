@@ -18,14 +18,21 @@ html
           gtag('js', new Date());
 
           gtag('config', 'G-QL8WNS65KZ');
+          
   body
-    .container-fluid
+    #particles-js        
+    .container-fluid 
       = render 'shared/header'
       - flash.each do |key, value|
         p class=("alert alert-#{key}") 
           = value
       = yield
       = render 'shared/footer'
+    script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
+    javascript:
+      particlesJS.load('particles-js', 'assets/particles.json', function() {
+             console.log('callback - particles.js config loaded');
+          });
     script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" 
     script src="https://unpkg.com/scrollreveal" 
     = javascript_pack_tag "swiper/swiper.js"

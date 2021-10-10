@@ -22,6 +22,7 @@ gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'meta-tags'
+gem 'particles-js-rails', '2.0.0'
 
 group :development, :test do
   gem 'bullet'
