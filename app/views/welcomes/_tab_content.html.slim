@@ -7,7 +7,7 @@
     .row.row-cols-md-3.row-cols-2.g-4
       - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
         .col
-          div class="card card-#{i}" id="category-#{category.id}"
+          div class="card card-#{i} question-effect" id="category-#{category.id}"
             = link_to questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start?")} do
               = image_tag(obj, class: "card-img-top")
               .card-body
@@ -24,7 +24,7 @@
     .row.row-cols-2.row-cols-md-3
       - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
         .col.mb-3
-          div class="card card-#{i}"
+          div class="card card-#{i} one-question-effect"
             = link_to one_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.one_question?")} do
               = image_tag(obj, class: "card-img-top")
               .card-body.pt-0

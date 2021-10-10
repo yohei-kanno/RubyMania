@@ -25,7 +25,6 @@
     border-radius: 5px;
     &:hover{
       box-shadow: 0 5px 10px rgb(156, 149, 149);
-      transform: translate(0, -5px);
       color: black;
     }
   }
@@ -50,11 +49,17 @@
 }
 
 .main-title{
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
+  
 }
   
-
+.main-sub-title{
+  font-weight: bold;
+  font-size: $big-font;
+  margin: 10px 0;
+}
+  
 .title{
   font-weight: bold;
   font-size: $big-font;
@@ -88,6 +93,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .main-title{
+    font-size: $big-font;
+  }
+  
+  .main-sub-title{
+    font-size: $basic-font;
+  }
+  
   .title{
     font-size: $basic-font;
   }
