@@ -30,6 +30,7 @@ html
     script src="https://unpkg.com/scrollreveal" 
     = javascript_pack_tag "swiper/swiper.js"
     = javascript_pack_tag "scroll/scroll.js"
+    = javascript_pack_tag "tippy/tippy.js"
     
     javascript:
       function onClickCopy(num){
@@ -42,15 +43,3 @@ html
         document.execCommand('copy');
         selection.removeAllRanges();
       }
-      
-      
-      tippy('.copy-button', {
-        content: "copied!",
-        trigger: 'click',
-        hideOnClick: false,
-        onShow(instance) {
-          setTimeout(() => {
-            instance.hide();
-          }, 700);
-        }
-      });
