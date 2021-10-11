@@ -2,6 +2,7 @@ module TestQuestion
   module StartQuestion
     def start_questions(i)
       visit root_path
+      execute_script('window.scrollBy(0,10000)')
       page.accept_confirm do
         click_on "link-#{i}"
       end

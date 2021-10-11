@@ -18,17 +18,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -43,17 +34,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -68,17 +50,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -93,17 +66,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -118,17 +82,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -143,17 +98,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -168,17 +114,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -195,17 +132,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -220,17 +148,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -245,17 +164,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -270,17 +180,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -295,17 +196,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -320,17 +212,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end
@@ -345,17 +228,8 @@ RSpec.describe "クイズ機能", type: :system do
         expect(page).to have_selector(".question-title")
         expect(page).to have_selector(".question-content")
         expect(page).to have_selector(".choice-content-hover")
-      end
-      
-      it "問題が10問ある事" do
         expect(all('.question-form').count).to eq(10)
-      end
-      
-      it "選択肢が合計40個あること" do
         expect(all('.choice-content-hover').count).to eq(40)
-      end
-      
-      it "回答ボタンがあること" do
         expect(page).to have_button("回答する")
       end
     end

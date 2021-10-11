@@ -18,16 +18,13 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]String(文字列)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
         expect(page).to have_selector(".judgment")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -41,15 +38,6 @@ RSpec.describe "回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
-      end
     end
     
     context "Integerの問題を回答した場合" do
@@ -60,17 +48,13 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]Integer(数値)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_selector(".judgment")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -84,17 +68,8 @@ RSpec.describe "回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
-      end
     end
-      
+    
     context "Arrayの問題を回答した場合" do
       before do
         start_questions(3)
@@ -103,17 +78,13 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]Array(配列)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_selector(".judgment")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -127,17 +98,8 @@ RSpec.describe "回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
-      end
     end
-      
+    
     context "Hashの問題を回答した場合" do
       before do
         start_questions(4)
@@ -146,18 +108,15 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]Hash(ハッシュ)編") 
+        expect(page).to have_selector(".judgment")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
-      end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
         expect(page).to have_link "もう一度やる"
@@ -170,17 +129,8 @@ RSpec.describe "回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
-      end
     end
-      
+    
     context "基礎編総合問題を回答した場合" do
       before do
         start_questions(5)
@@ -189,18 +139,15 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]基礎編総合問題編") 
+        expect(page).to have_selector(".judgment")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
-      end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
         expect(page).to have_link "もう一度やる"
@@ -213,15 +160,6 @@ RSpec.describe "回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
-      end
     end
     
     context "オブジェクト指向編を回答した場合" do
@@ -232,17 +170,13 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
+        expect(page).to have_selector(".judgment")
         expect(page).to have_content("[回答]オブジェクト指向編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -256,15 +190,6 @@ RSpec.describe "回答機能", type: :system do
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
       end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
-      end
     end
     
     context "正規表現の問題を回答した場合" do
@@ -277,15 +202,11 @@ RSpec.describe "回答機能", type: :system do
       
       it "点数が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]Regexp(正規表現)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_selector(".judgment")
+        expect(page).to have_content("レベルがアップしました！")
+        visit root_path
+        expect(user.study_records.count).to eq(1)
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -298,15 +219,6 @@ RSpec.describe "回答機能", type: :system do
         expect(page).to have_link "トップページへ"
         click_link "トップページへ", match: :first
         expect(page).to have_current_path root_path
-      end
-      
-      it "記録されていること" do
-        visit root_path
-        expect(user.study_records.count).to eq(1)
-      end
-      
-      it "レベルアップが機能していること" do
-        expect(page).to have_content("レベルがアップしました！")
       end
     end
   end
@@ -321,17 +233,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]String(文字列)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -355,17 +260,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]Integer(数値)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -389,17 +287,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
         expect(page).to have_content("[回答]Array(配列)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -423,17 +314,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
-        expect(page).to have_content("[回答]Hash(ハッシュ)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_content("[回答]Hash(ハッシュ)編")  
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -457,17 +341,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
-        expect(page).to have_content("[回答]基礎編総合問題編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_content("[回答]基礎編総合問題編")   
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -491,17 +368,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
-        expect(page).to have_content("[回答]オブジェクト指向編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_content("[回答]オブジェクト指向編")    
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
@@ -525,17 +395,10 @@ RSpec.describe "回答機能", type: :system do
         end
       end
       
-      it "点数が表示されていること" do 
+      it "正常に回答が表示されていること" do 
         expect(page).to have_selector("#your-point")
-      end
-      
-      it "回答が表示されていること" do
-        expect(page).to have_content("[回答]Regexp(正規表現)編") 
-      end
-      
-      it "正解、不正解が表示されていること" do
-        expect(page).to have_content("正解！")
-        expect(page).to have_content("不正解！")
+        expect(page).to have_content("[回答]Regexp(正規表現)編")     
+        expect(page).to have_selector(".judgment")
       end
       
       it "もう一度同じカテゴリーの問題が出来ること" do
