@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_22_044554) do
+ActiveRecord::Schema.define(version: 2021_10_11_050458) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_09_22_044554) do
     t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "commentary", default: "まだ解説はありません"
   end
 
   create_table "study_records", force: :cascade do |t|

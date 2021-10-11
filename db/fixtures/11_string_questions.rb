@@ -2,7 +2,7 @@ require("./db/fixtures/questions/string")
 
 title = '以下のコードの実行結果として適切なものを選びなさい'
 Question.seed(:id,
-              { id: 1, title: title, content: $s_question1 },
+              { id: 1, title: title, content: $s_question1, commentary: $s_commentary1 },
               { id: 2, title: title, content: $s_question2 },
               { id: 3, title: title, content: $s_question3 },
               { id: 4, title: title, content: $s_question4 },
