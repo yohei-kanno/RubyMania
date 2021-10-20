@@ -1,6 +1,6 @@
 $r_question1 =
   'obj = "123"
-p obj.match(/\d/)'
+p obj.match(/4/)'
 
 $r_question2 =
   'obj = /123/
@@ -11,40 +11,39 @@ $r_question3 =
 p obj.frozen?'
 
 $r_question4 =
-  'obj = Regexp.new("123")
-p obj.frozen?'
+  '%r(regexp)'
 
 $r_question5 =
   'obj = "123"
-p obj.match(/.../)'
+p obj.sub(/./,"a")'
 
 $r_question6 =
   'obj = "123"
-p obj.match(/\d{1,2}/)'
+p obj.gsub(/./,"a")'
 
 $r_question7 =
   'obj = "123"
-p obj.match(/\d{1,4}/)'
+p obj.sub(/\d{1,2}/){|str| "a"}'
 
 $r_question8 =
-  'obj = "123"
-p obj.match(/\d{4,4}/)'
+  'obj = "123, 123"
+p obj.gsub(/\d{1,3}/){|str| "a"}'
 
 $r_question9 =
-  'obj = "123"
-p obj.match(/\d{4}/)'
+  'obj = "123abc"
+p obj =~(/\D/)'
 
 $r_question10 =
-  'obj = "abcde"
-p obj.match(/[^a]/)'
+  'obj = "123abc"
+  p obj =~(/\s/)'
 
 $r_question11 =
-  'obj = "abcde"
-p obj.match(/[^ab]/)'
+  'obj = /reg/
+obj === "r"'
 
 $r_question12 =
-  'obj = "abcde"
-p obj.scan(/[^ab]/).class'
+  'obj = /reg/
+obj === "regexp"'
 
 $r_question13 =
   'obj = "abcde"
@@ -55,15 +54,15 @@ $r_question14 =
 p obj.match?(/abc[ ]?de/)'
 
 $r_question15 =
-  'obj = "abcde"
-p obj.match?(/abc[]?de/)'
+  'obj = "abc de"
+  p obj.scan(/abc[ ]?de/).class'
 
 $r_question16 =
   'obj = "abc123 ABC"
 p obj.scan(/\w/).count'
 
 $r_question17 =
-  'obj = "abc123 ABC"
+  'obj = "abc123AB"
 p obj.scan(/\w{1,3}/).count'
 
 $r_question18 =

@@ -9,6 +9,14 @@
       .choice-content
         - question.choices.each do |choice|
           = choice.content if choice.answer == true
+      #accordionExample.accordion
+        .accordion-item
+          h2#headingOne.accordion-header
+            button.accordion-button aria-controls="collapse#{question.id}" aria-expanded="true" data-bs-target="#collapse#{question.id}" data-bs-toggle="collapse" type="button" 
+              = "解説を見る"
+          .accordion-collapse.collapse aria-labelledby="headingOne" data-bs-parent="#accordionExample" id="collapse#{question.id}"
+            .accordion-body.text-start.commentary-form
+              = question.commentary
     div       
       = paginate @questions, theme: 'bootstrap-5',
                         class: "pagination",

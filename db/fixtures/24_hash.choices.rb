@@ -77,9 +77,9 @@ Choice.seed(:id,
             { id: 3060, content: $h_choice60, answer: false, question_id: 3015 },
             # h_question16
             { id: 3061, content: $h_choice61, answer: false, question_id: 3016 },
-            { id: 3062, content: $h_choice62, answer: true, question_id: 3016 },
+            { id: 3062, content: $h_choice62, answer: false, question_id: 3016 },
             { id: 3063, content: $h_choice63, answer: false, question_id: 3016 },
-            { id: 3064, content: $h_choice64, answer: false, question_id: 3016 },
+            { id: 3064, content: $h_choice64, answer: true, question_id: 3016 },
             # h_question17
             { id: 3065, content: $h_choice65, answer: false, question_id: 3017 },
             { id: 3066, content: $h_choice66, answer: false, question_id: 3017 },

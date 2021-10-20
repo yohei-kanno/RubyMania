@@ -324,7 +324,7 @@ $s_choice212 = is_exception
 # s_question54
 $s_choice213 = '"hello"と表示される'
 $s_choice214 = '"world"と表示される'
-$s_choice215 = '"foobar"と表示される'
+$s_choice215 = '"hello world"と表示される'
 $s_choice216 = is_exception
 
 # s_question55
@@ -362,33 +362,3 @@ $s_choice237 = '"string"と表示される'
 $s_choice238 = '"strng"と表示される'
 $s_choice239 = '"sting"と表示される'
 $s_choice240 = '"strig"と表示される'
-
-# s_question61
-$s_choice241 = '"ring"と表示される'
-$s_choice242 = '"ing"と表示される'
-$s_choice243 = '"in"と表示される'
-$s_choice244 = '"i"と表示される'
-
-# s_question62
-$s_choice245 = '"ring"と表示される'
-$s_choice246 = '"ing"と表示される'
-$s_choice247 = '"in"と表示される'
-$s_choice248 = '"i"と表示される'
-
-# s_question63
-$s_choice249 = '"strin"と表示される'
-$s_choice250 = '"stri"と表示される'
-$s_choice251 = '"str"と表示される'
-$s_choice252 = '"st"と表示される'
-
-# s_question64
-$s_choice253 = '"string"と表示される'
-$s_choice254 = '"strin"と表示される'
-$s_choice255 = '"stri"と表示される'
-$s_choice256 = '"str"と表示される'
-
-# s_question65
-$s_choice257 = '"string"と表示される'
-$s_choice258 = '"strin"と表示される'
-$s_choice259 = '"stri"と表示される'
-$s_choice260 = '"str"と表示される'

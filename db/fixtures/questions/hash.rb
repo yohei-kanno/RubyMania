@@ -65,7 +65,7 @@ p obj'
 
 $h_question16 =
   'obj = {a: "foo", b: "bar", c: "baz", d: "qux"}
-obj.delete_if{|key, value| value == "foo" }
+obj.delete_if!{|key, value| value == "foo" }
 p obj'
 
 $h_question17 =

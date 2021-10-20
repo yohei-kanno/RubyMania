@@ -12,8 +12,8 @@ Choice.seed(:id,
             { id: 1008, content: $n_choice8, answer: true, question_id: 1002 },
             # i_question3(3)
             { id: 1009, content: $n_choice9, answer: false, question_id: 1003 },
-            { id: 1010, content: $n_choice10, answer: false, question_id: 1003 },
-            { id: 1011, content: $n_choice11, answer: true, question_id: 1003 },
+            { id: 1010, content: $n_choice10, answer: true, question_id: 1003 },
+            { id: 1011, content: $n_choice11, answer: false, question_id: 1003 },
             { id: 1012, content: $n_choice12, answer: false, question_id: 1003 },
             # i_question4(2)
             { id: 1013, content: $n_choice13, answer: false, question_id: 1004 },

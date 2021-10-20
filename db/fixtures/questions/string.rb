@@ -243,26 +243,3 @@ $s_question60 =
   'obj1 = "string"
 obj1.slice!(3)
 p obj1'
-
-$s_question61 =
-  'obj1 = "string"
-p obj1[3...4]'
-
-$s_question62 =
-  'obj1 = "string"
-p obj1[3..4]'
-
-$s_question63 =
-  'obj1 = "string"
-obj1.slice!(2, 4)
-p obj1'
-
-$s_question64 =
-  'obj1 = "string"
-obj1.slice!(2, -4)
-p obj1'
-
-$s_question65 =
-  'obj1 = "string"
-obj1.slice!(2, -4)
-p obj1'

@@ -22,58 +22,58 @@ $r_choice11 = is_nil
 $r_choice12 = is_exception
 
 # r_question4(2)
-$r_choice13 = is_true
-$r_choice14 = is_false
-$r_choice15 = is_nil
-$r_choice16 = is_exception
+$r_choice13 = is_exception
+$r_choice14 = '/regexp/と表示される'
+$r_choice15 = '"regexpと表示される"'
+$r_choice16 = is_nil
 
-# r_question5(3)
-$r_choice17 = '「#<MatchData "1">」と表示される'
-$r_choice18 = '「#<MatchData "12">」と表示される'
-$r_choice19 = '「#<MatchData "123">」と表示される'
+# r_question5(2)
+$r_choice17 = '"123"と表示される'
+$r_choice18 = '"a23"と表示される'
+$r_choice19 = '"aaa"と表示される'
 $r_choice20 = is_nil
 
-# r_question6(2)
-$r_choice21 = '「#<MatchData "1">」と表示される'
-$r_choice22 = '「#<MatchData "12">」と表示される'
-$r_choice23 = '「#<MatchData "123">」と表示される'
+# r_question6(3)
+$r_choice21 = '"123"と表示される'
+$r_choice22 = '"a23"と表示される'
+$r_choice23 = '"aaa"と表示される'
 $r_choice24 = is_nil
 
 # r_question7(3)
-$r_choice25 = '「#<MatchData "1">」と表示される'
-$r_choice26 = '「#<MatchData "12">」と表示される'
-$r_choice27 = '「#<MatchData "123">」と表示される'
-$r_choice28 = is_nil
+$r_choice25 = '"123"と表示される'
+$r_choice26 = '"a23"と表示される'
+$r_choice27 = '"a3"と表示される'
+$r_choice28 = '"a"と表示される'
 
 # r_question8(4)
-$r_choice29 = '「#<MatchData "1">」と表示される'
-$r_choice30 = '「#<MatchData "12">」と表示される'
-$r_choice31 = '「#<MatchData "123">」と表示される'
-$r_choice32 = is_nil
+$r_choice29 = '"123, 123"と表示される'
+$r_choice30 = '"a23, a23"と表示される'
+$r_choice31 = '"a3, a3"と表示される'
+$r_choice32 = '"a, a"と表示される'
 
-# r_question9(4)
-$r_choice33 = '「#<MatchData "1">」と表示される'
-$r_choice34 = '「#<MatchData "12">」と表示される'
-$r_choice35 = '「#<MatchData "123">」と表示される'
+# r_question9(2)
+$r_choice33 = '「0」と表示される'
+$r_choice34 = '「3」と表示される'
+$r_choice35 = '「5」と表示される'
 $r_choice36 = is_nil
 
-# r_question10(1)
-$r_choice37 = '「#<MatchData "b">」と表示される'
-$r_choice38 = '「#<MatchData "c">」と表示される'
-$r_choice39 = '「#<MatchData "d">」と表示される'
-$r_choice40 = '「#<MatchData "e">」と表示される'
+# r_question10(4)
+$r_choice37 = '「0」と表示される'
+$r_choice38 = '「3」と表示される'
+$r_choice39 = '「5」と表示される'
+$r_choice40 = is_nil
 
-# r_question11(4)
-$r_choice41 = '「#<MatchData "a">」と表示される'
-$r_choice42 = '「#<MatchData "b">」と表示される'
-$r_choice43 = '「#<MatchData "ab">」と表示される'
-$r_choice44 = '「#<MatchData "c">」と表示される'
+# r_question11(2)
+$r_choice41 = is_true
+$r_choice42 = is_false
+$r_choice43 = is_nil
+$r_choice44 = is_exception
 
-# r_question12(3)
-$r_choice45 = '「String」と表示される'
-$r_choice46 = '「Integer」と表示される'
-$r_choice47 = '「Array」と表示される'
-$r_choice48 = '「Regexp」と表示される'
+# r_question12(1)
+$r_choice45 = is_true
+$r_choice46 = is_false
+$r_choice47 = is_nil
+$r_choice48 = is_exception
 
 # r_question13(4)
 $r_choice49 = '["a"]と表示される'
@@ -87,11 +87,11 @@ $r_choice54 = is_false
 $r_choice55 = is_nil
 $r_choice56 = is_exception
 
-# r_question15(4)
-$r_choice57 = is_true
-$r_choice58 = is_false
-$r_choice59 = is_nil
-$r_choice60 = is_exception
+# r_question15(3)
+$r_choice57 = '「String」と表示される。'
+$r_choice58 = '「Integer」と表示される。'
+$r_choice59 = '「Array」と表示される'
+$r_choice60 = '「Regexp」と表示される'
 
 # r_question16(3)
 $r_choice61 = '「1」と表示される'

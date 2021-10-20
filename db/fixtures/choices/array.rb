@@ -28,9 +28,9 @@ $a_choice15 = '[nil, nil, nil]と表示される'
 $a_choice16 = is_exception
 
 # a_question5
-$a_choice17 = '[0, 1, 2]と表示される'
-$a_choice18 = '[0, 2, 4]と表示される'
-$a_choice19 = '[nil, nil, nil]と表示される'
+$a_choice17 = '[1, 2, 3, 4, 5, 6, 7]と表示される'
+$a_choice18 = '[3, 4, 5, 6, 7]と表示される'
+$a_choice19 = '[1, 2]と表示される'
 $a_choice20 = is_exception
 
 # a_question6
@@ -67,7 +67,7 @@ $a_choice40 = '[[5, 6],[1, 2, 3]]'
 $a_choice41 = '[1, 2, 3 ,5, 6]と表示される'
 $a_choice42 = '[[1, 2 ,3],[5, 6]]と表示される'
 $a_choice43 = '[5, 6, 1, 2, 3]と表示される'
-$a_choice44 = '[[5, 6],[1, 2, 3]]'
+$a_choice44 = is_exception
 
 # a_question12
 $a_choice45 = '[1, 2, 3 ,3 ,4]と表示される'
@@ -349,10 +349,10 @@ $a_choice211 = '「6
 $a_choice212 = '[nil]と表示される'
 
 # a_question54
-$a_choice213 = '[1]と表示される'
-$a_choice214 = '[3]と表示される'
-$a_choice215 = '[5]と表示される'
-$a_choice216 = '[0]と表示される'
+$a_choice213 = '「1」と表示される'
+$a_choice214 = '「3」と表示される'
+$a_choice215 = '「5」と表示される'
+$a_choice216 = '「0」と表示される'
 
 # a_question55
 $a_choice217 = is_true
@@ -415,15 +415,15 @@ $a_choice255 = is_nil
 $a_choice256 = is_exception
 
 # a_question65
-$a_choice257 = '[3]と表示される'
-$a_choice258 = '[7]と表示される'
-$a_choice259 = '[nil]と表示される'
+$a_choice257 = '「3」と表示される'
+$a_choice258 = '「7」と表示される'
+$a_choice259 = is_nil
 $a_choice260 = is_exception
 
 # a_question66
-$a_choice261 = '[3]と表示される'
-$a_choice262 = '[7]と表示される'
-$a_choice263 = '[nil]と表示される'
+$a_choice261 = '「3」と表示される'
+$a_choice262 = '「7」と表示される'
+$a_choice263 = is_nil
 $a_choice264 = is_exception
 
 # a_question67

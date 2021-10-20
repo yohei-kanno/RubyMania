@@ -1,4 +1,5 @@
 require("./db/fixtures/choices/string")
+
 Choice.seed(:id,
             # s_question1(3)
             { id: 1, content: $s_choice1, answer: false, question_id: 1 },
@@ -299,29 +300,4 @@ Choice.seed(:id,
             { id: 237, content: $s_choice237, answer: false, question_id: 60 },
             { id: 238, content: $s_choice238, answer: true, question_id: 60 },
             { id: 239, content: $s_choice239, answer: false, question_id: 60 },
-            { id: 240, content: $s_choice240, answer: false, question_id: 60 },
-            # s_question61(4)
-            { id: 241, content: $s_choice241, answer: false, question_id: 61 },
-            { id: 242, content: $s_choice242, answer: false, question_id: 61 },
-            { id: 243, content: $s_choice243, answer: false, question_id: 61 },
-            { id: 244, content: $s_choice244, answer: true, question_id: 61 },
-            # s_question62(3)
-            { id: 245, content: $s_choice245, answer: false, question_id: 62 },
-            { id: 246, content: $s_choice246, answer: false, question_id: 62 },
-            { id: 247, content: $s_choice247, answer: true, question_id: 62 },
-            { id: 248, content: $s_choice248, answer: false, question_id: 62 },
-            # s_question63(4)
-            { id: 249, content: $s_choice249, answer: false, question_id: 63 },
-            { id: 250, content: $s_choice250, answer: false, question_id: 63 },
-            { id: 251, content: $s_choice251, answer: false, question_id: 63 },
-            { id: 252, content: $s_choice252, answer: true, question_id: 63 },
-            # s_question64(1)
-            { id: 253, content: $s_choice253, answer: true, question_id: 64 },
-            { id: 254, content: $s_choice254, answer: false, question_id: 64 },
-            { id: 255, content: $s_choice255, answer: false, question_id: 64 },
-            { id: 256, content: $s_choice256, answer: false, question_id: 64 },
-            # s_question65(1)
-            { id: 257, content: $s_choice257, answer: true, question_id: 65 },
-            { id: 258, content: $s_choice258, answer: false, question_id: 65 },
-            { id: 259, content: $s_choice259, answer: false, question_id: 65 },
-            { id: 260, content: $s_choice260, answer: false, question_id: 65 })
+            { id: 240, content: $s_choice240, answer: false, question_id: 60 })

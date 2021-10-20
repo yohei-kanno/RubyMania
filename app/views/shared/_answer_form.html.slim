@@ -20,5 +20,5 @@
           button.accordion-button aria-controls="collapse#{question.id}" aria-expanded="true" data-bs-target="#collapse#{question.id}" data-bs-toggle="collapse" type="button" 
             = "解説を見る"
         .accordion-collapse.collapse aria-labelledby="headingOne" data-bs-parent="#accordionExample" id="collapse#{question.id}"
-          .accordion-body.text-start
+          .accordion-body.text-start.commentary-form
             = question.commentary

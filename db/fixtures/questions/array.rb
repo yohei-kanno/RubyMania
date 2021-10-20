@@ -18,11 +18,8 @@ end
 p obj'
 
 $a_question5 =
-  'obj = Array.new(3) do |i|
-  i * 2
-end
-
-p obj'
+  'obj = [1, 2, 3, 4, 5, 6, 7]
+p obj.take(2)'
 
 $a_question6 =
   'obj = [2,4,6]
@@ -51,7 +48,7 @@ p obj1.concat(obj2)'
 $a_question11 =
   'obj1 = [1, 2, 3]
 obj2 = [5, 6]
-p obj1.concat(obj2)'
+p obj1.concat!(obj2)'
 
 $a_question12 =
   'obj = [1, 2, 3]
