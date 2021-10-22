@@ -1,4 +1,12 @@
 @import 'variable';
+
+.form-check-input{
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+
+
 .question-title{
   margin: auto;
   text-align: left;
@@ -18,7 +26,6 @@
 
 .choice-content-hover{
   @include choice-content-form;
-  padding: 10px 0px 10px 30px;
   &:hover{
     color: black;
     box-shadow: 0 5px 10px rgb(156, 149, 149);
@@ -34,7 +41,6 @@
 
 .choice-content-answer{
   @include choice-content-form;
-  padding: 10px 0px 10px 30px;
 }
   
 
@@ -50,6 +56,7 @@
 .form-check-label{
   width: 100%;
   white-space: pre;
+  padding: 5px;
 }
 
 .correct_answer{
@@ -79,7 +86,9 @@
       }
     }
   }
+
   
+ 
   .question-title{
     font-size: $small-font;
   }
@@ -95,11 +104,9 @@
   }
   .choice-content-hover{
     font-size: $small-font;
-    padding: 5px 0px 5px 15px;
   }
   
   .choice-content-answer{
     font-size: $small-font;
-    padding: 5px 0px 5px 15px;
   }
 }

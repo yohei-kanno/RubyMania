@@ -40,7 +40,7 @@
     = render "tab_menu"
     = render "tab_content"
   = link_to "ページトップに戻る", "#top", class:"btn btn-outline-primary btn-sm my-3 ms-1"
-  
+      
 - if logged_in?
   javascript:
     var ctx = document.getElementById("myChart").getContext("2d");
@@ -182,4 +182,4 @@
           }
         }
       }
-    });
+    });   
