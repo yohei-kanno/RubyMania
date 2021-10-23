@@ -26,6 +26,7 @@
 
 .choice-content-hover{
   @include choice-content-form;
+  color: black;
   &:hover{
     color: black;
     box-shadow: 0 5px 10px rgb(156, 149, 149);
