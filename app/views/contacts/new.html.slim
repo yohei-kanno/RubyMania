@@ -1,6 +1,14 @@
 = render "shared/errors",{object: @contact}
 .title
   = t("dict.contact")
+.small-font.mb-1
+  = "遊んで頂いてありがとうございます！"
+.small-font.mb-1
+  = "不具合や改善提案がございましたらここよりお願い致します"
+.small-font.mb-1
+  = "問題文や解説、回答間違い等ありましたら教えてください。"
+.small-font.mb-3
+  = "使ってみた感想やご意見も大歓迎です！"
 = form_with model: @contact, url: confirm_contacts_path do |f|
   .form-group
     = f.label :name, Contact.human_attribute_name(:name)
