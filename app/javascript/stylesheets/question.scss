@@ -3,7 +3,7 @@
 .form-check-input{
   position: relative;
   left: 5px;
-  top: 5px;
+  top: 10px;
 }
 
 
@@ -57,7 +57,7 @@
 .form-check-label{
   width: 100%;
   white-space: pre-wrap;
-  padding: 5px;
+  padding: 10px;
 }
 
 .correct_answer{
@@ -96,7 +96,7 @@
 
   .question-content{
     font-size: $small-font;
-    padding: 7px;
+    padding: 15px 7px;
   }
   
   
