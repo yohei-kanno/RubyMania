@@ -5,8 +5,6 @@ div class="swiper-slide swiper-effect-#{category.id}"
   .sub-title
     - unless category.questions.count.zero?
       - q = category.questions.first
-      .question-title
-        = q.title
       .question-content.mb-3
         = q.content
       - q.choices.each do |choice|
