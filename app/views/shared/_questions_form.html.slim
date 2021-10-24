@@ -2,15 +2,15 @@
   .question-form.mb-4.was-validated
     .question-title
       = "#{question.title}"
-      = f.radio_button "#{i}","a", class: "sss",style:"display:none"
-      = f.label "a", "", class: "form-check-label", style: "display:none;"
-      .invalid-feedback.mb-1
-        = "(Not selected)"
-      .valid-feedback.mb-1
-        = "(selected!!)"
-      
     .question-content.mb-4
       = question.content
+    = f.radio_button "#{i}","a", class: "sss",style:"display:none"
+    = f.label "a", "", class: "form-check-label", style: "display:none;"
+    .invalid-feedback.mb-1
+      = "選択必須"
+    .valid-feedback.mb-1
+      = "選択済"
+      
     - question.choices.each do |choice|
       .form-check.choice-content-hover
         = f.radio_button "#{i}","#{choice.id}" , class: "form-check-input", required: ""
