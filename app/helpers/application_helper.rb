@@ -54,7 +54,7 @@ module ApplicationHelper
         description: 'Rubyに特化したクイズサービスです。問題数は３５０問以上！progateでruby終わった！もしくは少し肩慣らししたいという方に向けてのサービスです。', 
         type: 'website',
         url: "https://www.rubymania.info",
-        image: image_url('ogp.png'),
+        image: image_url('top.png'),
         locale: 'ja_JP',
       }
     }
