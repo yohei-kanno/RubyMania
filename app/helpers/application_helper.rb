@@ -39,6 +39,7 @@ module ApplicationHelper
     {
       site: 'RubyMania',
       title: 'RubySilverを取得しよう！',
+      keywords: 'ruby, ruby問題集, rubysilver, rubygold, ruby資格, 問題, 問題集',
       reverse: false,
       separator: '|',
       description: 'Rubyに特化したクイズサービスです！',
