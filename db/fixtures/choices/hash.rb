@@ -102,7 +102,7 @@ $h_choice64 = is_exception
 # h_question17
 $h_choice65 = '{a: "foo", b: "bar", c: "baz", d: "qux"}と表示される'
 $h_choice66 = '{b: "bar", c: "baz", d: "qux"}と表示される'
-$h_choice67 = '{b: "bar", c: "baz", d: "qux"}と表示される'
+$h_choice67 = '{}と表示される'
 $h_choice68 = is_exception
 
 # h_question18

@@ -307,25 +307,25 @@ $o_choice184 = is_exception
 # o_question47
 $o_choice185 = '[M1::M2::M3, M1::M2, M1]と表示される'
 $o_choice186 = '[M1::M2, M1]と表示される'
-$o_choice187 = '[M1]"と表示される'
+$o_choice187 = '[M1]と表示される'
 $o_choice188 = '[M1::M3, M1]と表示される'
 
 # o_question48
 $o_choice189 = '[M1::M2::M3, M1::M2, M1]と表示される'
 $o_choice190 = '[M1::M2, M1]と表示される'
-$o_choice191 = '[M1]"と表示される'
+$o_choice191 = '[M1]と表示される'
 $o_choice192 = '[M1::M3, M1]と表示される'
 
 # o_question49
 $o_choice193 = '[M1::M2::M3, M1::M2, M1]と表示される'
 $o_choice194 = '[M1::M2, M1]と表示される'
-$o_choice195 = '[M1]"と表示される'
+$o_choice195 = '[M1]と表示される'
 $o_choice196 = '[M1::M3, M1]と表示される'
 
 # o_question50
 $o_choice197 = '[M1::M2::M3, M1::M2, M1]と表示される'
 $o_choice198 = '[M1::M2, M1]と表示される'
-$o_choice199 = '[M1]"と表示される'
+$o_choice199 = '[M1]と表示される'
 $o_choice200 = '[M1::M3, M1]と表示される'
 
 # o_question51

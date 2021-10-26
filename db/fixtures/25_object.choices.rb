@@ -47,8 +47,8 @@ Choice.seed(:id,
             { id: 4036, content: $o_choice36, answer: true, question_id: 4009 },
             # o_question10(2)
             { id: 4037, content: $o_choice37, answer: false, question_id: 4010 },
-            { id: 4038, content: $o_choice38, answer: true, question_id: 4010 },
-            { id: 4039, content: $o_choice39, answer: false, question_id: 4010 },
+            { id: 4038, content: $o_choice38, answer: false, question_id: 4010 },
+            { id: 4039, content: $o_choice39, answer: true, question_id: 4010 },
             { id: 4040, content: $o_choice40, answer: false, question_id: 4010 },
             # o_question11(1)
             { id: 4041, content: $o_choice41, answer: true, question_id: 4011 },

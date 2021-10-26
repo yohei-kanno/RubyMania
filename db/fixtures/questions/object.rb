@@ -56,7 +56,7 @@ $o_question5 =
   end
 
   def m_1
-    p  m_2
+    p C1.new("#{@foo}", "#{@bar}").m_2
   end
 
   protected
@@ -181,7 +181,6 @@ class C2 < C1
   alias :m_2 :m_1
 end
 
-C2.new("foo", "bar")
 p C2.instance_methods(false)'
 
 $o_question14 =
@@ -209,7 +208,6 @@ $o_question15 =
 end
 
 class C2 < C1
-  alias :m_2 :m_1
   undef :m_3
 end
 
@@ -224,7 +222,6 @@ $o_question16 =
 end
 
 class C2 < C1
-  alias :m_2 :m_1
   undef :m_3
 end
 
@@ -513,7 +510,6 @@ c2.m_1'
 $o_question32 =
   'module M1
   def m_1
-    super
     p "M1"
   end
 end
@@ -526,7 +522,6 @@ end
 
 class C2 < C1
   def m_1
-    super
     p "C2"
   end
   include M1
@@ -537,7 +532,6 @@ p C2.methods.include? :m_1'
 $o_question33 =
   'module M1
   def m_1
-    super
     p "M1"
   end
 end
@@ -550,7 +544,6 @@ end
 
 class C2 < C1
   def m_1
-    super
     p "C2"
   end
   include M1
@@ -609,10 +602,10 @@ C2.new.m_2'
 $o_question36 =
   'class C1
 
-def m_1
-end
+  def m_1
+  end
 
-private :m_1
+  private :m_1
 end
 
 p C1.new.private_methods.include?(:m_1)'
@@ -671,7 +664,7 @@ class C1
 end
 
 
-C1.new.m_2'
+C1.new.m_3'
 
 $o_question41 =
   'class C1
