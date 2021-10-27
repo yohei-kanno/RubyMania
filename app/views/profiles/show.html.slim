@@ -38,5 +38,5 @@ table.table.space
   = "#{current_user.name}さんの偏差値"
 .space
   canvas#myBarChart  height="180"                     
-= link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm mt-3"
-= render "chart"
+  = render "chart"
+  = link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm my-3"
