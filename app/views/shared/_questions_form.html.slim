@@ -4,8 +4,8 @@
       = "#{question.title}"
     .question-content.mb-4
       = question.content
-    = f.radio_button "#{i}","a", class: "sss",style:"display:none"
-    = f.label "a", "", class: "form-check-label", style: "display:none;"
+    = f.radio_button "#{i}","question",style:"display:none"
+    = f.label "question", "", class: "form-check-label", style: "display:none;"
     .invalid-feedback.mb-1
       = "選択必須"
     .valid-feedback.mb-1

@@ -32,19 +32,3 @@
                   = "#{category.name}"
                 .card-text.text-start
                   = category.decorate.one_question_description  
-                          
-  / .tab-pane.fade aria-labelledby="answers-tab" role="tabpanel" id="answers"                
-  /   .category-title
-  /     = "問題と回答を見る"
-  /   .row.row-cols-2.row-cols-md-3
-  /     - object_index(@categories2, "book").each.with_index(1) do |(obj, category), i|
-  /       .col.mb-3
-  /         div class="card answer-card-#{i}"
-  /           = link_to answers_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.watch?")} do
-  /             = image_tag(obj, class: "card-img-top")
-  /             .card-body.pt-0
-  /               div class="answer-card-title-#{i} card-title"
-  /                 = "#{category.name}"
-  /               .card-text.text-start
-  /                 = category.decorate.answer_description
-                    

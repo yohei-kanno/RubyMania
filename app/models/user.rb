@@ -11,8 +11,6 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
-  scope :level_upper, ->(i) { order(level: :desc).limit(i) }
-
   def point_up!(point)
     self.experience_point += point
     save!

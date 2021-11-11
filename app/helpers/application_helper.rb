@@ -1,30 +1,17 @@
 module ApplicationHelper
-  
- 
   def all_user_average_score(i)
     arr = []
     users = User.all
     users.each do |user|
-      arr.push user.study_records.where(category_id:i).pluck(:score)
+      arr.push user.study_records.where(category_id: i).pluck(:score)
     end
     return if arr.flatten.empty?
-    arr.to_a.flatten.sum / arr.to_a.flatten.length
-  end
-    
-  def ranks
-    %w[j1 j2 j3 j4 j5 j6 j7 j8 j9]
-  end
 
-  def user_rank(users)
-    ranks.zip(users)
+    arr.to_a.flatten.sum / arr.to_a.flatten.length
   end
 
   def ruby_objects
     %w[obj1 obj2 obj3 obj4 obj5 obj6 obj7]
-  end
-
-  def book_objects
-    %w[book1 book2 book3 book4 book5 book6]
   end
 
   def pen_objects
@@ -34,7 +21,7 @@ module ApplicationHelper
   def object_index(category, object)
     eval("#{object}_objects.zip(category)")
   end
-  
+
   def default_meta_tags
     {
       site: 'RubyMania',
@@ -51,11 +38,11 @@ module ApplicationHelper
       og: {
         site_name: 'RubyMania',
         title: 'RubySilverを取得しよう！',
-        description: 'Rubyに特化したクイズサービスです。問題数は３５０問以上！progateでruby終わった！もしくは少し肩慣らししたいという方に向けてのサービスです。', 
+        description: 'Rubyに特化したクイズサービスです。問題数は３５０問以上！progateでruby終わった！もしくは少し肩慣らししたいという方に向けてのサービスです。',
         type: 'website',
         url: "https://www.rubymania.info",
         image: image_url('logo.png'),
-        locale: 'ja_JP',
+        locale: 'ja_JP'
       }
     }
   end
