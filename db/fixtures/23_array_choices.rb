@@ -22,8 +22,8 @@ Choice.seed(:id,
             { id: 2016, content: $a_choice16, answer: false, question_id: 2004 },
             # a_question5(2)
             { id: 2017, content: $a_choice17, answer: false, question_id: 2005 },
-            { id: 2018, content: $a_choice18, answer: true, question_id: 2005 },
-            { id: 2019, content: $a_choice19, answer: false, question_id: 2005 },
+            { id: 2018, content: $a_choice18, answer: false, question_id: 2005 },
+            { id: 2019, content: $a_choice19, answer: true, question_id: 2005 },
             { id: 2020, content: $a_choice20, answer: false, question_id: 2005 },
             # a_question6(3)
             { id: 2021, content: $a_choice21, answer: false, question_id: 2006 },
@@ -51,10 +51,10 @@ Choice.seed(:id,
             { id: 2039, content: $a_choice39, answer: false, question_id: 2010 },
             { id: 2040, content: $a_choice40, answer: false, question_id: 2010 },
             # a_question11(1)
-            { id: 2041, content: $a_choice41, answer: true, question_id: 2011 },
+            { id: 2041, content: $a_choice41, answer: false, question_id: 2011 },
             { id: 2042, content: $a_choice42, answer: false, question_id: 2011 },
             { id: 2043, content: $a_choice43, answer: false, question_id: 2011 },
-            { id: 2044, content: $a_choice44, answer: false, question_id: 2011 },
+            { id: 2044, content: $a_choice44, answer: true, question_id: 2011 },
             # a_question12(2)
             { id: 2045, content: $a_choice45, answer: false, question_id: 2012 },
             { id: 2046, content: $a_choice46, answer: true, question_id: 2012 },
