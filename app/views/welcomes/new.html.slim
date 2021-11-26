@@ -1,4 +1,4 @@
-#particles-js   
+#particles-js
 .container
   .top-effect
     .main-title.mt-3
@@ -16,9 +16,8 @@
               = "Sign in with Github"
               
       .button
-        = link_to "すぐに始める", "#start", class:"btn btn-outline-primary button-form my-3"
+        = link_to "すぐに始める", "#start", class:"btn btn-outline-primary buttonああ-form my-3"
         
-    
       .sub-title
         = "※ログインすると結果が記録、チャート、偏差値に反映されます"
       
@@ -42,11 +41,10 @@
     = render "tab_content"
   = link_to "ページトップに戻る", "#top", class:"btn btn-outline-primary btn-sm my-3 ms-1"
   
+  script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
+  
 javascript:
-  particlesJS.load('particles-js', '/assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-    });
-      
+  particlesJS.load('particles-js', '/assets/particles.json');      
 - if logged_in?
   javascript:
     var ctx = document.getElementById("myChart").getContext("2d");

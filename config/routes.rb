@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
 
   resource :profile, only: %i[show edit update]
-  resource :answers, only: %i[show]
   
   resource :questions, only: %i[show] do
     collection do

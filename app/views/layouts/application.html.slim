@@ -19,7 +19,7 @@ html
 
           gtag('config', 'G-QL8WNS65KZ');
           
-  body     
+  body
     .container-fluid 
       = render 'shared/header'
       - flash.each do |key, value|
@@ -32,7 +32,6 @@ html
     = javascript_pack_tag "swiper/swiper.js"
     = javascript_pack_tag "scroll/scroll.js"
     = javascript_pack_tag "tippy/tippy.js"
-    script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
 
     javascript:
       function onClickCopy(num){

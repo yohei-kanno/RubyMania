@@ -1,10 +1,7 @@
 module ApplicationHelper
   def all_user_average_score(i)
     arr = []
-    users = User.all
-    users.each do |user|
-      arr.push user.study_records.where(category_id: i).pluck(:score)
-    end
+    arr.push StudyRecord.all.where(category_id: i).pluck(:score)
     return if arr.flatten.empty?
 
     arr.to_a.flatten.sum / arr.to_a.flatten.length

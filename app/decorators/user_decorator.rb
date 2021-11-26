@@ -2,11 +2,14 @@ class UserDecorator < Draper::Decorator
   delegate_all
 
   def average_score(i)
-    return if object.study_records.where(category_id: i).pluck(:score).count.zero?
-
     arr = object.study_records.where(category_id: i).pluck(:score)
-    arr.sum / arr.length
+    begin
+      arr.sum / arr.length
+    rescue ZeroDivisionError => e
+      0
+    end
   end
+      
 
   def dev(i)
     avg = arr_x(i).sum / arr_x(i).length
@@ -23,10 +26,7 @@ class UserDecorator < Draper::Decorator
 
   def arr_x(i)
     arr = []
-    users = User.all
-    users.each do |user|
-      arr << user.study_records.where(category_id: i).pluck(:score)
-    end
+    StudyRecord.all.where(category_id: i).pluck(:score)
     arr.to_a.flatten
   end
 end

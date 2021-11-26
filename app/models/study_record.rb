@@ -7,4 +7,5 @@ class StudyRecord < ApplicationRecord
   end
 
   scope :recent, -> { includes(:category).order(id: "desc") }
+  
 end
