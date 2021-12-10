@@ -12,11 +12,11 @@ class UserDecorator < Draper::Decorator
       
 
   def dev(i)
+    avg = arr_x(i).sum / arr_x(i).length
+    arr1 = arr_x(i).map { |x| (x - avg)**2 }
+    std = Math.sqrt(arr1.sum / arr_x(i).length)
     begin
-      avg = arr_x(i).sum / arr_x(i).length
-      arr1 = arr_x(i).map { |x| (x - avg)**2 }
-      std = Math.sqrt(arr1.sum / arr_x(i).length)
-        ((average_score(i) - avg) * 10 / std + 50).round(2)
+      ((average_score(i) - avg) * 10 / std + 50).round(2)
     rescue StandardError => e
       0
     end
@@ -25,6 +25,8 @@ class UserDecorator < Draper::Decorator
   private
 
   def arr_x(i)
-    StudyRecord.where(category_id: i).pluck(:score)
+    arr = []
+    StudyRecord.all.where(category_id: i).pluck(:score)
+    arr.to_a.flatten
   end
 end
