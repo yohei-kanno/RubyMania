@@ -394,6 +394,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  x86_64-darwin-19
   x86_64-darwin-20
   x86_64-linux
 
@@ -411,7 +412,6 @@ DEPENDENCIES
   html2slim
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
-  kaminari
   letter_opener_web
   listen (~> 3.3)
   meta-tags
