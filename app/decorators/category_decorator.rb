@@ -38,21 +38,4 @@ class CategoryDecorator < Draper::Decorator
       "Regexpクラスの問題が一問一答形式で出題されます"
     end
   end
-
-  def answer_description
-    case object.name
-    when "String(文字列)"
-      "Stringクラスの回答が確認出来ます"
-    when "Numeric(数値)"
-      "Numericクラスの回答が確認出来ます"
-    when "Array(配列)"
-      "Arrayクラスの回答が確認出来ます"
-    when "Hash(ハッシュ)"
-      "Hashクラスの回答が確認出来ます"
-    when "オブジェクト指向"
-      "応用問題の回答が確認出来ます"
-    when "Regexp(正規表現)"
-      "Regexpクラスの回答が確認出来ます"
-    end
-  end
 end
