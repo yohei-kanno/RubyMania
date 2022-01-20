@@ -12,7 +12,7 @@ ScrollReveal().reveal(`.top-effect`,{
 ScrollReveal().reveal(`.question-form-effect`,{
   duration: 500,
   reset: false,
-  origin: 'right',
+  origin: 'bottom',
   distance: '100%',
   viewFactor: 0
 });
