@@ -12,7 +12,10 @@ module GetQuestionAndAnswer
   end
 
   def get_answer
-    question_exist?(params[:question])
+    if question_exist?(params[:question])
+       redirect_to root_url
+       return
+    end
     @questions = []
     @point = 0
     @msgs = []
@@ -37,6 +40,6 @@ module GetQuestionAndAnswer
   end
 
   def question_exist?(params_question)
-    redirect_to root_url if params_question.nil?
+    params_question.nil?
   end
 end
