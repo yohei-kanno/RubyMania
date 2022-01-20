@@ -7,7 +7,7 @@
         = "経験値を獲得できませんでした"
     - elsif logged_in?
       #your-point
-        = "経験値を#{@point}獲得しました！"
+        = "経験値を#{@point}獲得しました!"
   = render "shared/answer_form",  {questions: @questions}           
   
   = link_to t("variable.retry"),  one_questions_path(name: @category.name), class: "btn btn-outline-primary btn-sm my-3 me-3", style: "width: 45%;"

@@ -14,6 +14,6 @@ class OneQuestionsController < ApplicationController
   private
 
   def point_up(_point)
-    current_user.point_up!(_point)
+    current_user&.point_up!(_point)
   end
 end
