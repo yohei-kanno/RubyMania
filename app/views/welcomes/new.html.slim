@@ -1,38 +1,38 @@
 #particles-js
-.container
-  .top-effect
-    .main-title.mt-3
-      = t("dict.sub-title")
-    .main-sub-title
-      = t("dict.content")
+.top-wrapper
+  .main-title.top-effect
+    = t("dict.sub-title")
+  .main-sub-title.second-effect
+    = t("dict.content")
 
+  .third-effect
     - if logged_in?
       = link_to "早速始める", "#start", class:"btn btn-outline-primary button-form my-3"
     
     - else
       .button
-        = link_to auth_at_provider_path(provider: :github) , class: "btn btn-outline-success button-form mb-2" do
+        = link_to auth_at_provider_path(provider: :github) , class: "btn btn-outline-success button-form my-4" do
               i.fab.fa-github.me-2
               = "Sign in with Github"
-              
+            
       .button
-        = link_to "すぐに始める", "#start", class:"btn btn-outline-primary buttonああ-form my-3"
+        = link_to "すぐに始める", "#start", class:"btn btn-outline-primary button-form mb-3"
         
-      .sub-title
-        = "※ログインすると結果が記録、チャート、偏差値に反映されます"
-      
-    .swiper.mb-3
-      .swiper-wrapper
-        = render @categories
-      .swiper-pagination.swiper-pagination-black
-      .swiper-button-prev.swiper-custom-button
-        i.fa.fa-angle-left  
-      .swiper-button-next.swiper-custom-button
-        i.fa.fa-angle-right
+    .top-sub-title.forth-effect
+      = "※ログインすると結果が記録、チャート、偏差値に反映されます"
+.flex
+  .swiper.mb-3
+    .swiper-wrapper
+      = render @categories
+    .swiper-pagination.swiper-pagination-black
+    .swiper-button-prev.swiper-custom-button
+      i.fa.fa-angle-left  
+    .swiper-button-next.swiper-custom-button
+      i.fa.fa-angle-right
 
-    .chart-space.mt-3
-      canvas#myChart
-      #start
+  .chart-space.mt-3
+    canvas#myChart
+  #start
   
 .space
   .title

@@ -6,31 +6,7 @@
 @import "modal";
 @import "flash";
 @import "variable";
-@import "kaminari";
-
-.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
-  color: black;
-}
-
-.was-validated .form-check-input:invalid, .form-check-input.is-invalid {
-  border-color: gray;
-}
-
-.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
-    color: black;
-}
-
-.was-validated .form-check-input:valid, .form-check-input.is-valid {
-  border-color: gray;
-}
-
-.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
-  background-color: #0d6efd;
-}
-
-.pagination ul >li{
-  font-size: 8px;
-}
+@import "validate";
 
 #particles-js{ 
 	position:fixed;
@@ -43,7 +19,6 @@
   display: flex;
   flex-direction: column;
 	z-index: 1;
-	width:100%;
   min-height: 100vh;
 }
 

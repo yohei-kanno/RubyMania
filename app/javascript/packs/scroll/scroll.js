@@ -6,7 +6,19 @@ ScrollReveal().reveal(`.question-effect`,{
 });
 
 ScrollReveal().reveal(`.top-effect`,{
-  duration: 1500,
+  duration: 1200,
+});
+
+ScrollReveal().reveal(`.second-effect`,{
+  duration: 1600,
+});
+
+ScrollReveal().reveal(`.third-effect`,{
+  duration: 2000,
+});
+
+ScrollReveal().reveal(`.forth-effect`,{
+  duration: 2200,
 });
 
 ScrollReveal().reveal(`.question-form-effect`,{
