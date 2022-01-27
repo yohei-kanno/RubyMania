@@ -23,7 +23,7 @@ ja:
     pricacy: プライバシーポリシー
     term: 利用規約
     service: サービス概要
-    select_category: カテゴリーを選択して下さい
+    select_category: Please select a category!
     
   
   submit:
@@ -34,18 +34,19 @@ ja:
     answer?: これで宜しいですか？
     logout?: ログアウトしますか？
     start?: "クイズを開始しますか？"
-    watch?: "問題と答えを確認しますか？"
     one_question?: "一問一答を開始しますか"
     
   link:
-    to_toppage: トップページへ
-    contact: お問い合わせ
-    profile: プロフィール
-    logout: ログアウト
+    to_toppage: Home
+    contact: Contact
+    profile: Profile
+    logout: Logout
     logged_in_start: Let’s start
     no_logged_in_start: このまま始める
   
   variable:
-    retry: もう一度やる
-    category: "%{name}編"
-    your-score: あなたの今回の点数は%{point}/100点です！
+    retry: Do it again
+    question_title: "【Question】%{name}"
+    answer_title: "【Answer】%{name}"
+    your_score: Your score this time is %{point}/100 points!
+    got_xp: You got %{point} experience point!

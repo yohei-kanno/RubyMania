@@ -22,14 +22,17 @@ gem 'slim-rails'
 gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'gretel'
 
-group :development, :test do
+group :development do
   gem 'bullet'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'rubocop-rails'
   gem 'sqlite3', '~> 1.4'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do

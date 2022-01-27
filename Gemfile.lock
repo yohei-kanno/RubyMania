@@ -80,7 +80,13 @@ GEM
       ruby2_keywords (>= 0.0.2, < 1.0)
     ast (2.4.2)
     bcrypt (3.1.16)
+    better_errors (2.9.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.8.1)
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.7.7)
       msgpack (~> 1.0)
     bootstrap5-kaminari-views (0.0.1)
@@ -103,6 +109,7 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    debug_inspector (1.1.0)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
@@ -148,6 +155,9 @@ GEM
     formtastic_i18n (0.7.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    gretel (4.4.0)
+      actionview (>= 5.1, < 7.1)
+      railties (>= 5.1, < 7.1)
     has_scope (0.8.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -400,6 +410,8 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  better_errors
+  binding_of_caller
   bootsnap (>= 1.4.4)
   bootstrap5-kaminari-views (~> 0.0.1)
   bullet
@@ -409,6 +421,7 @@ DEPENDENCIES
   draper
   enum_help
   factory_bot_rails
+  gretel
   html2slim
   image_processing (~> 1.2)
   jbuilder (~> 2.7)

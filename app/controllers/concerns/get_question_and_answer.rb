@@ -23,6 +23,7 @@ module GetQuestionAndAnswer
 
     insert_msg(choices, @msgs, @point, @questions)
     @category = Category.find_by(name: params[:question][:name])
+    @category_name = @category.name
   end
 
   private

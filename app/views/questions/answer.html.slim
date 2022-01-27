@@ -1,10 +1,14 @@
+
+- breadcrumb :answer, @category_name
 .container
   = render "link_to"      
 
-  .title.mb-3 
-    = "[回答]#{@category.name}編"
-  #your-point
-    = t("variable.your-score", point: "#{@point}")
+  .title.mb-2
+    = t("variable.answer_title", name: @category_name)
+  .your-point
+    = t("variable.your_score", point: "#{@point}")
+    br/
+    = t("variable.got_xp", point: "#{@point}")
     
   = render "shared/answer_form",  {questions: @questions}
   = render "link_to"      

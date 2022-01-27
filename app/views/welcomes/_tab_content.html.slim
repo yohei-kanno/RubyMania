@@ -1,9 +1,14 @@
 #pills-tabContent.tab-content
   .tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
-    .category-title
-      = "ランダムに10問出題されます"
-    .mb-3 style="font-size:8px;"
-      = "※記録,チャート,偏差値に反映されます(ログインが必要です)"
+    .discription-space.text-start
+      .category-title
+        = "ランダムに10問出題されます"
+      .term-sentence
+        = "・記録、チャート、偏差値に反映されます(ログインが必要です)"
+      .term-sentence
+        = "・ある程度がっつりやりたい方にお勧めのモードです。"
+      .term-sentence.mt-3
+        = "下の画像からカテゴリーを選択して下さい。"
     .row.row-cols-md-3.row-cols-2.g-4
       - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
         .col
@@ -17,10 +22,18 @@
                   = category.decorate.question_description
 
   .tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
-    .category-title
-      = "一問一答形式です"
-    .mb-3 style="font-size:8px;"
-      = "※記録やチャートには反映されませんが経験値は付与されます(ログインが必要です)"
+    .discription-space.text-start
+      .category-title
+        = "一問一答形式です"
+      .term-sentence
+        = "・記録やチャートには反映されませんが経験値は付与されます"
+      .term-sentence
+        = "・経験値を得る為にはログインが必要です。"
+      .term-sentence
+        = "・サクッと問題を解いていきたい方にお勧めのモードです。"
+      .term-sentence.mt-3
+        = "下の画像からカテゴリーを選択して下さい。"
+
     .row.row-cols-2.row-cols-md-3
       - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
         .col.mb-3

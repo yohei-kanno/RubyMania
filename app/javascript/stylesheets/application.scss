@@ -27,16 +27,46 @@ body{
   background-image: url("/images/siro.jpg");
 }
 
+a{
+  text-decoration: none;
+}
+
 header{
   width: 100%;
-  padding: 15px 5% 5px;
-  display: flex;
   align-items: center;
   background-color: #f8eef6;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 10;
+  .header{
+    display: flex;
+  }
+
+
+  .breadcrumb{
+    font-size: 13px;
+    text-align: left;
+    margin: 0;
+    list-style: none;
+    background: #51a8ff;
+    overflow: hidden;
+    color: white;
+    width: 100%;
+  
+    a,span{
+      color: $white;
+    }
+    a:first-child{
+      margin-left: 20px;
+    }
+    a:hover{
+      color: lightgray;
+    }
+  }
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: lightgray;
 }
 
 footer{
@@ -44,21 +74,17 @@ footer{
   padding: 5px 5%;
   background-color: #a3dee8;
   margin-top: auto;
-  
 }
+  
 
 h1{
   font-size: $big-font;
 }
 
-a{
-  text-decoration: none;
-  color: #4b4b4b;
-}
 
 ul.menu{
   list-style: none;
-  margin: 0;
+  margin-top: 17px;
   display: flex;
   > li{
     margin: 0 0 0 15px;
@@ -92,6 +118,8 @@ nav{
   
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .input-group{

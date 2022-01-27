@@ -33,13 +33,13 @@
   .chart-space.mt-3
     canvas#myChart
   #start
-  
+
 .space
-  .title
+  .main-sub-title
     = t("dict.select_category")
+  .title
     = render "tab_menu"
     = render "tab_content"
-  = link_to "ページトップに戻る", "#top", class:"btn btn-outline-primary btn-sm my-3 ms-1"
   
   script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
   

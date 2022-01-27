@@ -74,6 +74,11 @@
   background-color: $failure-color;
 }
 
+.your-point{
+  margin-bottom: 10px;
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
 @media screen and (max-width: 600px) {
 
   @each $i,$color in $colorList {

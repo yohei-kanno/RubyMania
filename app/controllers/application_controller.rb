@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
 
   include GetQuestionAndAnswer
 
+
+  def current_user_average_score(i)
+    Category.count.times do |i|
+      @average_score = current_user.average_score(i)
+    end
+  end
+      
+
   def not_authenticated
     redirect_to root_path
     flash[:mydanger] = 'ログインして下さい'

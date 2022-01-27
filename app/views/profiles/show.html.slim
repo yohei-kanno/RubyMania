@@ -1,7 +1,9 @@
+- breadcrumb :profile
+  
 .title
-  = "プロフィール画面"
+  = "プロフィール"
 
-table.table.space
+table.table.space.mt-1
   tbody
     tr
       th = User.human_attribute_name(:name)
@@ -34,9 +36,9 @@ table.table.space
               .modal-footer
                 button.btn.btn-secondary data-bs-dismiss="modal" type="button"  Close
 
-.text-center
+.text-center.mt-5
   = "#{current_user.name}さんの偏差値"
-.space
+.space.mt-1
   canvas#myBarChart  height="180"                     
   = render "chart"
   = link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm my-3"
