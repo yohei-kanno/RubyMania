@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class RundomQuestionDecoratorTest < Draper::TestCase
+class RandomQuestionDecoratorTest < Draper::TestCase
 end

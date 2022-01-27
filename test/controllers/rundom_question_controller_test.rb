@@ -1,6 +1,6 @@
 require "test_helper"
 
-class RundomQuestionControllerTest < ActionDispatch::IntegrationTest
+class RandomQuestionControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

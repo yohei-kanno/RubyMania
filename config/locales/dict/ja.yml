@@ -23,7 +23,7 @@ ja:
     pricacy: プライバシーポリシー
     term: 利用規約
     service: サービス概要
-    select_category: Please select a category!
+    select_category: Please select a mode!
     
   
   submit:
@@ -34,7 +34,8 @@ ja:
     answer?: これで宜しいですか？
     logout?: ログアウトしますか？
     start?: "クイズを開始しますか？"
-    one_question?: "一問一答を開始しますか"
+    one_question?: "一問一答を開始しますか？"
+    three_question?: "クイズを開始しますか？"
     
   link:
     to_toppage: Home
