@@ -20,6 +20,13 @@ Rails.application.routes.draw do
       get :answer
     end
   end
+
+  resource :three_questions, only: %i[show] do
+    collection do
+      post :answer
+      get :answer
+    end
+  end
   
   resources :contacts, only: %i[new create] do
     collection do

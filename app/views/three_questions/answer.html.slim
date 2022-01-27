@@ -1,0 +1,13 @@
+.container
+  .title.mb-2
+    = t("variable.answer_title", name: @category_name)
+  .your-point
+    - if logged_in? && @point == 0
+      = "You couldn't get experience points"
+    - elsif logged_in?
+      = t("variable.got_xp", point: "#{@point}")
+  = render "shared/answer_form",  {questions: @questions}           
+  
+  = link_to t("variable.retry"),  three_questions_path(name: @category.name), class: "btn btn-outline-primary btn-sm my-3 me-3", style: "width: 45%;"
+  = link_to t("link.to_toppage"), root_path, class: "btn btn-outline-primary btn-sm my-3", style: "width: 45%;"
+  
