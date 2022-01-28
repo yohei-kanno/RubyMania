@@ -6,9 +6,15 @@
   .title.mb-2
     = t("variable.answer_title", name: @category_name)
   .your-point
-    = t("variable.your_score", point: "#{@point}")
-    br/
-    = t("variable.got_xp", point: "#{@point}")
+    - if logged_in? && @point == 0
+      = "You couldn't get experience points"
+    - elsif logged_in?
+      = t("variable.your_score", point: "#{@point}")
+      br/
+      = t("variable.got_xp", point: "#{@point}")
+    
+    - else 
+      = t("variable.your_score_10", point: "#{@point}")
     
   = render "shared/answer_form",  {questions: @questions}
   = render "link_to"      

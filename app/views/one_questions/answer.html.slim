@@ -6,6 +6,9 @@
       = "You couldn't get experience points"
     - elsif logged_in?
       = t("variable.got_xp", point: "#{@point}")
+    - else 
+      = t("variable.your_score_1", point: "#{@point}")
+
   = render "shared/answer_form",  {questions: @questions}           
   
   = link_to t("variable.retry"),  one_questions_path(name: @category.name), class: "btn btn-outline-primary btn-sm my-3 me-3", style: "width: 45%;"

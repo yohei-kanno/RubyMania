@@ -49,5 +49,7 @@ ja:
     retry: Do it again
     question_title: "【Question】%{name}"
     answer_title: "【Answer】%{name}"
-    your_score: Your score this time is %{point}/100 points!
+    your_score_10: Your score this time is %{point}/100 points!
+    your_score_3: Your score this time is %{point}/30 points!
+    your_score_1: Your score this time is %{point}/10 points!
     got_xp: You got %{point} experience point!
