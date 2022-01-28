@@ -45,13 +45,16 @@
   }
   
 @media screen and (max-width: 1100px) {
-  .swiper.space {
+  .swiper,
+  .space {
     width: 600px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .swiper.space.chart-space {
+  .swiper,
+  .space,
+  .chart-space{
     width: 300px;
   }
   

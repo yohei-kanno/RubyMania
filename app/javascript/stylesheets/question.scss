@@ -60,7 +60,9 @@
     }
   }
 
-  .question-title.choice-content-hover.choice-content-answer{
+  .question-title,
+  .choice-content-hover,
+  .choice-content-answer{
     font-size: $small-font;
   }
 

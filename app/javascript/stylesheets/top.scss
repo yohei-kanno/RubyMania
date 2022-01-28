@@ -187,10 +187,16 @@ ul.menu{
     font-size: $big-font;
   }
   
-  .title.main-sub-title.category-title{
+  .title,
+  .main-sub-title,
+  .category-title{
     font-size: $basic-font;
   }
-  .sub-title.small-font.navbar-nav.top-sub-title{
+
+  .sub-title,
+  .small-font,
+  .navbar-nav,
+  .top-sub-title{
     font-size: $small-font;
   }
   
