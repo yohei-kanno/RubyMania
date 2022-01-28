@@ -2,7 +2,7 @@ div class="swiper-slide swiper-effect-#{category.id}"
   span class="box-title-#{category.id}" = category.name 
   div class="container-disabled-title-#{category.id}"
     = "こんな問題が出題されます!"
-  .sub-title
+  .small-font
     .question-content.mb-3
       = category.questions.first.content
     - category.questions.first.choices.each do |choice|

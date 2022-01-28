@@ -8,6 +8,7 @@
 @import "variable";
 @import "validate";
 @import "errors";
+@import "bootstrap_custom";
 
 #particles-js{ 
 	position:fixed;
@@ -66,9 +67,8 @@ header{
     }
   }
 }
-.navbar-light .navbar-nav .nav-link:hover{
-  color: lightgray;
-}
+
+
 
 footer{
   width: 100%;
@@ -97,10 +97,6 @@ nav{
   margin: 0 0 0 auto;
 }
 
-.question-form{
-  text-align: left;
-}
-
 .commentary-form{
   white-space: pre-wrap;
   font-size: $basic-font;
@@ -123,9 +119,6 @@ nav{
   margin-left: 20px;
 }
 
-.input-group{
-  width: 300px;
-}
 
 @media screen and (max-width: 600px) {
   ul.menu{
