@@ -60,14 +60,16 @@
     }
   }
 
-  .question-title,
+  .question-title{
+    font-size: $small-font;
+  }
   .choice-content-hover,
   .choice-content-answer{
-    font-size: $small-font;
+    font-size: $basic-font;
   }
 
   .question-content{
-    font-size: $small-font;
+    font-size: $basic-font;
     padding: 15px 7px;
   }
   
