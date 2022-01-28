@@ -2,7 +2,11 @@ class ApplicationController < ActionController::Base
   before_action :require_login
   before_action :level_up_point
 
+  class Forbidden < ActionController::ActionControllerError; end
+  class IpAddressRejected < ActionController::ActionControllerError; end
+
   include GetQuestionAndAnswer
+  include ErrorHandlers if Rails.env.production?
 
 
   def current_user_average_score(i)
