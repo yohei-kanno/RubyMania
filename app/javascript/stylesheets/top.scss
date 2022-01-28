@@ -112,6 +112,19 @@ ul.menu{
   margin: 10px 0;
 }
 
+.question-answer-title{
+  font-family: "Times New Roman";
+  font-weight: bold;
+  font-size: $big-font;
+  margin: 10px 0;
+  color: white;
+  background-color: #51a8ff;
+  border-left: 15px solid blue;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, .5);
+  padding: 10px;
+
+}
+
 .button-form{
   padding: 2px 50px;
   font-size: 20px;

@@ -1,6 +1,8 @@
 - breadcrumb :question, @category_name
 .container
-  .title
+  .question-answer-title
+    = t("variable.question_mode", n: 10)
+    br/
     = t("variable.question_title", name: @category_name)
   - unless @questions.count.zero?
     = form_with model: @questions, url: answer_questions_path, method: :post , local: true do |f|

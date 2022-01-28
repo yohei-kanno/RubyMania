@@ -46,8 +46,12 @@ ja:
   
   variable:
     retry: Do it again
-    question_title: "【Question】%{name}"
-    answer_title: "【Answer】%{name}"
+
+    question_mode: "【Random%{n} Question】"
+    question_title: "%{name}"
+
+    answer_mode: "【Random%{n} Answer】"
+    answer_title: "%{name}"
     your_score_10: Your score this time is %{point}/100 points!
     your_score_3: Your score this time is %{point}/30 points!
     your_score_1: Your score this time is %{point}/10 points!
