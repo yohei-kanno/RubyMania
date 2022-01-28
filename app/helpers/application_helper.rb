@@ -13,7 +13,7 @@ module ApplicationHelper
       description: 'Rubyに特化したクイズサービスです。問題数は３５０問以上！progateでruby終わった！もしくは少し肩慣らししたいという方に向けてのサービスです。',
       canonical: "https://www.rubymania.info",
       icon: [
-        { href: image_url('logo.png') },
+        { href: image_url('top.png') },
         { href: image_url('logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' }
       ],
       og: {
