@@ -9,6 +9,7 @@
 @import "validate";
 @import "errors";
 @import "bootstrap_custom";
+@import "answer";
 
 #particles-js{ 
 	position:fixed;
@@ -97,16 +98,6 @@ nav{
   margin: 0 0 0 auto;
 }
 
-.commentary-form{
-  white-space: pre-wrap;
-  font-size: $basic-font;
-}
-
-.copy-button {
-  font-size: 10px;
-  border-radius: 5px;
-  padding: 3px;  
-}
     
 
 .gradation{
@@ -130,20 +121,6 @@ nav{
       
   h1{
     font-size: $basic-font;
-  }
-  
-  .copy-button{
-    left: 87%;
-  }
-  
-  .commentary-form{
-    font-size: $small-font;
-    padding: 10px;
-  }
-  
-  .accordion-button{
-    font-size: $small-font;
-    padding: 5px 10px;
   }
 }
   

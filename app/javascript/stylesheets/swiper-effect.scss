@@ -25,14 +25,14 @@
   }
 }
 
-.swiper {
-  width: 550px;
-}
 .swiper-button-next::after, 
 .swiper-button-prev::after {
   content: none !important;
 }
 
+.swiper {
+  width: 550px;
+}
 .space{
   width: 800px;
   margin: auto;
@@ -45,26 +45,16 @@
   }
   
 @media screen and (max-width: 1100px) {
-  .swiper {
-    width: 600px;
-  }
-  .space{
+  .swiper.space {
     width: 600px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .swiper {
+  .swiper.space.chart-space {
     width: 300px;
   }
   
-  .space{
-    width:  300px;
-  }
-  
-  .chart-space{
-    width: 300px;
-  }
   @each $i,$color in $colorList{
     .container-disabled-tag-#{$i} {
       padding-top: 4px;

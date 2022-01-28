@@ -1,12 +1,5 @@
 @import 'variable';
 
-.form-check-input{
-  position: relative;
-  left: 5px;
-  top: 10px;
-}
-
-
 .question-title{
   margin: auto;
   text-align: left;
@@ -53,32 +46,6 @@
   font-size: $choice-color;
 }
 
-
-.form-check-label{
-  width: 100%;
-  white-space: pre-wrap;
-  padding: 10px;
-}
-
-.correct_answer{
-  background-color: lightgreen
-}
-
-.correct{
-  @include correct-form; 
-  background-color: $success-color;
-}
-
-.uncorrect{
-  @include correct-form;  
-  background-color: $failure-color;
-}
-
-.your-point{
-  margin-bottom: 10px;
-  border-top: solid 3px #364e96;/*上線*/
-  border-bottom: solid 3px #364e96;/*下線*/
-}
 @media screen and (max-width: 600px) {
 
   @each $i,$color in $colorList {
@@ -93,7 +60,7 @@
     }
   }
 
-  .question-title{
+  .question-title.choice-content-hover.choice-content-answer{
     font-size: $small-font;
   }
 
@@ -102,15 +69,7 @@
     padding: 15px 7px;
   }
   
-  
   .choice-content{
     padding: 5px; 
-  }
-  .choice-content-hover{
-    font-size: $small-font;
-  }
-  
-  .choice-content-answer{
-    font-size: $small-font;
   }
 }
