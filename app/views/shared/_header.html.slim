@@ -4,7 +4,7 @@ header
     - if logged_in?
       h1.gradation = link_to t("dict.title"), root_path
       nav
-        ul.menu
+        ul.menu.pt-2
           li = "Lv#{current_user.level}"
           li = ""
           .progress.mt-1
@@ -16,12 +16,12 @@ header
           span.navbar-toggler-icon style="width: 15px;"
         #navbarNavAltMarkup.collapse.navbar-collapse
           ul.navbar-nav.text-end.me-2
-            li.nav-item
+            li.nav-item.pt-2
               = link_to t("link.profile"), profile_path, class: "nav-link"
 
-            li.nav-item
+            li.nav-item.pt-2
               = link_to t("link.logout"), logout_path, method: :delete, data: {confirm: t("confirm.logout?")}, class: "nav-link"
-            li.nav-item
+            li.nav-item.pt-2
               = link_to t("link.contact"), new_contact_path, class: "nav-link"
       
     - else
