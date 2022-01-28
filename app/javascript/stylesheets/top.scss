@@ -128,11 +128,12 @@ ul.menu{
 }
 
 .card-title{
+  font-weight: bold;
   font-size: 20px;
 }
 
 .card-text{
-  font-size: 8px;
+  font-size: 15px;
 }
 
 .card-img-top{
@@ -196,7 +197,11 @@ ul.menu{
   }
   
   .card-title{
-    font-size: 8px;
+    font-size: 12px;
+  }
+
+  .card-text{
+    font-size: 10px;
   }
   
   .progress{
