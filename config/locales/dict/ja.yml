@@ -33,9 +33,8 @@ ja:
   confirm:
     answer?: これで宜しいですか？
     logout?: ログアウトしますか？
-    start?: "クイズを開始しますか？"
-    one_question?: "一問一答を開始しますか？"
-    three_question?: "クイズを開始しますか？"
+    start_question?: "【Random%{n}】クイズを開始しますか？"
+
     
   link:
     to_toppage: Home
