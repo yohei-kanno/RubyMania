@@ -26,8 +26,9 @@ module ApplicationHelper
         locale: 'ja_JP'
       },
       twitter: {
-        card: 'summary',
         site: '@iZXIlbQrHHr5n6E',
+        card: 'summary_large_image',
+        image: image_url("top.png")
       }
     }
   end
