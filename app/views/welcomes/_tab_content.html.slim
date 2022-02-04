@@ -1,73 +1,34 @@
 #pills-tabContent.tab-content
+
   .tab-pane.fade aria-labelledby="questions-tab" role="tabpanel" id="questions" class="show active"
     .discription-space.text-start
-      .category-title
-        = "ランダムに10問出題されます"
-      .term-sentence
-        = "・記録、チャート、偏差値に反映されます(ログインが必要です)"
-      .term-sentence
-        = "・ある程度がっつりやりたい方にお勧めでです。"
-      .term-sentence.mt-3
-        = "下の画像からカテゴリーを選択して下さい。"
-
+      = mode_description(10)
     .row.row-cols-md-3.row-cols-2.g-4
       - object_index(@categories, "ruby").each.with_index(1) do |(obj, category), i|
         .col
           div class="card card-#{i} question-effect" id="category-#{category.id}"
-            = link_to questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start_question?", n: 10)} do
-              = image_tag(obj, class: "card-img-top")
-              .card-body
-                div class="card-title-#{i} card-title"
-                  = "#{category.name}"
-                .card-text.text-start
-                  = category.decorate.question_description
+            = link_to questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start_question?", n: 10)}
+              = render "card_body", obj: obj, i: i, category: category, n: 10
+
 
   .tab-pane.fade aria-labelledby="three_questions-tab" role="tabpanel" id="three_questions"
     .discription-space.text-start
-      .category-title
-        = "ランダムに3問出題されます"
-      .term-sentence
-        = "・記録やチャートには反映されませんが経験値は付与されます。"
-      .term-sentence
-        = "・経験値を得る為にはログインが必要です。"
-      .term-sentence
-        = "・1問では物足りないけど10問は重い方にお勧めです。"
-      .term-sentence.mt-3
-        = "下の画像からカテゴリーを選択して下さい。"
-
+      = mode_description(3)
     .row.row-cols-2.row-cols-md-3
       - object_index(@categories, "book").each.with_index(1) do |(obj, category), i|
         .col.mb-3
           div class="card card-#{i} three-question-effect"
-            = link_to three_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start_question?", n: 3)} do
-              = image_tag(obj, class: "card-img-top")
-              .card-body.pt-0
-                div class="card-title-#{i} card-title"
-                  = "#{category.name}"
-                .card-text.text-start
-                  = category.decorate.three_question_description  
+            = link_to three_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start_question?", n: 3)}
+              = render "card_body", obj: obj, i: i, category: category, n: 3
+
+
 
   .tab-pane.fade aria-labelledby="one_questions-tab" role="tabpanel" id="one_questions"
     .discription-space.text-start
-      .category-title
-        = "ランダムに1問1答形式で出題されます"
-      .term-sentence
-        = "・記録やチャートには反映されませんが経験値は付与されます"
-      .term-sentence
-        = "・経験値を得る為にはログインが必要です。"
-      .term-sentence
-        = "・サクッと問題を解いていきたい方にお勧めです。"
-      .term-sentence.mt-3
-        = "下の画像からカテゴリーを選択して下さい。"
-
+      = mode_description(1)
     .row.row-cols-2.row-cols-md-3
       - object_index(@categories, "pen").each.with_index(1) do |(obj, category), i|
         .col.mb-3
           div class="card card-#{i} one-question-effect"
-            = link_to one_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start_question?", n: 1)} do
-              = image_tag(obj, class: "card-img-top")
-              .card-body.pt-0
-                div class="card-title-#{i} card-title"
-                  = "#{category.name}"
-                .card-text.text-start
-                  = category.decorate.one_question_description  
+            = link_to one_questions_path(name: category.name), class: "link-dark", id: "link-#{category.id}", data: {confirm: t("confirm.start_question?", n: 1)} 
+              = render "card_body", obj: obj, i: i, category: category, n: 1

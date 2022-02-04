@@ -1,10 +1,11 @@
-div class="swiper-slide swiper-effect-#{category.id}"
-  span class="box-title-#{category.id}" = category.name 
-  div class="container-disabled-title-#{category.id}"
-    = "こんな問題が出題されます!"
-  .small-font
-    .question-content.mb-3
-      = category.questions.first.content
-    - category.questions.first.choices.each do |choice|
-      .choice-content
-        = choice.content
+- unless category.questions.count.zero?
+  div class="swiper-slide swiper-effect-#{category.id}"
+    span class="box-title-#{category.id}" = category.name 
+    div class="container-disabled-title-#{category.id}"
+      = "こんな問題が出題されます!"
+    .small-font
+      .question-content.mb-3
+        = category.questions.first.content
+      - category.questions.first.choices.each do |choice|
+        .choice-content
+          = choice.content

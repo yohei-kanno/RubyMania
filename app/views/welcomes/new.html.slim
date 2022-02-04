@@ -39,7 +39,7 @@
     = t("dict.select_category")
   .title
     = render "tab_menu"
-    = render "tab_content"
+    = render "tab_content", {categories: @categories}
   
   script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
   

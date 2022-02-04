@@ -2,7 +2,9 @@ module ApplicationHelper
 
   include ObjectIndex
   include AverageScore
+  include ModeDescription
 
+        
   def default_meta_tags
     {
       site: 'RubyMania',

@@ -98,7 +98,15 @@ nav{
   margin: 0 0 0 auto;
 }
 
-    
+.card-8{
+  pointer-events: none;
+  .comming-soon{
+    background-color: rgb(231, 94, 94);
+    color: white;
+    border-radius: 5px;
+    font-size: $basic-font;
+  }
+}
 
 .gradation{
   color: #DA8E00;
@@ -121,6 +129,12 @@ nav{
       
   h1{
     font-size: $basic-font;
+  }
+
+  .card-8{
+    .comming-soon{
+      font-size: $small-font;
+    }
   }
 }
   

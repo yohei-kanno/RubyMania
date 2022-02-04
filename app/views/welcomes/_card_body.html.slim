@@ -1,0 +1,9 @@
+= image_tag(obj, class: "card-img-top")
+.card-body.pt-0
+  div class="card-title-#{i} card-title"
+    - if category.questions.count.zero?
+      .comming-soon 
+        = "COMING SOON..."
+    = "#{category.name}"
+  .card-text.text-start
+    = category.decorate.question_description(n)

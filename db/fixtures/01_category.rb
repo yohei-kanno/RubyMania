@@ -5,4 +5,5 @@ Category.seed(:id,
               { id: 4, name: 'Hash(ハッシュ)' },
               { id: 5, name: '基礎編総合問題' },
               { id: 6, name: 'オブジェクト指向' },
-              { id: 7, name: 'Regexp(正規表現)' })
+              { id: 7, name: 'Regexp(正規表現)' },
+              { id: 8, name: 'Others'})
