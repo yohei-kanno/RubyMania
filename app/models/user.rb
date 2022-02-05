@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def average_score(i)
-    arr = object.study_records.where(category_id: i).pluck(:score)
+    arr = study_records.where(category_id: i).pluck(:score)
     begin
       arr.sum / arr.length
     rescue ZeroDivisionError => e

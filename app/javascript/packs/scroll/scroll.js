@@ -36,3 +36,4 @@ ScrollReveal().reveal(`.answer-form-effect`,{
   distance: '100px',
   viewFactor: 0
 });
+

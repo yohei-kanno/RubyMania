@@ -1,7 +1,3 @@
-script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
-  
-javascript:
-  particlesJS.load('particles-js', '/assets/particles.json');      
 - if logged_in?
   javascript:
     var ctx = document.getElementById("myChart").getContext("2d");
@@ -31,13 +27,13 @@ javascript:
                   hitRadius:10,
                   //グラフのデータ
                   data: [
-                    #{current_user.decorate.average_score(1)},
-                    #{current_user.decorate.average_score(2)},
-                    #{current_user.decorate.average_score(3)},
-                    #{current_user.decorate.average_score(4)},
-                    #{current_user.decorate.average_score(5)},
-                    #{current_user.decorate.average_score(6)},
-                    #{current_user.decorate.average_score(7)},
+                    #{current_user.average_score(1)},
+                    #{current_user.average_score(2)},
+                    #{current_user.average_score(3)},
+                    #{current_user.average_score(4)},
+                    #{current_user.average_score(5)},
+                    #{current_user.average_score(6)},
+                    #{current_user.average_score(7)},
                     ],
               },
               {
@@ -59,13 +55,13 @@ javascript:
                   hitRadius: 10,
                   //グラフのデータ
                   data: [
-                    #{all_user_average_score(1)},
-                    #{all_user_average_score(2)},
-                    #{all_user_average_score(3)},
-                    #{all_user_average_score(4)},
-                    #{all_user_average_score(5)},
-                    #{all_user_average_score(6)},
-                    #{all_user_average_score(7)},
+                    #{StudyRecord.all_user_average_score(1)},
+                    #{StudyRecord.all_user_average_score(2)},
+                    #{StudyRecord.all_user_average_score(3)},
+                    #{StudyRecord.all_user_average_score(4)},
+                    #{StudyRecord.all_user_average_score(5)},
+                    #{StudyRecord.all_user_average_score(6)},
+                    #{StudyRecord.all_user_average_score(7)},
                   ]
               }
           ]
@@ -118,13 +114,13 @@ javascript:
                   hitRadius: 10,
                   //グラフのデータ
                   data: [
-                    #{all_user_average_score(1)},
-                    #{all_user_average_score(2)},
-                    #{all_user_average_score(3)},
-                    #{all_user_average_score(4)},
-                    #{all_user_average_score(5)},
-                    #{all_user_average_score(6)},
-                    #{all_user_average_score(7)},
+                    #{StudyRecord.all_user_average_score(1)},
+                    #{StudyRecord.all_user_average_score(2)},
+                    #{StudyRecord.all_user_average_score(3)},
+                    #{StudyRecord.all_user_average_score(4)},
+                    #{StudyRecord.all_user_average_score(5)},
+                    #{StudyRecord.all_user_average_score(6)},
+                    #{StudyRecord.all_user_average_score(7)},
                   ]
               }
           ]
