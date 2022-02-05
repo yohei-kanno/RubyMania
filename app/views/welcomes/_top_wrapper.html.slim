@@ -1,0 +1,21 @@
+.top-wrapper
+  .main-title.top-effect
+    = t("dict.sub-title")
+  .main-sub-title.second-effect
+    = t("dict.content")
+
+  .third-effect
+    - if logged_in?
+      = link_to "早速始める", "#start", class:"btn btn-outline-primary button-form my-3"
+    
+    - else
+      .button
+        = link_to auth_at_provider_path(provider: :github) , class: "btn btn-outline-success button-form my-4" do
+              i.fab.fa-github.me-2
+              = "Sign in with Github"
+            
+      .button
+        = link_to "すぐに始める", "#start", class:"btn btn-outline-primary button-form mb-3"
+        
+    .top-sub-title.forth-effect
+      = "※ログインすると結果が記録、チャート、偏差値に反映されます"

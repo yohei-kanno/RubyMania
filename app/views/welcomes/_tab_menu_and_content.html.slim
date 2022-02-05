@@ -1,0 +1,12 @@
+.space
+  .main-sub-title
+    = t("dict.select_category")
+  .title
+    ul#pills-tab.nav.nav-pills.mt-2.justify-content-center.menu role="tablist"
+      = tab_menu(n: 10, boolean: "true", active: "active")
+      = tab_menu(en: "three_",n: 3)
+      = tab_menu(en: "one_", n:1)
+    #pills-tabContent.tab-content
+      = tab_content(n: 10, active: "show active", obj: "ruby")
+      = tab_content(en: "three_", n: 3, obj: "book")
+      = tab_content(en: "one_", n: 1, obj: "pen")

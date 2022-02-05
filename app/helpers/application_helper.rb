@@ -4,7 +4,6 @@ module ApplicationHelper
   include AverageScore
   include ModeDescription
 
-        
   def default_meta_tags
     {
       site: 'RubyMania',

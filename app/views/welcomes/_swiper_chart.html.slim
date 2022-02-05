@@ -1,0 +1,13 @@
+.flex
+  .swiper.mb-3
+    .swiper-wrapper
+      = render @categories
+    .swiper-pagination.swiper-pagination-black
+    .swiper-button-prev.swiper-custom-button
+      i.fa.fa-angle-left  
+    .swiper-button-next.swiper-custom-button
+      i.fa.fa-angle-right
+
+  .chart-space.mt-3
+    canvas#myChart
+  #start
