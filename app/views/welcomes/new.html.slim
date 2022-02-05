@@ -4,7 +4,8 @@
 = render "tab_menu_and_content", categories: @categories
 = render "javascript"
 
-#tag_info data-json="#{current_user.average_score(1).to_json}" 
+- Category.count.times  do |i|
+  div id="user_average_#{i}" data-json="#{current_user.average_score(i).to_json}" 
 script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
 javascript:
   particlesJS.load('particles-js', '/assets/particles.json');  
