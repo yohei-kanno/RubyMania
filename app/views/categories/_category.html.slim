@@ -5,7 +5,8 @@
       = "こんな問題が出題されます!"
     .small-font
       .question-content.mb-3
-        = category.questions.first.content
-      - category.questions.first.choices.each do |choice|
+        - first_question = category.decorate.first_question
+        = first_question.content
+      - first_question.choices.each do |choice|
         .choice-content
           = choice.content

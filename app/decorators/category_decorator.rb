@@ -1,6 +1,10 @@
 class CategoryDecorator < Draper::Decorator
   delegate_all
 
+  def first_question
+    object.questions.first
+  end
+
   def question_description(n)
     if n == 10
       case object.name
