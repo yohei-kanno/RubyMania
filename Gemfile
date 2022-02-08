@@ -25,6 +25,8 @@ gem 'slim-rails'
 gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'rails_admin', '~> 2.0'
+gem 'cancancan'
 
 group :development do
   gem 'better_errors'
