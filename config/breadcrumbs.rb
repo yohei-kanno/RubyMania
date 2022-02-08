@@ -3,14 +3,14 @@ crumb :root do
 end
 
 #プロフィール
-crumb :profile do
-  link "your profile" , profile_path
+crumb :record do
+  link "your record" , record_path
   parent :root
 end
 
-crumb :edit_profile do
-  link "profile edit" , edit_profile_path
-  parent :profile
+crumb :edit_record do
+  link "name edit" , edit_record_path
+  parent :record
 end
 
 #Rundom10問題作成周り

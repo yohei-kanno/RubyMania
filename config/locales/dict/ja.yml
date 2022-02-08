@@ -5,7 +5,7 @@ ja:
     password: 半角英数字  6文字以上
   
   dict:
-    change_name: ニックネーム変更画面
+    change_name: RubyMania's name change
     no-user: まだユーザーがいません
     title: RubyMania
     sub-title: RubySilverを取得しよう！
@@ -39,7 +39,7 @@ ja:
   link:
     to_toppage: Home
     contact: Contact
-    profile: Profile
+    record: record
     logout: Logout
     logged_in_start: Let’s start
     no_logged_in_start: このまま始める

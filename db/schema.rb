@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_11_050458) do
+ActiveRecord::Schema.define(version: 2022_02_08_062920) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2021_10_11_050458) do
   create_table "study_records", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "category_id", null: false
-    t.datetime "studied_at", null: false
+    t.datetime "start_time", null: false
     t.integer "score", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

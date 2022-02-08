@@ -4,7 +4,7 @@ class StudyRecord < ApplicationRecord
   
   class << self
     def create_record(user, category, point)
-      StudyRecord.create(user: user, category: category, studied_at: Time.zone.now, score: point)
+      StudyRecord.create(user: user, category: category, start_time: Time.zone.now, score: point)
     end
 
     def all_user_average_score(i)

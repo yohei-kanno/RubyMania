@@ -1,0 +1,22 @@
+.calendar-space.calendar-body        
+  = month_calendar events: @study_records do |date, records|
+    / .form-check.choice-content-answer style=("#{'background-color: lightgreen' if choice.answer == true}")
+    .me-2.border-black.mt-1.small-font
+      - if records.size == 0
+        .little-more.p-2
+          = "#{date.month}/#{date.day}"
+      - elsif records.size <= 1
+        .more.p-2
+          = "#{date.month}/#{date.day}"
+      - elsif records.size <= 5
+        .good.p-2
+          = "#{date.month}/#{date.day}"
+      - elsif records.size > 5
+        .very-good.p-2
+          = "#{date.month}/#{date.day}"
+  span.me-2 = "少ない"
+  span.box.border-brack.little-more
+  span.box.border-brack.more
+  span.box.border-brack.good
+  span.box.border-brack.very-good
+  span = "多い"

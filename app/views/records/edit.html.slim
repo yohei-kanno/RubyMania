@@ -1,11 +1,11 @@
-- breadcrumb :edit_profile
+- breadcrumb :edit_record
 
 = render "shared/errors",{object: @user}
 
 .title
   = t("dict.change_name")
   
-= form_with model: @user, url: profile_path, method: :patch, local: true do |f|
+= form_with model: @user, url: record_path, method: :patch, local: true do |f|
   .form-group
     = f.label :name, User.human_attribute_name(:name)
     .row.justify-content-center.mb-3

@@ -1,0 +1,9 @@
+- breadcrumb :record
+.title
+  = "Your record"
+= render 'calendar_table'
+= render 'record_table'
+= render 'chart_space'
+.space         
+  = link_to "名前を変更する", edit_record_path, class: "btn btn-primary btn-sm my-3"
+= javascript_pack_tag "chart/dev.js"

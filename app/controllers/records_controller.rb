@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class RecordsController < ApplicationController
 
   before_action :your_dev_set, only: %i[ show ]
   def show
@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   def update
     @user = current_user
     if @user.update(params_user)
-      redirect_to profile_path
+      redirect_to record_path
       flash[:mysuccess] = t('flash.success_update')
     else
       flash.now[:mydanger] = t('flash.failure_update')

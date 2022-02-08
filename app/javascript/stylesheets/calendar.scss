@@ -1,0 +1,42 @@
+.calendar-space{
+  margin: auto;
+  
+  .little-more{
+    background-color: rgb(243, 240, 240);
+  }
+  .more{
+    background-color: rgb(200, 240, 200);
+  }
+  
+  .good{
+    background-color: rgb(79, 211, 79);
+    color: white;
+  }
+
+  .very-good{
+    background-color: rgb(13, 156, 13);
+    color: white;
+  }
+
+  .box{
+    border-radius: 3px;
+    padding: 4px 14px;
+    margin-right: 10px;
+    box-shadow: 0 0 2px gray;
+  }
+}
+.border-black{
+  box-shadow: 0 0 2px gray;
+}
+
+.calendar-body{
+  .table > :not(caption) > * > * {
+    padding: 0;
+  }
+  .calendar-tr{
+     color: rgb(7, 85, 255);
+    width: 30px;
+    word-wrap: break-word;
+    font-size: 10px;
+  }
+}

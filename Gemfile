@@ -23,6 +23,8 @@ gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'gretel'
+gem "simple_calendar", "~> 2.4"
+gem "html2slim"
 
 group :development do
   gem 'bullet'

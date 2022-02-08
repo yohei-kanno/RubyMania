@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "oauth/callback", to: "oauths#callback"
   get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
 
-  resource :profile, only: %i[show edit update]
+  resource :record, only: %i[show edit update]
   
   resource :questions, only: %i[show] do
     collection do
