@@ -29,7 +29,9 @@ module ModeDescription
                 concat (image_tag(obj, class: "card-img-top"))
                 concat( content_tag(:div,"", class: "card-body pt-0") do
                   concat( content_tag(:div, "", class:"card-title-#{i} card-title") do
-                    concat content_tag(:div, "COMMING SOON...", class: "comming-soon")
+                    if category.name == "Others"
+                      concat content_tag(:div, "COMMING SOON...", class: "comming-soon")
+                    end
                     concat content_tag(:div, "#{category.name}")
                   end)
                   concat content_tag(:div, "#{category.decorate.question_description(n)}", class: "card-text text-start")

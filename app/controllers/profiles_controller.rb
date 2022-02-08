@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+
+  before_action :your_dev_set, only: %i[ show ]
   def show
     @study_records = current_user.study_records.recent
   end
@@ -22,5 +24,17 @@ class ProfilesController < ApplicationController
 
   def params_user
     params.require(:user).permit(:name)
+  end
+
+  def your_dev_set
+    if current_user
+      @dstr= current_user.dev(1)
+      @dint = current_user.dev(2)
+      @darr = current_user.dev(3)
+      @dhash = current_user.dev(4)
+      @dtotal = current_user.dev(5)
+      @dobj = current_user.dev(6)
+      @dreg = current_user.dev(7)
+    end
   end
 end

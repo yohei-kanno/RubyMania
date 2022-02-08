@@ -1,11 +1,13 @@
 #particles-js
 = render "top_wrapper"
 = render "swiper_chart"
+= render "table" 
 = render "tab_menu_and_content", categories: @categories
-= render "javascript"
+- if logged_in?
+  = javascript_pack_tag "chart/logged_in_chart.js"
+- else 
+  = javascript_pack_tag "chart/not_logged_in_chart.js"
 
-- Category.count.times  do |i|
-  div id="user_average_#{i}" data-json="#{current_user.average_score(i).to_json}" 
 script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
 javascript:
   particlesJS.load('particles-js', '/assets/particles.json');  

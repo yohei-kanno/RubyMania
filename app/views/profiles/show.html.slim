@@ -38,7 +38,30 @@ table.table.space.mt-1
 
 .text-center.mt-5
   = "#{current_user.name}さんの偏差値"
+table.table.table-sm.small-font.mt-1.table-hover
+  thead
+    tr
+      th scope="col"
+      th scope="col"  String
+      th scope="col"  Integer  
+      th scope="col"  Array
+      th scope="col"  Hash
+      th scope="col"  Total
+      th scope="col"  Object
+      th scope="col"  Regexp
+  tbody
+    -if logged_in?
+      tr
+        th scope="row"  Your's
+        td#dstr data-json="#{@dstr.to_json}" = @dstr
+        td#dint data-json="#{@dint.to_json}" = @dint
+        td#darr data-json="#{@darr.to_json}" = @darr
+        td#dhash data-json="#{@dhash.to_json}" = @dhash
+        td#dtotal data-json="#{@dtotal.to_json}" = @dtotal
+        td#dobj data-json="#{@dobj.to_json}" = @dobj
+        td#dreg data-json="#{@dreg.to_json}" = @dreg
+
 .space.mt-1
   canvas#myBarChart  height="180"                     
-  = render "chart"
   = link_to "名前を変更する", edit_profile_path, class: "btn btn-primary btn-sm my-3"
+= javascript_pack_tag "chart/dev.js"

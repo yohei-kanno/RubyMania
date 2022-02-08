@@ -1,0 +1,33 @@
+table.table.table-sm.small-font.mt-5.table-hover
+  thead
+    tr
+      th scope="col"  average
+      th scope="col"  String
+      th scope="col"  Integer  
+      th scope="col"  Array
+      th scope="col"  Hash
+      th scope="col"  Total
+      th scope="col"  Object
+      th scope="col"  Regexp
+  tbody
+    -if logged_in?
+      tr
+        th scope="row"  Your's
+        td#str data-json="#{@str.to_json}" = @str
+        td#int data-json="#{@int.to_json}" = @int
+        td#arr data-json="#{@arr.to_json}" = @arr
+        td#hash data-json="#{@hash.to_json}" = @hash
+        td#total data-json="#{@total.to_json}" = @total
+        td#obj data-json="#{@obj.to_json}" = @obj
+        td#reg data-json="#{@reg.to_json}" = @reg
+         
+    tr
+      th scope="row"  Everyone's
+      td#estr data-json="#{@estr.to_json}" = @estr
+      td#eint data-json="#{@eint.to_json}" = @eint
+      td#earr data-json="#{@earr.to_json}" = @earr
+      td#ehash data-json="#{@ehash.to_json}" = @ehash
+      td#etotal data-json="#{@etotal.to_json}" = @etotal
+      td#eobj data-json="#{@eobj.to_json}" = @eobj
+      td#ereg data-json="#{@ereg.to_json}" = @ereg
+  #start
