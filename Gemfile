@@ -8,7 +8,9 @@ gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'dotenv-rails'
 gem 'draper'
 gem 'enum_help'
+gem 'gretel'
 gem 'html2slim'
+gem "html2slim"
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
 gem 'meta-tags'
@@ -18,23 +20,21 @@ gem 'rails', '~> 6.1.4'
 gem 'rails-i18n'
 gem 'sass-rails', '>= 6'
 gem 'seed-fu'
+gem "simple_calendar", "~> 2.4"
 gem 'slim-rails'
 gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
-gem 'gretel'
-gem "simple_calendar", "~> 2.4"
-gem "html2slim"
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'bullet'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'rubocop-rails'
   gem 'sqlite3', '~> 1.4'
-  gem 'better_errors'
-  gem 'binding_of_caller'
 end
 
 group :development do

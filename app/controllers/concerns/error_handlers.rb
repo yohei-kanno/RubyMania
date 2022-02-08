@@ -1,7 +1,7 @@
 module ErrorHandlers
   extend ActiveSupport::Concern
 
-  included  do
+  included do
     rescue_from StandardError, with: :rescue500
     rescue_from ActiveRecord::RecordNotFound, with: :rescue404
     rescue_from ApplicationController::IpAddressRejected, with: :rescue403
@@ -11,21 +11,20 @@ module ErrorHandlers
 
   private
 
-  def rescue500(e)
-    render "errors/internal_server_error", status: 500
+  def rescue500(_e)
+    render "errors/internal_server_error", status: :internal_server_error
   end
 
-  def rescue404(e)
-     render "errors/not_found", status: 404 
+  def rescue404(_e)
+    render "errors/not_found", status: :not_found
   end
 
   def rescue403(e)
     @exception = e
-    render "errors/forbidden", status: 403
+    render "errors/forbidden", status: :forbidden
   end
 
-  def rescue400(e)
-    render "errors/bad_request", status: 400
+  def rescue400(_e)
+    render "errors/bad_request", status: :bad_request
   end
-
 end

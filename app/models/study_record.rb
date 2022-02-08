@@ -1,7 +1,7 @@
 class StudyRecord < ApplicationRecord
   belongs_to :user
   belongs_to :category
-  
+
   class << self
     def create_record(user, category, point)
       StudyRecord.create(user: user, category: category, start_time: Time.zone.now, score: point)
@@ -17,5 +17,3 @@ class StudyRecord < ApplicationRecord
   end
   scope :recent, -> { includes(:category).order(id: "desc") }
 end
-
-  

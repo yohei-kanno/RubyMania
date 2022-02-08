@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   include ObjectIndex
   include ModeDescription
 

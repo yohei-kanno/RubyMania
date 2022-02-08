@@ -13,8 +13,8 @@ module GetQuestionAndAnswer
 
   def get_answer
     if question_exist?(params[:question])
-       redirect_to root_url
-       return
+      redirect_to root_url
+      return
     end
     @questions = []
     @point = 0
@@ -27,7 +27,7 @@ module GetQuestionAndAnswer
   end
 
   private
-  
+
   def insert_msg(choices, msgs, _point, questions)
     choices.each do |choice|
       if choice.answer == true

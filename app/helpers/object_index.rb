@@ -6,12 +6,12 @@ module ObjectIndex
   def pen_objects
     %w[pen1 pen2 pen3 pen4 pen5 pen6 pen7 pen8]
   end
-  
+
   def book_objects
     %w[book1 book2 book3 book4 book5 book6 book7 book8]
   end
 
-  def object_index(category, object)
-    eval("#{object}_objects.zip(category)")
+  def object_index(_category, object)
+    eval("#{object}_objects.zip(_category)")
   end
 end

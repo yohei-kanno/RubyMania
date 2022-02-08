@@ -1,6 +1,5 @@
 class RecordsController < ApplicationController
-
-  before_action :your_dev_set, only: %i[ show ]
+  before_action :your_dev_set, only: %i[show]
   def show
     @study_records = current_user.study_records.recent
   end
@@ -28,7 +27,7 @@ class RecordsController < ApplicationController
 
   def your_dev_set
     if current_user
-      @dstr= current_user.dev(1)
+      @dstr = current_user.dev(1)
       @dint = current_user.dev(2)
       @darr = current_user.dev(3)
       @dhash = current_user.dev(4)
