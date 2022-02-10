@@ -21,13 +21,13 @@ RSpec.describe "一問一答機能", type: :system do
     end
         
     
-    context "Integerの問題を選択した場合" do
+    context "Numericの問題を選択した場合" do
       before do
         start_one_question(2)
       end
         
       it "正常に問題が表示されること" do
-        expect(page).to have_content("Integer(数値)編")
+        expect(page).to have_content("Numeric(数値)編")
         expect(all('.question-form').count).to eq(1)
         expect(page).to have_button("回答する")
         expect(all('.choice-content-hover').count).to eq(4)
@@ -114,13 +114,13 @@ RSpec.describe "一問一答機能", type: :system do
       end
     end
     
-    context "Integerの問題を選択した場合" do
+    context "Numericの問題を選択した場合" do
       before do
         start_one_question(2)
       end
         
       it "正常に問題が表示されること" do
-        expect(page).to have_content("Integer(数値)編")
+        expect(page).to have_content("Numeric(数値)編")
         expect(all('.question-form').count).to eq(1)
         expect(all('.choice-content-hover').count).to eq(4)
         expect(page).to have_button("回答する")

@@ -9,7 +9,6 @@ gem 'dotenv-rails'
 gem 'draper'
 gem 'enum_help'
 gem 'gretel'
-gem 'html2slim'
 gem "html2slim"
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
@@ -27,16 +26,17 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
+gem 'simplecov'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'rubocop-rails'
   gem 'sqlite3', '~> 1.4'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -48,6 +48,7 @@ group :development do
 end
 
 group :test do
+  gem 'pry-rails'
   gem 'capybara', '>= 3.26'
   gem 'factory_bot_rails'
   gem 'rspec-rails'

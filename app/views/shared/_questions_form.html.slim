@@ -11,9 +11,9 @@
     .valid-feedback.text-start.mb-1
       = "選択済"
       
-    - question.choices.each do |choice|
+    - question.choices.each_with_index do |choice, o|
       .form-check.choice-content-hover
-        = f.radio_button "#{i}","#{choice.id}" , class: "form-check-input", required: ""
+        = f.radio_button "#{i}","#{choice.id}" , class: "form-check-input choice_#{i}_#{o}", required: ""
         = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
         = f.hidden_field :name, value: params[:name]
 
