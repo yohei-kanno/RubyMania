@@ -1,6 +1,6 @@
 module TestQuestion
   module StartQuestion
-    def start_questions(i, random_num)
+    def start_questions(category_num, random_num)
       visit root_path
       execute_script('window.scrollBy(0,10000)')
       case random_num
@@ -13,14 +13,14 @@ module TestQuestion
       end
       execute_script('window.scrollBy(0,10000)')
       page.accept_confirm do
-        click_on "link-#{i}"
+        click_on "link-#{category_num}"
       end
       sleep 1
       execute_script('window.scrollBy(0,10000)')
-      sleep 1 
+      sleep 1
     end
 
-    def start_questions_include_choose(category_num , random_num )
+    def start_questions_include_choose(category_num, random_num)
       visit root_path
       execute_script('window.scrollBy(0,10000)')
       case random_num
@@ -38,10 +38,22 @@ module TestQuestion
       sleep 1
       find('.choice_0_0').click
       execute_script('window.scrollBy(0,1000)')
+
+      if random_num == 1
+        sleep 1
+        return
+      end
+
       find('.choice_1_0').click
       execute_script('window.scrollBy(0,1000)')
       find('.choice_2_0').click
       execute_script('window.scrollBy(0,1000)')
+
+      if random_num == 3
+        sleep 1
+        return
+      end
+
       find('.choice_3_0').click
       execute_script('window.scrollBy(0,1000)')
       find('.choice_4_0').click
@@ -55,8 +67,8 @@ module TestQuestion
       find('.choice_8_0').click
       execute_script('window.scrollBy(0,1000)')
       find('.choice_9_0').click
-      execute_script('window.scrollBy(0,10000)')
-      sleep 1 
+      execute_script('window.scrollBy(0,1000)')
+      sleep 1
     end
   end
 end

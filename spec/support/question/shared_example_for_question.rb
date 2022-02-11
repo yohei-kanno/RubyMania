@@ -1,4 +1,4 @@
-shared_examples :Questions_will_be_asked_examples do |category, num_of_question, category_num|
+shared_examples :Questions_will_be_asked_examples do |category, num_of_question, _category_num|
   it "#{category}の問題が表示されている事" do
     expect(page).to have_content(category)
     expect(page).to have_selector(".question-title")
@@ -9,4 +9,3 @@ shared_examples :Questions_will_be_asked_examples do |category, num_of_question,
     expect(page).to have_button("回答する")
   end
 end
-
