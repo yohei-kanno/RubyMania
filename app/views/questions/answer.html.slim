@@ -1,10 +1,10 @@
-- breadcrumb :answer, @category_name
+- breadcrumb :answer, @category.name
 .container
 
   .question-answer-title
     = t("variable.answer_mode", n: 10)
     br/
-    = t("variable.answer_title", name: @category_name)
+    = t("variable.answer_title", name: @category.name)
   = render "link_to"      
   .your-point
     - if logged_in? && @point == 0

@@ -4,7 +4,7 @@
       = "#{question.title}"
     .question-content.mb-4
       = question.content
-    = f.radio_button "#{i}","question",style:"display:none"
+    = f.radio_button "#{question.id}","question",style:"display:none"
     = f.label "question", "", class: "form-check-label", style: "display:none;"
     .invalid-feedback.text-start.mb-1
       = "選択必須"
@@ -13,8 +13,8 @@
       
     - question.choices.each_with_index do |choice, o|
       .form-check.choice-content-hover
-        = f.radio_button "#{i}","#{choice.id}" , class: "form-check-input choice_#{i}_#{o}", required: ""
-        = f.label "#{i}_#{choice.id}", choice.content, class: "form-check-label"
+        = f.radio_button "#{question.id}","#{choice.id}" , class: "form-check-input choice_#{i}_#{o}", required: "", checked: true
+        = f.label "#{question.id}_#{choice.id}", choice.content, class: "form-check-label"
         = f.hidden_field :name, value: params[:name]
 
                 

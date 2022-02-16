@@ -1,9 +1,9 @@
-- breadcrumb :three_answers, @category_name
+- breadcrumb :three_answers, @category.name
 .container
   .question-answer-title
     = t("variable.answer_mode", n: 3)
     br/
-    = t("variable.answer_title", name: @category_name)
+    = t("variable.answer_title", name: @category.name)
   = link_to t("variable.retry"),  three_questions_path(name: @category.name), class: "btn btn-outline-primary btn-sm my-3 me-3", style: "width: 45%;"
   = link_to t("link.to_toppage"), root_path, class: "btn btn-outline-primary btn-sm my-3", style: "width: 45%;"
   .your-point

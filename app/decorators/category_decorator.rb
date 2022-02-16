@@ -23,7 +23,7 @@ class CategoryDecorator < Draper::Decorator
       when "Regexp(正規表現)"
         "Regexpクラスの問題が出題されます"
       when "Others"
-        "Procオブジェクト、例外処理、その他RubySilver取得に必要な問題が出題されます"
+        "Dirクラス、例外処理、その他RubySilver取得に必要な問題が出題されます。"
       end
 
     elsif n == 3

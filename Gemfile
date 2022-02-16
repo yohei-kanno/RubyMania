@@ -27,6 +27,7 @@ gem 'webpacker', '~> 5.0'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
 gem 'simplecov'
+gem 'order_as_specified'
 
 group :development do
   gem 'better_errors'

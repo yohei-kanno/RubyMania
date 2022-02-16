@@ -9,9 +9,11 @@ class ApplicationController < ActionController::Base
   include GetQuestionAndAnswer
   include ErrorHandlers if Rails.env.production?
 
-  def current_user_average_score(_i)
+
+
+  def current_user_average_score(category)
     Category.count.times do |i|
-      @average_score = current_user.average_score(i)
+      @average_score = current_user.average_score(category)
     end
   end
 

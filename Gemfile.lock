@@ -240,6 +240,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
+    order_as_specified (1.7)
+      activerecord (>= 5.0.0)
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -461,6 +463,7 @@ DEPENDENCIES
   letter_opener_web
   listen (~> 3.3)
   meta-tags
+  order_as_specified
   particles-js-rails (= 2.0.0)
   pg
   pry-rails

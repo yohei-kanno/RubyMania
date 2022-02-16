@@ -32,3 +32,9 @@ $other_choice = '"\#{apple}\norange\nbanana\n"'
 $other_choice = '"apple\norange\nbanana\n"と表示される'
 $other_choice = is_nil
 $other_choice = is_exception
+
+# other_question6(4)
+$other_choice = '「0」と表示される'
+$other_choice = '"0では割れません"と表示される'
+$other_choice = is_nil
+$other_choice = is_exception
