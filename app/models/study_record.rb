@@ -18,6 +18,6 @@ class StudyRecord < ApplicationRecord
       average_score.round(1)
     end
   end
-    
+
   scope :recent, -> { includes(:category).order(id: "desc") }
 end

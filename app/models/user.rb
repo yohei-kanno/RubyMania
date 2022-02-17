@@ -40,7 +40,8 @@ class User < ApplicationRecord
 
   def dev(i)
     arr = arr_x(i)
-    return 0 if arr.empty? 
+    return 0 if arr.empty?
+
     avg = arr.sum / arr.length
     arr1 = arr.map { |x| (x - avg)**2 }
     std = Math.sqrt(arr1.sum / arr.length)

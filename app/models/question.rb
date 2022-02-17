@@ -6,5 +6,7 @@ class Question < ApplicationRecord
   has_many :categories, through: :categories_questions
 
   scope :random, ->(num) { includes(:choices).sample(num) }
-  scope :selected_questions, ->(question_ids) { includes(:choices).where(id: question_ids).order_as_specified(id: question_ids) }
+  scope :selected_questions, lambda { |question_ids|
+                               includes(:choices).where(id: question_ids).order_as_specified(id: question_ids)
+                             }
 end

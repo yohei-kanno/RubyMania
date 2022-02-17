@@ -17,7 +17,7 @@ AllCops:
     - 'vendor/bundle/**/*'
     - 'tmp/**/*'
     - 'config/**/*'
-    # - 'spec/**/*'
+    - 'spec/**/*'
 
 Style/StringLiterals:
   Enabled: false

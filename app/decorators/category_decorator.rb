@@ -6,7 +6,8 @@ class CategoryDecorator < Draper::Decorator
   end
 
   def question_description(n)
-    if n == 10
+    case n
+    when 10
       case object.name
       when "String(文字列)"
         "Stringクラスの問題が出題されます"
@@ -26,7 +27,7 @@ class CategoryDecorator < Draper::Decorator
         "Dirクラス、例外処理、その他RubySilver取得に必要な問題が出題されます。"
       end
 
-    elsif n == 3
+    when 3
       case object.name
       when "String(文字列)"
         "Stringクラスの問題がランダムで3問出題されます"
@@ -46,7 +47,7 @@ class CategoryDecorator < Draper::Decorator
         "Procオブジェクト、例外処理、その他RubySilver取得に必要な問題がランダムで3問出題されます"
       end
 
-    elsif n == 1
+    when 1
       case object.name
       when "String(文字列)"
         "Stringクラスの問題が一問一答形式で出題されます"
