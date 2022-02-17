@@ -3,9 +3,11 @@ class StudyRecord < ApplicationRecord
   belongs_to :category
 
   class << self
-    def create_record(user, category, point)
-      StudyRecord.create(user: user, category: category, start_time: Time.zone.now, score: point)
-      # user.study_records.create(category: category, start_time: Time.zone.now, score: point)
+    def create_record_and_point_up!(user, category, point)
+      ActiveRecord::Base.transaction do
+        user.study_records.create(category: category, start_time: Time.zone.now, score: point)
+        user.point_up!(point)
+      end
     end
 
     def all_user_average_score(i)
@@ -16,5 +18,6 @@ class StudyRecord < ApplicationRecord
       average_score.round(1)
     end
   end
+    
   scope :recent, -> { includes(:category).order(id: "desc") }
 end
