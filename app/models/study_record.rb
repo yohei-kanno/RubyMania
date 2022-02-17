@@ -10,8 +10,8 @@ class StudyRecord < ApplicationRecord
       end
     end
 
-    def all_user_average_score(i)
-      sum_score = StudyRecord.where(category_id: i).pluck(:score)
+    def all_user_average_score(category_id)
+      sum_score = StudyRecord.where(category_id: category_id).pluck(:score)
       return 0 if sum_score.empty?
 
       average_score = sum_score.sum / sum_score.length.to_f

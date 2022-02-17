@@ -26,33 +26,33 @@ class User < ApplicationRecord
     save!
   end
 
-  def average_score(i)
-    arr = study_records.where(category_id: i).pluck(:score)
-    return 0 if arr.empty?
+  def average_score(category_id)
+    category_score = study_records.where(category_id: category_id).pluck(:score)
+    return 0 if category_score.empty?
 
     begin
-      your_average_score = arr.sum / arr.length.to_f
+      your_average_score = category_score.sum / category_score.length.to_f
       your_average_score.round(1)
-    rescue ZeroDivisionError => e
+    rescue ZeroDivisionError
       0
     end
   end
 
-  def dev(i)
-    arr = arr_x(i)
-    return 0 if arr.empty?
+  def dev(category_id)
+    score = category_score(category_id)
+    return 0 if score.empty?
 
-    avg = arr.sum / arr.length
-    arr1 = arr.map { |x| (x - avg)**2 }
-    std = Math.sqrt(arr1.sum / arr.length)
-    ((average_score(i) - avg) * 10 / std + 50).round(1)
-  rescue ZeroDivisionError => e
+    avg = score.sum / score.length
+    score1 = score.map { |x| (x - avg)**2 }
+    std = Math.sqrt(score1.sum / score.length)
+    ((average_score(category_id) - avg) * 10 / std + 50).round(1)
+  rescue ZeroDivisionError
     0
   end
 
   private
 
-  def arr_x(i)
-    StudyRecord.where(category_id: i).pluck(:score)
+  def category_score(category_id)
+    StudyRecord.where(category_id: category_id).pluck(:score)
   end
 end

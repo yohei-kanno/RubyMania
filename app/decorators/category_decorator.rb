@@ -5,8 +5,8 @@ class CategoryDecorator < Draper::Decorator
     object.questions.first
   end
 
-  def question_description(n)
-    case n
+  def question_description(num)
+    case num
     when 10
       case object.name
       when "String(文字列)"

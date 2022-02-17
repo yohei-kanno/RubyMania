@@ -33,7 +33,7 @@ ja:
   confirm:
     answer?: これで宜しいですか？
     logout?: ログアウトしますか？
-    start_question?: "【Random%{n}】クイズを開始しますか？"
+    start_question?: "【Random%{num}】クイズを開始しますか？"
 
     
   link:

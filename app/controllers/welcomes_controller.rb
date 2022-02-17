@@ -10,15 +10,15 @@ class WelcomesController < ApplicationController
   private
 
   def your_average_variable_set
-    if current_user
-      @str = current_user.average_score(1)
-      @int = current_user.average_score(2)
-      @arr = current_user.average_score(3)
-      @hash = current_user.average_score(4)
-      @total = current_user.average_score(5)
-      @obj = current_user.average_score(6)
-      @reg = current_user.average_score(7)
-    end
+    return unless current_user
+
+    @str = current_user.average_score(1)
+    @int = current_user.average_score(2)
+    @arr = current_user.average_score(3)
+    @hash = current_user.average_score(4)
+    @total = current_user.average_score(5)
+    @obj = current_user.average_score(6)
+    @reg = current_user.average_score(7)
   end
 
   def everyone_average_variable_set
