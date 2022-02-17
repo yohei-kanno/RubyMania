@@ -15,16 +15,8 @@ module ModeDescription
       concat(tag.div("", class: "row row-cols-md-3 row-cols-2 g-4") do
         object_index(@categories, obj.to_s).each.with_index(1) do |(obj, category), i|
           concat(tag.div("", class: "col mb-3") do
-            concat(tag.div("", class: "card card-#{i} #{eng}question-effect",
-                               id: "category-#{category.id}") do
-                     case num
-                     when 10
-                       path = questions_path(name: category.name)
-                     when 3
-                       path = three_questions_path(name: category.name)
-                     when 1
-                       path = one_questions_path(name: category.name)
-                     end
+            concat(tag.div("", class: "card card-#{i} #{eng}question-effect", id: "category-#{category.id}") do
+                     path = questions_path(name: category.name, random: num)
                      link_to path, class: "link-dark", id: "link-#{category.id}",
                                    data: { confirm: t("confirm.start_question?", num: num) } do
                        concat(image_tag(obj, class: "card-img-top"))
@@ -33,7 +25,8 @@ module ModeDescription
                            concat tag.div("COMMING SOON...", class: "comming-soon") if category.name == "Others"
                            concat tag.div(category.name.to_s)
                          end)
-                         concat tag.div(category.decorate.question_description(num).to_s, class: "card-text text-start")
+                         concat tag.div(category.decorate.question_description(num).to_s,
+                                        class: "card-text text-start")
                        end)
                      end
                    end)

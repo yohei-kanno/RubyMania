@@ -47,7 +47,7 @@ RSpec.describe 'User', type: :model do
     another_user = create(:user)
     study_record_1 = create(:study_record, user: user)
     study_record_2 = create(:study_record, user: another_user, score: 40)
-    user.send(:arr_x, 1)
+    user.send(:category_score, 1)
     expect(user.dev(1)).to eq(60)
   end
 end

@@ -52,7 +52,5 @@ ja:
 
     answer_mode: "【Random%{n} Answer】"
     answer_title: "%{name}"
-    your_score_10: Your score this time is %{point}/100 points!
-    your_score_3: Your score this time is %{point}/30 points!
-    your_score_1: Your score this time is %{point}/10 points!
+    your_score: Your score this time is %{point}/%{denom} points!
     got_xp: You got %{point} experience point!

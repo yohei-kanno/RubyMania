@@ -2,7 +2,7 @@
 .container
 
   .question-answer-title
-    = t("variable.answer_mode", n: 10)
+    = t("variable.answer_mode", n: @questions.size)
     br/
     = t("variable.answer_title", name: @category.name)
   = render "link_to"      
@@ -10,13 +10,13 @@
     - if logged_in? && @point == 0
       = "You couldn't get experience points"
     - elsif logged_in?
-      = t("variable.your_score_10", point: "#{@point}")
+      = t("variable.your_score", point: "#{@point}", denom: @questions.size * 10)
       br/
       = t("variable.got_xp", point: "#{@point}")
     
     - else 
-      = t("variable.your_score_10", point: "#{@point}")
+      = t("variable.your_score", point: "#{@point}", denom: @questions.size * 10)
     
   = render "shared/answer_form",  {questions: @questions}
-  = render "link_to"      
+  = render "link_to" 
            

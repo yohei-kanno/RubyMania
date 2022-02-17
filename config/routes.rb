@@ -15,20 +15,6 @@ Rails.application.routes.draw do
     end
   end
   
-  resource :one_questions, only: %i[show] do
-    collection do
-      post :answer
-      get :answer
-    end
-  end
-
-  resource :three_questions, only: %i[show] do
-    collection do
-      post :answer
-      get :answer
-    end
-  end
-  
   resources :contacts, only: %i[new create] do
     collection do
       post :confirm

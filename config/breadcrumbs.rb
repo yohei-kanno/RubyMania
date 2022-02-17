@@ -35,26 +35,6 @@ crumb :answer do |category|
   parent :question, category
 end
 
-crumb :three_questions do |category|
-  link "#{category}編", three_questions_path(name: category)
-  parent :root
-end
-
-crumb :three_answers do |category|
-  link "#{category}解答", answer_questions_path(name: category)
-  parent :three_questions, category
-end
-
-crumb :one_question do |category|
-  link "#{category}編", one_questions_path(name: category)
-  parent :root
-end
-
-crumb :one_answer do |category|
-  link "#{category}解答", answer_questions_path(name: category)
-  parent :one_question, category
-end
-
 #お問合せ
 crumb :contact do
   link "Contact", new_contact_path
