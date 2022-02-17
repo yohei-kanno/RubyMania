@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
     @category = Category.find_by(name: params[:question][:name])
     @point = Choice.selected_choice(except_name_params.values).point
     @questions = Question.selected_questions(except_name_params.keys)
-    
+
     if @questions.size == 10 && current_user
       StudyRecord.create_record_and_point_up!(current_user, @category, @point)
       flash.now[:mysuccess] = t('flash.level_up') if current_user.level_up?
@@ -23,6 +23,7 @@ class QuestionsController < ApplicationController
   end
 
   private
+
   def except_name_params
     params[:question].except("name")
   end
