@@ -29,19 +29,19 @@ gem 'sorcery'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'bullet'
+group :development, :test do
+  gem 'letter_opener_web'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
-  gem 'rubocop', require: false
-  gem 'rubocop-rails'
   gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
-  gem 'letter_opener_web'
+  gem 'bullet'
+  gem 'rubocop', require: false
+  gem 'rubocop-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
