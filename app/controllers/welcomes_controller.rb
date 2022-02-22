@@ -4,7 +4,7 @@ class WelcomesController < ApplicationController
   before_action :everyone_average_variable_set, only: %i[new]
 
   def new
-    @categories = Category.all.order(:id)
+    @categories = Category.includes(questions: :choices).all.order(:id)
   end
 
   private

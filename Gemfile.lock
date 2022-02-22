@@ -89,9 +89,6 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.7.7)
       msgpack (~> 1.0)
-    bootstrap5-kaminari-views (0.0.1)
-      kaminari (>= 0.13)
-      rails (>= 3.1)
     builder (3.2.4)
     bullet (6.1.4)
       activesupport (>= 3.0.0)
@@ -447,7 +444,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.4)
-  bootstrap5-kaminari-views (~> 0.0.1)
   bullet
   byebug
   cancancan

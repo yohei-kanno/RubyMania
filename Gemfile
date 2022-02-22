@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.2'
 gem 'activeadmin'
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 gem 'cancancan'
 gem 'dotenv-rails'
 gem 'draper'
