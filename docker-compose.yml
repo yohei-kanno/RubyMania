@@ -12,14 +12,13 @@ services:
     #image: ununtu:latestとしてimageを指定する
     #buildcontextを指定
     build: .
-
     #publishのポートをしているhostの3000とコンテナの3000を繋ぐ
     ports:
-      - "3000:3001"
+      - "3000:3000"
     volumes:
     #オプションで指定していた時は絶対pathだったがdocker-compose.ymlに記載する場合は相対pathで記述する
     #以下の場合はホストのrails_dockerフォルダをコンテナに対してrails_dockerフォルダを作成してそこからホストのrails_dockerフォルダを確認することができるということ
-      - ".:/RubyMania"
+      - ".:/cloud"
 
     environment:
       - 'DATABASE_PASSWORD=postgres'

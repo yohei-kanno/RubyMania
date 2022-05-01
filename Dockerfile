@@ -8,10 +8,11 @@ RUN apt-get update && apt-get install -y \
     postgresql-client \
     yarn
 
-WORKDIR /CLOUD
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
+WORKDIR /cloud
+
+ADD Gemfile /cloud/Gemfile
+ADD Gemfile.lock /cloud/Gemfile.lock
+
 RUN bundle install
 
-WORKDIR /RubyMania
-COPY . /RubyMania
+ADD . /cloud
