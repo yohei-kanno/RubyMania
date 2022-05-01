@@ -1,19 +1,25 @@
 
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  #defaltuser
+  user: postgres
+  #defaultport
+  port: 5432
+  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: rubymania_development
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: rubymania_test
 
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: rubymania_production
+  username: rubymania
+  password: <%= ENV['RAILS_DOCKER_DATABASE_PASSWORD'] %>

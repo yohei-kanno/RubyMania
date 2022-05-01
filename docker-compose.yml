@@ -1,0 +1,51 @@
+#今からdocker-compose書きますって宣言
+
+version: "3"
+
+volumes:
+  db-data:
+#これをやらないとコンテナを消した時にデータも一緒に消えてしまうのでdb-dataにそのデータを蓄積させようとしていた。これをやって再度ビルドすればdb-dataというフォルダをマウントしてdocker-compose-ymlに記載されたpathにdataをマウントできる
+
+services:
+  app:
+    #imageを使う場合は
+    #image: ununtu:latestとしてimageを指定する
+    #buildcontextを指定
+    build: .
+
+    #publishのポートをしているhostの3000とコンテナの3000を繋ぐ
+    ports:
+      - "3000:3001"
+    volumes:
+    #オプションで指定していた時は絶対pathだったがdocker-compose.ymlに記載する場合は相対pathで記述する
+    #以下の場合はホストのrails_dockerフォルダをコンテナに対してrails_dockerフォルダを作成してそこからホストのrails_dockerフォルダを確認することができるということ
+      - ".:/RubyMania"
+
+    environment:
+      - 'DATABASE_PASSWORD=postgres'
+    #環境変数を読み込むのはあくまでコンテナ側で行う。
+    #ホストにコードはあるけど実行するのはコンテナ
+
+    #表示内容が綺麗になる
+    tty: true
+
+    #コンテナで入力が可能になる
+    stdin_open: true
+
+    depends_on:
+      - db
+
+    links:
+      - db
+
+#database.ymlに書いたhost名がここでのservivesの引数の一つになる
+  db:
+    image: postgres
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=postgres'
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+      #db-dataにどんどんデータを蓄積させることができる
+      #db-dataとかないじゃん！
+      #docker-volumuってのを使うことができる
