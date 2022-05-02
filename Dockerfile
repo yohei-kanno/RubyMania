@@ -15,3 +15,10 @@ ADD Gemfile.lock /cloud/Gemfile.lock
 RUN bundle install
 
 ADD . /cloud
+
+COPY start.sh /usr/bin/
+RUN chmod +x /usr/bin/start.sh
+ENTRYPOINT ["start.sh"]
+EXPOSE 3000
+
+CMD ["bin/start"]
