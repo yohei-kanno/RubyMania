@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_02_08_062920) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "authentications", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "provider", null: false
@@ -31,8 +28,8 @@ ActiveRecord::Schema.define(version: 2022_02_08_062920) do
   end
 
   create_table "categories_questions", force: :cascade do |t|
-    t.bigint "question_id", null: false
-    t.bigint "category_id", null: false
+    t.integer "question_id", null: false
+    t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_categories_questions_on_category_id"
@@ -41,7 +38,7 @@ ActiveRecord::Schema.define(version: 2022_02_08_062920) do
   end
 
   create_table "choices", force: :cascade do |t|
-    t.bigint "question_id", null: false
+    t.integer "question_id", null: false
     t.text "content", null: false
     t.boolean "answer", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -72,8 +69,8 @@ ActiveRecord::Schema.define(version: 2022_02_08_062920) do
   end
 
   create_table "study_records", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "category_id", null: false
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
     t.datetime "start_time", null: false
     t.integer "score", null: false
     t.datetime "created_at", precision: 6, null: false
