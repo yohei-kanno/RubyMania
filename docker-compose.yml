@@ -15,11 +15,11 @@ services:
     tty: true
     stdin_open: true
     depends_on:
-      - localhost
+      - db
     links:
-      - localhost
+      - db
 
-  localhost:
+  db:
     image: postgres
     ports:
       - "5432:5432"

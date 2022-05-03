@@ -4,7 +4,7 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  host: localhhost
+  host: db
 
 development:
   <<: *default
@@ -20,5 +20,5 @@ production:
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_ROOT_PASSWORD'] %>
   database: <%= ENV['POSTGRES_DATABASE'] %>
-  host: <%= ENV['POSTGRES_HOST'] %>
+  host: localhost
   socket: <%= ENV['POSTGRES_SOCKET'] %>
