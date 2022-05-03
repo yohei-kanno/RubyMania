@@ -20,5 +20,4 @@ production:
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_ROOT_PASSWORD'] %>
   database: <%= ENV['POSTGRES_DATABASE'] %>
-  host: localhost
-  socket: <%= ENV['POSTGRES_SOCKET'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
