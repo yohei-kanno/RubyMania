@@ -5,6 +5,7 @@ if [ -n "$PORT" ]; then
 fi
 
 bin/rails db:migrate RAILS_ENV=production
+bundle exec rake assets:precompile RAILS_ENV=production
 
 rm -f tmp/pids/server.pid
 
