@@ -16,4 +16,7 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
+  host: db
   pool: 5
+  username: postgres
+  password: postgres
