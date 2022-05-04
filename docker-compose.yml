@@ -1,5 +1,3 @@
-#今からdocker-compose書きますって宣言
-
 version: "3"
 
 volumes:
@@ -22,9 +20,11 @@ services:
   db:
     image: postgres
     ports:
-      - "5432:5432"
+      - "5432:5432"     
     environment:
-      - "POSTGRES_USER=postgres"
-      - "POSTGRES_PASSWORD=postgres"
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
       - "db-data:/var/lib/postgresql/data"

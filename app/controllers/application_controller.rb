@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   class IpAddressRejected < ActionController::ActionControllerError; end
 
-  include ErrorHandlers if Rails.env.production?
+  # include ErrorHandlers if Rails.env.production?
 
   def not_authenticated
     flash[:mydanger] = 'ログインして下さい'
