@@ -9,6 +9,7 @@ worker_timeout 3600 if ENV.fetch('RAILS_ENV', 'development') == 'development'
 #port        ENV.fetch("PORT") { 3000 }
 bind "unix:///var/www/rubymania_app/tmp/sockets/puma.sock"
 
+
 environment ENV.fetch('RAILS_ENV') { 'development' }
 
 pidfile ENV.fetch('PIDFILE') { 'tmp/pids/server.pid' }
